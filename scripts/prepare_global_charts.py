@@ -1,4 +1,7 @@
-"""FIT3179 DV2 — build datasets for Charts 1–3.
+"""
+scripts/prepare_global_charts.py
+
+FIT3179 DV2 — build datasets for Charts 1–3.
 Run from repository root: python scripts/prepare_global_charts.py
 Requires pandas. Does not modify existing processed data.
 
@@ -38,6 +41,15 @@ def numeric(df, cols):
     return df
 
 
+def integer_iso_numeric(series):
+    """Preserve missing ISO numeric codes without writing valid codes as 36.0."""
+    values = pd.to_numeric(series, errors='coerce')
+    nonmissing = values.dropna()
+    if not nonmissing.eq(nonmissing.round()).all():
+        raise ValueError('ISO numeric country identifiers must be whole numbers')
+    return values.astype('Int64')
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     countries = read('movie_countries.csv')
@@ -54,7 +66,7 @@ def main():
     numeric(genres, ['id', 'year'])
     numeric(pop, ['year', 'population'])
     numeric(coords, ['latitude', 'longitude'])
-    numeric(lookup, ['iso_numeric'])
+    lookup['iso_numeric'] = integer_iso_numeric(lookup['iso_numeric'])
     countries = countries[countries.year.between(START, END)].copy()
     genres = genres[genres.year.between(START, END)].copy()
     if countries[['id', 'year']].isna().any().any() or genres[['id', 'year']].isna().any().any():
@@ -82,6 +94,7 @@ def main():
                               how='left', validate='one_to_one')
     cp = cp.merge(lookup[lookup.iso3.ne('')][['iso3', 'iso_numeric']].drop_duplicates('iso3'),
                   on='iso3', how='left', validate='many_to_one')
+    cp['iso_numeric'] = integer_iso_numeric(cp['iso_numeric'])
     cp['valid_population'] = cp.population.gt(0)
     cp['movies_per_million'] = cp.movie_count.div(cp.population).mul(1_000_000).where(cp.valid_population)
     cp.sort_values(['iso3', 'year']).to_csv(OUT / 'country_production_by_year.csv', index=False)
@@ -100,6 +113,7 @@ def main():
         first_valid_year=('year', 'min'), last_valid_year=('year', 'max'))
     aggregate = aggregate.merge(lookup[lookup.iso3.ne('')][['iso3', 'iso_numeric', 'standard_name']]
                                 .drop_duplicates('iso3'), on='iso3', how='left', validate='one_to_one')
+    aggregate['iso_numeric'] = integer_iso_numeric(aggregate['iso_numeric'])
     aggregate.sort_values('iso3').to_csv(OUT / 'country_production.csv', index=False)
 
     # Chart 2: count a movie once for each of its genres.

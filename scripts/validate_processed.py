@@ -1,4 +1,7 @@
-"""FIT3179 DV2: validate Stage 1 processed CSV outputs.
+"""
+scripts/validate_processed.py
+
+FIT3179 DV2: validate Stage 1 processed CSV outputs.
 
 Run from the project root: python3 scripts/validate_processed.py
 

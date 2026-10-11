@@ -1,4 +1,7 @@
-"""FIT3179 DV2 — prepare geographic reference data for Charts 1 and 3.
+"""
+scripts/preprocess_geography.py
+
+FIT3179 DV2 — prepare geographic reference data for Charts 1 and 3.
 
 Run from project root:
     pip install pandas pycountry countryinfo

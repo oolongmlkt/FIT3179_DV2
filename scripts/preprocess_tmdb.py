@@ -1,4 +1,7 @@
-"""FIT3179 DV2 — Stage 1 preprocessing.
+"""
+scripts/preprocess_tmdb.py
+
+FIT3179 DV2 — Stage 1 preprocessing.
 
 Run from the project root:
     python3 scripts/preprocess_tmdb.py

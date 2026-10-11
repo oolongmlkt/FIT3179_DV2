@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FIT3179 DV2 — Chart 1</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 1050px; padding: 0 1rem; color: #252525; }
+    #vis { width: 100%; overflow-x: auto; }
+    .note { font-size: .85rem; color: #555; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="vis" aria-label="World choropleth of average annual movie production per million residents"></div>
+    <p class="note">Source: TMDB movie production-country credits and World Bank population (SP.POP.TOTL). Released films, 1980–2025. A multi-country production contributes one credit to each credited country. Annual rates are averaged across years with valid population; missing values are not zero.</p>
+  </main>
+  <script>
+    vegaEmbed('#vis', 'charts/chart1_choropleth.vg.json', { actions: false, renderer: 'svg' })
+      .catch(error => { console.error(error); document.querySelector('#vis').textContent = 'Chart failed to load. Check the browser console and serve the project over HTTP.'; });
+  </script>
+</body>
+</html>
