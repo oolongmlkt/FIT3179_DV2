@@ -129,6 +129,45 @@
     </section>
 
 
+    <!-- SECTION 2: WHAT MAKES A MOVIE SUCCESSFUL? -->
+
+    <section id="movie-success">
+
+      <div class="section-intro">
+        <h2>What Makes a Movie Successful?</h2>
+
+        <p>
+          Movie production has evolved significantly over the
+          decades, but which genres have consistently dominated
+          the industry? We begin by examining the changing
+          distribution of movie genres.
+        </p>
+      </div>
+
+      <!-- Chart 4: Genre × Decade Heatmap -->
+
+      <div class="chart-container">
+
+        <h3>Which Movie Genres Have Dominated Each Decade?</h3>
+
+        <p>
+          Explore the number of movies produced within each
+          genre across five release periods. Darker cells
+          indicate higher production volumes.
+        </p>
+
+        <div id="chart4"></div>
+
+        <p class="chart-note">
+          Source: TMDB. Movies with multiple genres are counted
+          once within each assigned genre. The final period
+          covers 2020–2025 only.
+        </p>
+
+      </div>
+
+    </section>
+
   </main>
 
   <script>
@@ -161,11 +200,20 @@
         'Chart 2 failed to load. Check the browser console.';
     });
 
-    // Chart 3
-
+    // Chart 3: Co-production Flowmap
     vegaEmbed('#chart3', 'charts/chart3_flowmap.vg.json', {
       actions: false
     }).catch(console.error);
+
+    // Chart 4: Genre × Decade Heatmap
+    vegaEmbed(
+      "#chart4",
+      "charts/chart4_heatmap.vg.json",
+      {
+        actions: false
+      }
+    ).catch(console.error);
+
 
   </script>
 

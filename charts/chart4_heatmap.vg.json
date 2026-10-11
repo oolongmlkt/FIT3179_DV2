@@ -1,0 +1,113 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Which Movie Genres Have Dominated Each Decade?",
+    "subtitle": "Number of TMDB-listed films by genre and release period (1980–2025)",
+    "anchor": "start",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "offset": 18
+  },
+
+  "width": 650,
+  "height": 480,
+
+  "data": {
+    "url": "data/charts/genre_by_decade.csv"
+  },
+
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1,
+    "cornerRadius": 2
+  },
+
+  "encoding": {
+    "x": {
+      "field": "decade",
+      "type": "ordinal",
+      "sort": [
+        "1980s",
+        "1990s",
+        "2000s",
+        "2010s",
+        "2020–2025"
+      ],
+      "axis": {
+        "title": "Release period",
+        "labelAngle": 0,
+        "labelFontSize": 12,
+        "titlePadding": 12
+      }
+    },
+
+    "y": {
+      "field": "genre",
+      "type": "nominal",
+      "sort": "-x",
+      "axis": {
+        "title": "Movie genre",
+        "labelFontSize": 12,
+        "labelLimit": 160,
+        "titlePadding": 12
+      }
+    },
+
+    "color": {
+      "field": "movie_count",
+      "type": "quantitative",
+      "scale": {
+        "scheme": "blues",
+        "zero": true
+      },
+      "legend": {
+        "title": "Number of movies",
+        "orient": "right",
+        "gradientLength": 240
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "genre",
+        "type": "nominal",
+        "title": "Genre"
+      },
+      {
+        "field": "decade",
+        "type": "ordinal",
+        "title": "Release period"
+      },
+      {
+        "field": "movie_count",
+        "type": "quantitative",
+        "title": "Movie count",
+        "format": ","
+      },
+      {
+        "field": "annual_average",
+        "type": "quantitative",
+        "title": "Annual average",
+        "format": ",.1f"
+      },
+      {
+        "field": "genre_assignment_share",
+        "type": "quantitative",
+        "title": "Genre assignment share (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false
+    }
+  }
+}
