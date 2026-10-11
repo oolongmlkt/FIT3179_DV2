@@ -1,0 +1,185 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "International Film Co-production Network",
+    "subtitle": "Explore international film partnerships recorded in TMDB, 1980–2025",
+    "anchor": "start",
+    "fontSize": 20,
+    "subtitleFontSize": 12,
+    "offset": 15
+  },
+
+  "width": 850,
+  "height": 450,
+  "background": "#ffffff",
+
+  "projection": {
+    "type": "equalEarth"
+  },
+
+  "params": [
+    {
+      "name": "minFilms",
+      "value": 50,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 200,
+        "step": 5,
+        "name": "Minimum shared films: "
+      }
+    },
+    {
+      "name": "selectedCountry",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          "AUS",
+          "USA",
+          "GBR",
+          "FRA",
+          "DEU",
+          "CAN",
+          "JPN",
+          "IND",
+          "NZL",
+          "CHN",
+          "KOR",
+          "ITA",
+          "ESP"
+        ],
+        "labels": [
+          "All countries",
+          "Australia",
+          "United States",
+          "United Kingdom",
+          "France",
+          "Germany",
+          "Canada",
+          "Japan",
+          "India",
+          "New Zealand",
+          "China",
+          "South Korea",
+          "Italy",
+          "Spain"
+        ],
+        "name": "Highlight country: "
+      }
+    }
+  ],
+
+  "layer": [
+    {
+      "data": {
+        "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+        "format": {
+          "type": "topojson",
+          "feature": "countries"
+        }
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "#edf0f2",
+        "stroke": "#cbd2d8",
+        "strokeWidth": 0.45
+      }
+    },
+
+    {
+      "data": {
+        "url": "data/charts/country_coproductions.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "movie_count": "number",
+            "source_lat": "number",
+            "source_lon": "number",
+            "target_lat": "number",
+            "target_lon": "number"
+          }
+        }
+      },
+
+      "transform": [
+        {
+          "filter": "isValid(datum.source_lon) && isValid(datum.source_lat) && isValid(datum.target_lon) && isValid(datum.target_lat)"
+        },
+        {
+          "filter": "datum.movie_count >= minFilms"
+        },
+        {
+          "filter": "selectedCountry === 'All' || datum.source_iso3 === selectedCountry || datum.target_iso3 === selectedCountry"
+        }
+      ],
+
+      "mark": {
+        "type": "rule",
+        "color": "#c45b45",
+        "opacity": 0.7
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "source_lon",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "source_lat",
+          "type": "quantitative"
+        },
+
+        "longitude2": {
+          "field": "target_lon"
+        },
+
+        "latitude2": {
+          "field": "target_lat"
+        },
+
+        "size": {
+          "field": "movie_count",
+          "type": "quantitative",
+          "scale": {
+            "type": "sqrt",
+            "range": [0.6, 5]
+          },
+          "legend": {
+            "title": "Shared films"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "source_iso3",
+            "type": "nominal",
+            "title": "Country 1"
+          },
+          {
+            "field": "target_iso3",
+            "type": "nominal",
+            "title": "Country 2"
+          },
+          {
+            "field": "movie_count",
+            "type": "quantitative",
+            "title": "Shared films",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

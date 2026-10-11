@@ -102,6 +102,33 @@
 
     </section>
 
+
+    <section id="chart3-section">
+      <h2>Connecting the World Through Film</h2>
+
+      <p>
+        International film production connects countries through
+        shared creative and financial partnerships. Explore the
+        strongest co-production relationships recorded in TMDB
+        between 1980 and 2025.
+      </p>
+
+      <div id="chart3"></div>
+
+
+      <p class="chart-note">
+        Each connection represents films jointly credited to
+        two production countries. Thicker lines indicate more
+        shared productions.
+
+        Use the minimum shared films slider to filter weaker
+        relationships, or select a country to explore its
+        international co-production network.
+      </p>
+
+    </section>
+
+
   </main>
 
   <script>
@@ -133,6 +160,12 @@
       document.querySelector('#vis2').textContent =
         'Chart 2 failed to load. Check the browser console.';
     });
+
+    // Chart 3
+
+    vegaEmbed('#chart3', 'charts/chart3_flowmap.vg.json', {
+      actions: false
+    }).catch(console.error);
 
   </script>
 
