@@ -1,0 +1,875 @@
+year,genre,movie_count
+1980,Action,396
+1980,Adventure,228
+1980,Animation,426
+1980,Comedy,912
+1980,Crime,257
+1980,Documentary,844
+1980,Drama,1897
+1980,Family,239
+1980,Fantasy,145
+1980,History,123
+1980,Horror,259
+1980,Music,290
+1980,Mystery,119
+1980,Romance,319
+1980,Science Fiction,134
+1980,TV Movie,531
+1980,Thriller,209
+1980,War,88
+1980,Western,20
+1981,Action,344
+1981,Adventure,186
+1981,Animation,438
+1981,Comedy,891
+1981,Crime,238
+1981,Documentary,879
+1981,Drama,1854
+1981,Family,249
+1981,Fantasy,148
+1981,History,153
+1981,Horror,288
+1981,Music,300
+1981,Mystery,120
+1981,Romance,302
+1981,Science Fiction,108
+1981,TV Movie,485
+1981,Thriller,201
+1981,War,107
+1981,Western,36
+1982,Action,377
+1982,Adventure,214
+1982,Animation,447
+1982,Comedy,1001
+1982,Crime,248
+1982,Documentary,906
+1982,Drama,1940
+1982,Family,291
+1982,Fantasy,186
+1982,History,131
+1982,Horror,293
+1982,Music,319
+1982,Mystery,117
+1982,Romance,367
+1982,Science Fiction,132
+1982,TV Movie,472
+1982,Thriller,219
+1982,War,89
+1982,Western,24
+1983,Action,403
+1983,Adventure,201
+1983,Animation,461
+1983,Comedy,928
+1983,Crime,249
+1983,Documentary,953
+1983,Drama,2035
+1983,Family,275
+1983,Fantasy,215
+1983,History,147
+1983,Horror,239
+1983,Music,352
+1983,Mystery,125
+1983,Romance,353
+1983,Science Fiction,146
+1983,TV Movie,511
+1983,Thriller,217
+1983,War,107
+1983,Western,22
+1984,Action,382
+1984,Adventure,209
+1984,Animation,477
+1984,Comedy,985
+1984,Crime,283
+1984,Documentary,899
+1984,Drama,2076
+1984,Family,316
+1984,Fantasy,204
+1984,History,147
+1984,Horror,234
+1984,Music,385
+1984,Mystery,111
+1984,Romance,375
+1984,Science Fiction,157
+1984,TV Movie,447
+1984,Thriller,247
+1984,War,109
+1984,Western,19
+1985,Action,443
+1985,Adventure,224
+1985,Animation,515
+1985,Comedy,1062
+1985,Crime,287
+1985,Documentary,977
+1985,Drama,2003
+1985,Family,328
+1985,Fantasy,230
+1985,History,135
+1985,Horror,281
+1985,Music,427
+1985,Mystery,105
+1985,Romance,378
+1985,Science Fiction,177
+1985,TV Movie,442
+1985,Thriller,231
+1985,War,128
+1985,Western,22
+1986,Action,528
+1986,Adventure,258
+1986,Animation,574
+1986,Comedy,1209
+1986,Crime,344
+1986,Documentary,925
+1986,Drama,2109
+1986,Family,357
+1986,Fantasy,220
+1986,History,134
+1986,Horror,316
+1986,Music,399
+1986,Mystery,116
+1986,Romance,362
+1986,Science Fiction,195
+1986,TV Movie,513
+1986,Thriller,293
+1986,War,124
+1986,Western,29
+1987,Action,576
+1987,Adventure,282
+1987,Animation,617
+1987,Comedy,1317
+1987,Crime,326
+1987,Documentary,1045
+1987,Drama,2176
+1987,Family,374
+1987,Fantasy,277
+1987,History,161
+1987,Horror,417
+1987,Music,402
+1987,Mystery,137
+1987,Romance,432
+1987,Science Fiction,216
+1987,TV Movie,527
+1987,Thriller,297
+1987,War,114
+1987,Western,23
+1988,Action,624
+1988,Adventure,257
+1988,Animation,605
+1988,Comedy,1272
+1988,Crime,365
+1988,Documentary,1080
+1988,Drama,2107
+1988,Family,371
+1988,Fantasy,291
+1988,History,137
+1988,Horror,490
+1988,Music,359
+1988,Mystery,131
+1988,Romance,409
+1988,Science Fiction,206
+1988,TV Movie,503
+1988,Thriller,354
+1988,War,132
+1988,Western,27
+1989,Action,653
+1989,Adventure,200
+1989,Animation,615
+1989,Comedy,1254
+1989,Crime,409
+1989,Documentary,1230
+1989,Drama,2197
+1989,Family,340
+1989,Fantasy,271
+1989,History,193
+1989,Horror,511
+1989,Music,404
+1989,Mystery,150
+1989,Romance,397
+1989,Science Fiction,214
+1989,TV Movie,541
+1989,Thriller,420
+1989,War,119
+1989,Western,19
+1990,Action,685
+1990,Adventure,208
+1990,Animation,581
+1990,Comedy,1196
+1990,Crime,437
+1990,Documentary,1214
+1990,Drama,2044
+1990,Family,343
+1990,Fantasy,277
+1990,History,152
+1990,Horror,438
+1990,Music,474
+1990,Mystery,123
+1990,Romance,384
+1990,Science Fiction,173
+1990,TV Movie,521
+1990,Thriller,357
+1990,War,91
+1990,Western,21
+1991,Action,682
+1991,Adventure,215
+1991,Animation,618
+1991,Comedy,1199
+1991,Crime,406
+1991,Documentary,1286
+1991,Drama,2044
+1991,Family,330
+1991,Fantasy,273
+1991,History,163
+1991,Horror,425
+1991,Music,490
+1991,Mystery,135
+1991,Romance,402
+1991,Science Fiction,170
+1991,TV Movie,518
+1991,Thriller,365
+1991,War,80
+1991,Western,29
+1992,Action,620
+1992,Adventure,182
+1992,Animation,622
+1992,Comedy,1262
+1992,Crime,414
+1992,Documentary,1273
+1992,Drama,2009
+1992,Family,277
+1992,Fantasy,213
+1992,History,168
+1992,Horror,372
+1992,Music,458
+1992,Mystery,152
+1992,Romance,455
+1992,Science Fiction,162
+1992,TV Movie,490
+1992,Thriller,421
+1992,War,80
+1992,Western,24
+1993,Action,678
+1993,Adventure,178
+1993,Animation,560
+1993,Comedy,1166
+1993,Crime,453
+1993,Documentary,1230
+1993,Drama,2039
+1993,Family,317
+1993,Fantasy,214
+1993,History,178
+1993,Horror,348
+1993,Music,421
+1993,Mystery,140
+1993,Romance,497
+1993,Science Fiction,169
+1993,TV Movie,497
+1993,Thriller,438
+1993,War,82
+1993,Western,21
+1994,Action,617
+1994,Adventure,208
+1994,Animation,544
+1994,Comedy,1160
+1994,Crime,410
+1994,Documentary,1328
+1994,Drama,1990
+1994,Family,356
+1994,Fantasy,250
+1994,History,148
+1994,Horror,319
+1994,Music,380
+1994,Mystery,147
+1994,Romance,432
+1994,Science Fiction,176
+1994,TV Movie,534
+1994,Thriller,429
+1994,War,68
+1994,Western,46
+1995,Action,639
+1995,Adventure,203
+1995,Animation,536
+1995,Comedy,1204
+1995,Crime,397
+1995,Documentary,1365
+1995,Drama,2045
+1995,Family,352
+1995,Fantasy,228
+1995,History,161
+1995,Horror,365
+1995,Music,448
+1995,Mystery,134
+1995,Romance,485
+1995,Science Fiction,203
+1995,TV Movie,504
+1995,Thriller,487
+1995,War,90
+1995,Western,38
+1996,Action,633
+1996,Adventure,212
+1996,Animation,533
+1996,Comedy,1230
+1996,Crime,424
+1996,Documentary,1330
+1996,Drama,2075
+1996,Family,385
+1996,Fantasy,247
+1996,History,136
+1996,Horror,398
+1996,Music,401
+1996,Mystery,127
+1996,Romance,492
+1996,Science Fiction,224
+1996,TV Movie,555
+1996,Thriller,493
+1996,War,70
+1996,Western,26
+1997,Action,591
+1997,Adventure,236
+1997,Animation,532
+1997,Comedy,1366
+1997,Crime,421
+1997,Documentary,1467
+1997,Drama,2163
+1997,Family,391
+1997,Fantasy,230
+1997,History,186
+1997,Horror,401
+1997,Music,465
+1997,Mystery,122
+1997,Romance,552
+1997,Science Fiction,228
+1997,TV Movie,469
+1997,Thriller,503
+1997,War,71
+1997,Western,15
+1998,Action,575
+1998,Adventure,215
+1998,Animation,558
+1998,Comedy,1353
+1998,Crime,420
+1998,Documentary,1508
+1998,Drama,2126
+1998,Family,387
+1998,Fantasy,264
+1998,History,139
+1998,Horror,408
+1998,Music,466
+1998,Mystery,154
+1998,Romance,563
+1998,Science Fiction,217
+1998,TV Movie,504
+1998,Thriller,505
+1998,War,80
+1998,Western,18
+1999,Action,582
+1999,Adventure,213
+1999,Animation,562
+1999,Comedy,1456
+1999,Crime,429
+1999,Documentary,1757
+1999,Drama,2220
+1999,Family,364
+1999,Fantasy,241
+1999,History,156
+1999,Horror,464
+1999,Music,523
+1999,Mystery,149
+1999,Romance,634
+1999,Science Fiction,238
+1999,TV Movie,541
+1999,Thriller,528
+1999,War,69
+1999,Western,32
+2000,Action,572
+2000,Adventure,220
+2000,Animation,612
+2000,Comedy,1479
+2000,Crime,438
+2000,Documentary,1806
+2000,Drama,2320
+2000,Family,382
+2000,Fantasy,237
+2000,History,169
+2000,Horror,496
+2000,Music,577
+2000,Mystery,184
+2000,Romance,628
+2000,Science Fiction,201
+2000,TV Movie,473
+2000,Thriller,529
+2000,War,85
+2000,Western,25
+2001,Action,639
+2001,Adventure,226
+2001,Animation,631
+2001,Comedy,1592
+2001,Crime,480
+2001,Documentary,2080
+2001,Drama,2424
+2001,Family,382
+2001,Fantasy,242
+2001,History,189
+2001,Horror,514
+2001,Music,783
+2001,Mystery,200
+2001,Romance,697
+2001,Science Fiction,243
+2001,TV Movie,463
+2001,Thriller,529
+2001,War,124
+2001,Western,20
+2002,Action,640
+2002,Adventure,238
+2002,Animation,678
+2002,Comedy,1698
+2002,Crime,460
+2002,Documentary,2465
+2002,Drama,2520
+2002,Family,412
+2002,Fantasy,263
+2002,History,193
+2002,Horror,572
+2002,Music,901
+2002,Mystery,192
+2002,Romance,718
+2002,Science Fiction,213
+2002,TV Movie,450
+2002,Thriller,567
+2002,War,100
+2002,Western,29
+2003,Action,696
+2003,Adventure,281
+2003,Animation,781
+2003,Comedy,1887
+2003,Crime,469
+2003,Documentary,2720
+2003,Drama,2682
+2003,Family,505
+2003,Fantasy,252
+2003,History,244
+2003,Horror,643
+2003,Music,1197
+2003,Mystery,195
+2003,Romance,764
+2003,Science Fiction,267
+2003,TV Movie,515
+2003,Thriller,530
+2003,War,107
+2003,Western,28
+2004,Action,651
+2004,Adventure,272
+2004,Animation,830
+2004,Comedy,1987
+2004,Crime,425
+2004,Documentary,3203
+2004,Drama,2716
+2004,Family,533
+2004,Fantasy,276
+2004,History,264
+2004,Horror,813
+2004,Music,1436
+2004,Mystery,223
+2004,Romance,734
+2004,Science Fiction,245
+2004,TV Movie,452
+2004,Thriller,544
+2004,War,135
+2004,Western,21
+2005,Action,718
+2005,Adventure,295
+2005,Animation,943
+2005,Comedy,2174
+2005,Crime,443
+2005,Documentary,3388
+2005,Drama,3126
+2005,Family,594
+2005,Fantasy,291
+2005,History,288
+2005,Horror,869
+2005,Music,1549
+2005,Mystery,254
+2005,Romance,820
+2005,Science Fiction,304
+2005,TV Movie,484
+2005,Thriller,654
+2005,War,146
+2005,Western,29
+2006,Action,745
+2006,Adventure,341
+2006,Animation,1022
+2006,Comedy,2284
+2006,Crime,471
+2006,Documentary,3896
+2006,Drama,3399
+2006,Family,587
+2006,Fantasy,350
+2006,History,320
+2006,Horror,1052
+2006,Music,1553
+2006,Mystery,286
+2006,Romance,840
+2006,Science Fiction,294
+2006,TV Movie,520
+2006,Thriller,779
+2006,War,138
+2006,Western,28
+2007,Action,791
+2007,Adventure,339
+2007,Animation,1015
+2007,Comedy,2430
+2007,Crime,511
+2007,Documentary,3947
+2007,Drama,3616
+2007,Family,615
+2007,Fantasy,338
+2007,History,327
+2007,Horror,1069
+2007,Music,1554
+2007,Mystery,331
+2007,Romance,882
+2007,Science Fiction,325
+2007,TV Movie,563
+2007,Thriller,831
+2007,War,130
+2007,Western,35
+2008,Action,871
+2008,Adventure,425
+2008,Animation,1043
+2008,Comedy,2635
+2008,Crime,519
+2008,Documentary,4157
+2008,Drama,3922
+2008,Family,627
+2008,Fantasy,382
+2008,History,337
+2008,Horror,1108
+2008,Music,1498
+2008,Mystery,342
+2008,Romance,1004
+2008,Science Fiction,337
+2008,TV Movie,556
+2008,Thriller,878
+2008,War,161
+2008,Western,36
+2009,Action,877
+2009,Adventure,455
+2009,Animation,1129
+2009,Comedy,2721
+2009,Crime,519
+2009,Documentary,4396
+2009,Drama,4176
+2009,Family,660
+2009,Fantasy,451
+2009,History,369
+2009,Horror,1161
+2009,Music,1467
+2009,Mystery,336
+2009,Romance,1026
+2009,Science Fiction,410
+2009,TV Movie,550
+2009,Thriller,981
+2009,War,159
+2009,Western,46
+2010,Action,956
+2010,Adventure,395
+2010,Animation,1283
+2010,Comedy,2873
+2010,Crime,549
+2010,Documentary,4514
+2010,Drama,4343
+2010,Family,666
+2010,Fantasy,466
+2010,History,407
+2010,Horror,1238
+2010,Music,1390
+2010,Mystery,381
+2010,Romance,1087
+2010,Science Fiction,444
+2010,TV Movie,500
+2010,Thriller,977
+2010,War,200
+2010,Western,36
+2011,Action,981
+2011,Adventure,492
+2011,Animation,1360
+2011,Comedy,3040
+2011,Crime,557
+2011,Documentary,4795
+2011,Drama,4779
+2011,Family,781
+2011,Fantasy,524
+2011,History,436
+2011,Horror,1360
+2011,Music,1610
+2011,Mystery,397
+2011,Romance,1115
+2011,Science Fiction,457
+2011,TV Movie,532
+2011,Thriller,1009
+2011,War,187
+2011,Western,51
+2012,Action,971
+2012,Adventure,494
+2012,Animation,1406
+2012,Comedy,3309
+2012,Crime,662
+2012,Documentary,5242
+2012,Drama,5168
+2012,Family,754
+2012,Fantasy,577
+2012,History,476
+2012,Horror,1566
+2012,Music,1681
+2012,Mystery,458
+2012,Romance,1209
+2012,Science Fiction,555
+2012,TV Movie,539
+2012,Thriller,1099
+2012,War,214
+2012,Western,58
+2013,Action,1099
+2013,Adventure,620
+2013,Animation,1575
+2013,Comedy,3661
+2013,Crime,723
+2013,Documentary,5651
+2013,Drama,5794
+2013,Family,796
+2013,Fantasy,647
+2013,History,491
+2013,Horror,1776
+2013,Music,1713
+2013,Mystery,549
+2013,Romance,1387
+2013,Science Fiction,657
+2013,TV Movie,537
+2013,Thriller,1341
+2013,War,182
+2013,Western,49
+2014,Action,1103
+2014,Adventure,656
+2014,Animation,1515
+2014,Comedy,3924
+2014,Crime,742
+2014,Documentary,6184
+2014,Drama,6317
+2014,Family,905
+2014,Fantasy,667
+2014,History,564
+2014,Horror,1906
+2014,Music,1712
+2014,Mystery,606
+2014,Romance,1505
+2014,Science Fiction,694
+2014,TV Movie,615
+2014,Thriller,1377
+2014,War,271
+2014,Western,54
+2015,Action,1152
+2015,Adventure,626
+2015,Animation,1608
+2015,Comedy,4074
+2015,Crime,837
+2015,Documentary,6641
+2015,Drama,6847
+2015,Family,840
+2015,Fantasy,769
+2015,History,618
+2015,Horror,2070
+2015,Music,1762
+2015,Mystery,668
+2015,Romance,1579
+2015,Science Fiction,769
+2015,TV Movie,658
+2015,Thriller,1587
+2015,War,260
+2015,Western,68
+2016,Action,1292
+2016,Adventure,661
+2016,Animation,1621
+2016,Comedy,4238
+2016,Crime,863
+2016,Documentary,6742
+2016,Drama,7269
+2016,Family,826
+2016,Fantasy,756
+2016,History,567
+2016,Horror,2182
+2016,Music,1705
+2016,Mystery,729
+2016,Romance,1726
+2016,Science Fiction,836
+2016,TV Movie,723
+2016,Thriller,1771
+2016,War,252
+2016,Western,76
+2017,Action,1438
+2017,Adventure,671
+2017,Animation,1954
+2017,Comedy,4617
+2017,Crime,1017
+2017,Documentary,7787
+2017,Drama,8260
+2017,Family,924
+2017,Fantasy,852
+2017,History,651
+2017,Horror,2432
+2017,Music,1827
+2017,Mystery,780
+2017,Romance,1884
+2017,Science Fiction,889
+2017,TV Movie,769
+2017,Thriller,1891
+2017,War,285
+2017,Western,87
+2018,Action,1442
+2018,Adventure,690
+2018,Animation,1960
+2018,Comedy,4730
+2018,Crime,1046
+2018,Documentary,8217
+2018,Drama,8912
+2018,Family,894
+2018,Fantasy,969
+2018,History,696
+2018,Horror,2568
+2018,Music,1775
+2018,Mystery,852
+2018,Romance,1996
+2018,Science Fiction,935
+2018,TV Movie,753
+2018,Thriller,1984
+2018,War,268
+2018,Western,98
+2019,Action,1504
+2019,Adventure,705
+2019,Animation,2340
+2019,Comedy,5088
+2019,Crime,1155
+2019,Documentary,9569
+2019,Drama,9583
+2019,Family,989
+2019,Fantasy,1019
+2019,History,813
+2019,Horror,2717
+2019,Music,1919
+2019,Mystery,888
+2019,Romance,2028
+2019,Science Fiction,1001
+2019,TV Movie,855
+2019,Thriller,2064
+2019,War,299
+2019,Western,101
+2020,Action,1212
+2020,Adventure,567
+2020,Animation,2621
+2020,Comedy,4559
+2020,Crime,885
+2020,Documentary,9821
+2020,Drama,8591
+2020,Family,867
+2020,Fantasy,1008
+2020,History,636
+2020,Horror,2886
+2020,Music,1999
+2020,Mystery,807
+2020,Romance,1868
+2020,Science Fiction,1043
+2020,TV Movie,800
+2020,Thriller,1977
+2020,War,245
+2020,Western,101
+2021,Action,1526
+2021,Adventure,666
+2021,Animation,3062
+2021,Comedy,4968
+2021,Crime,1222
+2021,Documentary,10292
+2021,Drama,10126
+2021,Family,994
+2021,Fantasy,1164
+2021,History,807
+2021,Horror,2953
+2021,Music,2203
+2021,Mystery,1052
+2021,Romance,2003
+2021,Science Fiction,1213
+2021,TV Movie,1045
+2021,Thriller,2403
+2021,War,279
+2021,Western,125
+2022,Action,1819
+2022,Adventure,805
+2022,Animation,2770
+2022,Comedy,6272
+2022,Crime,1378
+2022,Documentary,10667
+2022,Drama,11667
+2022,Family,1097
+2022,Fantasy,1312
+2022,History,838
+2022,Horror,3561
+2022,Music,2326
+2022,Mystery,1297
+2022,Romance,2259
+2022,Science Fiction,1213
+2022,TV Movie,1072
+2022,Thriller,2935
+2022,War,299
+2022,Western,144
+2023,Action,2298
+2023,Adventure,958
+2023,Animation,3109
+2023,Comedy,7560
+2023,Crime,1640
+2023,Documentary,11865
+2023,Drama,13785
+2023,Family,1321
+2023,Fantasy,1521
+2023,History,859
+2023,Horror,4329
+2023,Music,2704
+2023,Mystery,1522
+2023,Romance,2636
+2023,Science Fiction,1455
+2023,TV Movie,1041
+2023,Thriller,3648
+2023,War,364
+2023,Western,172
+2024,Action,2429
+2024,Adventure,1120
+2024,Animation,3358
+2024,Comedy,8399
+2024,Crime,1873
+2024,Documentary,12350
+2024,Drama,15317
+2024,Family,1455
+2024,Fantasy,1852
+2024,History,942
+2024,Horror,5208
+2024,Music,2885
+2024,Mystery,1923
+2024,Romance,2695
+2024,Science Fiction,1632
+2024,TV Movie,872
+2024,Thriller,4471
+2024,War,326
+2024,Western,202
+2025,Action,2513
+2025,Adventure,1200
+2025,Animation,3409
+2025,Comedy,8867
+2025,Crime,1855
+2025,Documentary,12336
+2025,Drama,16392
+2025,Family,1638
+2025,Fantasy,2032
+2025,History,954
+2025,Horror,5428
+2025,Music,2974
+2025,Mystery,2151
+2025,Romance,2909
+2025,Science Fiction,1826
+2025,TV Movie,672
+2025,Thriller,4831
+2025,War,427
+2025,Western,254
