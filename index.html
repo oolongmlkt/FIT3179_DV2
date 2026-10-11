@@ -166,6 +166,27 @@
 
       </div>
 
+
+      <div class="chart-container">
+        <h3>Does a Bigger Budget Mean Bigger Box Office Returns?</h3>
+
+        <p>
+          Explore the relationship between production budgets and
+          worldwide box-office revenue. Each point represents one movie.
+          Both axes use logarithmic scales to accommodate the wide
+          variation in movie finances.
+        </p>
+
+        <div id="chart5"></div>
+
+        <p class="chart-note">
+          Source: TMDB. Only movies with reported positive budgets
+          and revenues are included. Revenue is worldwide box-office
+          gross, not studio profit.
+        </p>
+      </div>
+
+
     </section>
 
   </main>
@@ -213,6 +234,27 @@
         actions: false
       }
     ).catch(console.error);
+
+
+    // Chart 5: Budget × Revenue Scatterplot
+    vegaEmbed(
+      '#chart5',
+      'charts/chart5_scatterplot.vg.json',
+      {
+        actions: false,
+        renderer: 'svg'
+      }
+    )
+      .then(result => {
+        console.log('Chart 5 embedded successfully.');
+        console.log(result);
+      })
+      .catch(error => {
+        console.error('Chart 5 failed:', error);
+
+        document.querySelector('#chart5').textContent =
+          'Chart 5 failed to load. Check the browser console.';
+      });
 
 
   </script>
