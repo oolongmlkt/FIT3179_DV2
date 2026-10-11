@@ -1,0 +1,125 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Evolution of TMDB-listed movie genres from 1980 to 2025.",
+    "width": 850,
+    "height": 420,
+    "background": "transparent",
+    "data": {
+        "url": "data/charts/genre_by_year.csv",
+        "format": {
+            "type": "csv",
+            "parse": {
+                "year": "number",
+                "movie_count": "number"
+            }
+        }
+    },
+    "params": [
+        {
+            "name": "genre_selection",
+            "select": {
+                "type": "point",
+                "fields": [
+                    "genre"
+                ],
+                "on": "click",
+                "clear": "dblclick",
+                "toggle": true
+            },
+            "bind": "legend"
+        }
+    ],
+    "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "stroke": "white",
+        "strokeWidth": 0.4
+    },
+    "encoding": {
+        "x": {
+            "field": "year",
+            "type": "quantitative",
+            "title": "Release Year",
+            "scale": {
+                "domain": [
+                    1980,
+                    2025
+                ],
+                "nice": false
+            },
+            "axis": {
+                "format": "d",
+                "tickCount": 10,
+                "labelAngle": 0,
+                "labelFontSize": 12,
+                "titleFontSize": 13,
+                "grid": false,
+                "domain": false,
+                "tickColor": "#CCCCCC",
+                "labelColor": "#555555",
+                "titleColor": "#333333"
+            }
+        },
+        "y": {
+            "field": "movie_count",
+            "type": "quantitative",
+            "stack": "center",
+            "axis": null
+        },
+        "color": {
+            "field": "genre",
+            "type": "nominal",
+            "title": "Movie Genre",
+            "scale": {
+                "scheme": "tableau20"
+            },
+            "legend": {
+                "orient": "right",
+                "direction": "vertical",
+                "titleFontSize": 13,
+                "labelFontSize": 11,
+                "symbolType": "square",
+                "symbolSize": 130,
+                "rowPadding": 5,
+                "offset": 20
+            }
+        },
+        "opacity": {
+            "condition": {
+                "param": "genre_selection",
+                "value": 0.95
+            },
+            "value": 0.15
+        },
+        "order": {
+            "field": "genre",
+            "type": "nominal",
+            "sort": "ascending"
+        },
+        "tooltip": [
+            {
+                "field": "genre",
+                "type": "nominal",
+                "title": "Movie Genre"
+            },
+            {
+                "field": "year",
+                "type": "quantitative",
+                "title": "Release Year",
+                "format": "d"
+            },
+            {
+                "field": "movie_count",
+                "type": "quantitative",
+                "title": "Genre Credits",
+                "format": ","
+            }
+        ]
+    },
+    "config": {
+        "view": {
+            "stroke": null
+        },
+        "font": "Arial"
+    }
+}

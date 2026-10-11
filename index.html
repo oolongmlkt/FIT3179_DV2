@@ -1,26 +1,141 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FIT3179 DV2 — Chart 1</title>
+
+  <title>FIT3179 DV2 — Movie Collections</title>
+
+  <!-- Vega libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 1050px; padding: 0 1rem; color: #252525; }
-    #vis { width: 100%; overflow-x: auto; }
-    .note { font-size: .85rem; color: #555; line-height: 1.5; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem auto;
+      max-width: 1050px;
+      padding: 0 1rem;
+      color: #252525;
+    }
+
+    .vis {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .chart-section {
+      margin-bottom: 4rem;
+    }
+
+    .note {
+      font-size: .85rem;
+      color: #555;
+      line-height: 1.5;
+    }
   </style>
 </head>
+
 <body>
+
   <main>
-    <div id="vis" aria-label="World choropleth of average annual movie production per million residents"></div>
-    <p class="note">Source: TMDB movie production-country credits and World Bank population (SP.POP.TOTL). Released films, 1980–2025. A multi-country production contributes one credit to each credited country. Annual rates are averaged across years with valid population; missing values are not zero.</p>
+
+    <!-- Chart 1: World Choropleth -->
+    <section class="chart-section">
+
+      <h2>Global Film Production</h2>
+
+      <div id="vis1" class="vis" aria-label="World choropleth of average annual movie production per million residents">
+      </div>
+
+      <p class="note">
+        Source: TMDB movie production-country credits and World Bank
+        population (SP.POP.TOTL). Released films, 1980–2025.
+        A multi-country production contributes one credit to each
+        credited country. Annual rates are averaged across years
+        with valid population; missing values are not zero.
+      </p>
+
+    </section>
+
+    <!-- Chart 2: Genre Streamgraph -->
+    <section class="chart-section">
+
+      <h2>The Evolution of Movie Genres</h2>
+
+      <p>
+        How has the composition of film production changed over time?
+        Explore the evolution of different movie genres between
+        1980 and 2025.
+      </p>
+
+
+      <p class="note">
+        Each coloured band represents a movie genre.
+        The thickness of the band indicates the number of
+        TMDB-listed productions associated with that genre
+        in a given year.
+      </p>
+
+
+      <div id="vis2" class="vis" aria-label="Streamgraph showing the evolution of movie genres from 1980 to 2025">
+      </div>
+
+
+      <p class="note">
+        <strong>Reading the trend:</strong>
+        The overall stream expands considerably in later years,
+        indicating an increase in recorded genre credits.
+        This reflects trends within the TMDB dataset and may
+        also be influenced by changes in database coverage
+        over time.
+      </p>
+
+
+      <p class="note">
+        Source: TMDB. Each movie contributes one count to every
+        genre assigned to it. Genre counts are therefore not
+        mutually exclusive. Click a genre in the legend to highlight it.
+      </p>
+
+    </section>
+
   </main>
+
   <script>
-    vegaEmbed('#vis', 'charts/chart1_choropleth.vg.json', { actions: false, renderer: 'svg' })
-      .catch(error => { console.error(error); document.querySelector('#vis').textContent = 'Chart failed to load. Check the browser console and serve the project over HTTP.'; });
+
+    // Chart 1: World Choropleth
+    vegaEmbed(
+      '#vis1',
+      'charts/chart1_choropleth.vg.json',
+      {
+        actions: false,
+        renderer: 'svg'
+      }
+    ).catch(error => {
+      console.error('Chart 1 error:', error);
+      document.querySelector('#vis1').textContent =
+        'Chart 1 failed to load. Check the browser console.';
+    });
+
+    // Chart 2: Genre Streamgraph
+    vegaEmbed(
+      '#vis2',
+      'charts/chart2_streamgraph.vg.json',
+      {
+        actions: false,
+        renderer: 'svg'
+      }
+    ).catch(error => {
+      console.error('Chart 2 error:', error);
+      document.querySelector('#vis2').textContent =
+        'Chart 2 failed to load. Check the browser console.';
+    });
+
   </script>
+
 </body>
+
 </html>
