@@ -187,6 +187,27 @@
       </div>
 
 
+      <!-- Chart 6: Financial Performance by Genre -->
+      <div class="chart-container">
+
+        <h3>Which Movie Genres Deliver the Highest Returns?</h3>
+
+        <p>
+          This chart compares the median reported return on
+          investment across movie genres from 1980 to 2025.
+          Movies are counted in every genre assigned to them.
+        </p>
+
+        <div id="chart6"></div>
+
+        <p class="chart-note">
+          Note: ROI is calculated from reported production
+          budgets and worldwide revenues. It does not
+          represent actual studio profit.
+        </p>
+
+      </div>
+
     </section>
 
   </main>
@@ -255,6 +276,15 @@
         document.querySelector('#chart5').textContent =
           'Chart 5 failed to load. Check the browser console.';
       });
+
+    // Chart 6: ROI by Genre Bar Chart
+    vegaEmbed(
+      "#chart6",
+      "charts/chart6_financial.vg.json",
+      {
+        actions: false
+      }
+    ).catch(console.error);
 
 
   </script>
