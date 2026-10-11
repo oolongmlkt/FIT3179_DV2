@@ -1,0 +1,241 @@
+iso3,iso_numeric,country,latitude,longitude,coordinate_source
+ABW,533,Aruba,12.5,-69.96666666,countryinfo
+AFG,4,Afghanistan,33.0,65.0,countryinfo
+AGO,24,Angola,-12.5,18.5,countryinfo
+AIA,660,Anguilla,18.25,-63.16666666,countryinfo
+ALB,8,Albania,41.0,20.0,countryinfo
+AND,20,Andorra,42.55,1.58,curated_approximate
+ARE,784,United Arab Emirates,24.0,54.0,countryinfo
+ARG,32,Argentina,-34.0,-64.0,countryinfo
+ARM,51,Armenia,40.0,45.0,countryinfo
+ASM,16,American Samoa,-14.33333333,-170.0,countryinfo
+ATA,10,Antarctica,,,
+ATF,260,French Southern Territories,,,
+ATG,28,Antigua and Barbuda,17.05,-61.8,countryinfo
+AUS,36,Australia,-27.0,133.0,countryinfo
+AUT,40,Austria,47.33333333,13.33333333,countryinfo
+AZE,31,Azerbaijan,40.5,47.5,countryinfo
+BDI,108,Burundi,-3.5,30.0,countryinfo
+BEL,56,Belgium,50.83333333,4.0,countryinfo
+BEN,204,Benin,9.5,2.25,countryinfo
+BFA,854,Burkina Faso,13.0,-2.0,countryinfo
+BGD,50,Bangladesh,24.0,90.0,countryinfo
+BGR,100,Bulgaria,43.0,25.0,countryinfo
+BHR,48,Bahrain,26.0,50.55,countryinfo
+BHS,44,Bahamas,24.25,-76.0,curated_approximate
+BIH,70,Bosnia and Herzegovina,44.0,18.0,countryinfo
+BLR,112,Belarus,53.0,28.0,countryinfo
+BLZ,84,Belize,17.25,-88.75,countryinfo
+BMU,60,Bermuda,32.33333333,-64.75,countryinfo
+BOL,68,"Bolivia, Plurinational State of",-17.0,-65.0,curated_approximate
+BRA,76,Brazil,-10.0,-55.0,countryinfo
+BRB,52,Barbados,13.16666666,-59.53333333,countryinfo
+BRN,96,Brunei Darussalam,4.54,114.73,curated_approximate
+BTN,64,Bhutan,27.5,90.5,countryinfo
+BVT,74,Bouvet Island,,,
+BWA,72,Botswana,-22.0,24.0,countryinfo
+CAF,140,Central African Republic,7.0,21.0,countryinfo
+CAN,124,Canada,60.0,-95.0,countryinfo
+CCK,166,Cocos (Keeling) Islands,-12.5,96.83333333,countryinfo
+CHE,756,Switzerland,47.0,8.0,countryinfo
+CHL,152,Chile,-30.0,-71.0,countryinfo
+CHN,156,China,35.0,105.0,countryinfo
+CIV,384,Côte d'Ivoire,,,
+CMR,120,Cameroon,6.0,12.0,countryinfo
+COD,180,"Congo, The Democratic Republic of the",,,
+COG,178,Congo,-1.0,15.0,curated_approximate
+COK,184,Cook Islands,-21.23333333,-159.76666666,countryinfo
+COL,170,Colombia,4.0,-72.0,countryinfo
+COM,174,Comoros,-12.16666666,44.25,countryinfo
+CPV,132,Cabo Verde,16.0,-24.0,curated_approximate
+CRI,188,Costa Rica,10.0,-84.0,countryinfo
+CUB,192,Cuba,21.5,-80.0,countryinfo
+CXR,162,Christmas Island,-10.5,105.66666666,countryinfo
+CYM,136,Cayman Islands,19.5,-80.5,countryinfo
+CYP,196,Cyprus,35.0,33.0,countryinfo
+CZE,203,Czechia,49.75,15.5,curated_approximate
+DEU,276,Germany,51.0,9.0,countryinfo
+DJI,262,Djibouti,11.5,43.0,countryinfo
+DMA,212,Dominica,15.41666666,-61.33333333,countryinfo
+DNK,208,Denmark,56.0,10.0,countryinfo
+DOM,214,Dominican Republic,19.0,-70.66666666,countryinfo
+DZA,12,Algeria,28.0,3.0,countryinfo
+ECU,218,Ecuador,-2.0,-77.5,countryinfo
+EGY,818,Egypt,27.0,30.0,countryinfo
+ERI,232,Eritrea,15.0,39.0,countryinfo
+ESH,732,Western Sahara,24.5,-13.0,countryinfo
+ESP,724,Spain,40.0,-4.0,countryinfo
+EST,233,Estonia,59.0,26.0,countryinfo
+ETH,231,Ethiopia,8.0,38.0,countryinfo
+FIN,246,Finland,64.0,26.0,countryinfo
+FJI,242,Fiji,-18.0,175.0,countryinfo
+FLK,238,Falkland Islands (Malvinas),,,
+FRA,250,France,46.0,2.0,countryinfo
+FRO,234,Faroe Islands,62.0,-7.0,countryinfo
+FSM,583,"Micronesia, Federated States of",,,
+GAB,266,Gabon,-1.0,11.75,countryinfo
+GBR,826,United Kingdom,54.0,-2.0,countryinfo
+GEO,268,Georgia,42.0,43.5,countryinfo
+GHA,288,Ghana,8.0,-2.0,countryinfo
+GIB,292,Gibraltar,36.13333333,-5.35,countryinfo
+GIN,324,Guinea,11.0,-10.0,countryinfo
+GLP,312,Guadeloupe,16.25,-61.583333,countryinfo
+GMB,270,Gambia,13.45,-15.4,curated_approximate
+GNB,624,Guinea-Bissau,12.0,-15.0,countryinfo
+GNQ,226,Equatorial Guinea,2.0,10.0,countryinfo
+GRC,300,Greece,39.0,22.0,countryinfo
+GRD,308,Grenada,12.11666666,-61.66666666,countryinfo
+GRL,304,Greenland,72.0,-40.0,countryinfo
+GTM,320,Guatemala,15.5,-90.25,countryinfo
+GUF,254,French Guiana,4.0,-53.0,countryinfo
+GUM,316,Guam,13.46666666,144.78333333,countryinfo
+GUY,328,Guyana,5.0,-59.0,countryinfo
+HKG,344,Hong Kong,22.25,114.16666666,countryinfo
+HMD,334,Heard Island and McDonald Islands,-53.1,72.51666666,countryinfo
+HND,340,Honduras,15.0,-86.5,countryinfo
+HRV,191,Croatia,45.16666666,15.5,countryinfo
+HTI,332,Haiti,19.0,-72.41666666,countryinfo
+HUN,348,Hungary,47.0,20.0,countryinfo
+IDN,360,Indonesia,-5.0,120.0,countryinfo
+IND,356,India,20.0,77.0,countryinfo
+IOT,86,British Indian Ocean Territory,-6.0,71.5,countryinfo
+IRL,372,Ireland,53.0,-8.0,countryinfo
+IRN,364,"Iran, Islamic Republic of",32.0,53.0,curated_approximate
+IRQ,368,Iraq,33.0,44.0,countryinfo
+ISL,352,Iceland,65.0,-18.0,countryinfo
+ISR,376,Israel,31.5,34.75,countryinfo
+ITA,380,Italy,42.83333333,12.83333333,countryinfo
+JAM,388,Jamaica,18.25,-77.5,countryinfo
+JOR,400,Jordan,31.0,36.0,countryinfo
+JPN,392,Japan,36.0,138.0,countryinfo
+KAZ,398,Kazakhstan,48.0,68.0,countryinfo
+KEN,404,Kenya,1.0,38.0,countryinfo
+KGZ,417,Kyrgyzstan,41.0,75.0,countryinfo
+KHM,116,Cambodia,13.0,105.0,countryinfo
+KIR,296,Kiribati,1.41666666,173.0,countryinfo
+KNA,659,Saint Kitts and Nevis,17.33333333,-62.75,countryinfo
+KOR,410,"Korea, Republic of",36.5,127.75,curated_approximate
+KWT,414,Kuwait,29.5,45.75,countryinfo
+LAO,418,Lao People's Democratic Republic,18.0,105.0,countryinfo
+LBN,422,Lebanon,33.83333333,35.83333333,countryinfo
+LBR,430,Liberia,6.5,-9.5,countryinfo
+LBY,434,Libya,25.0,17.0,countryinfo
+LCA,662,Saint Lucia,13.88333333,-60.96666666,countryinfo
+LIE,438,Liechtenstein,47.26666666,9.53333333,countryinfo
+LKA,144,Sri Lanka,7.0,81.0,countryinfo
+LSO,426,Lesotho,-29.5,28.5,countryinfo
+LTU,440,Lithuania,56.0,24.0,countryinfo
+LUX,442,Luxembourg,49.75,6.16666666,countryinfo
+LVA,428,Latvia,57.0,25.0,countryinfo
+MAC,446,Macao,22.2,113.55,curated_approximate
+MAR,504,Morocco,32.0,-5.0,countryinfo
+MCO,492,Monaco,43.73333333,7.4,countryinfo
+MDA,498,"Moldova, Republic of",47.0,28.5,curated_approximate
+MDG,450,Madagascar,-20.0,47.0,countryinfo
+MDV,462,Maldives,3.25,73.0,countryinfo
+MEX,484,Mexico,23.0,-102.0,countryinfo
+MHL,584,Marshall Islands,9.0,168.0,countryinfo
+MKD,807,North Macedonia,,,
+MLI,466,Mali,17.0,-4.0,countryinfo
+MLT,470,Malta,35.83333333,14.58333333,countryinfo
+MMR,104,Myanmar,21.0,96.0,curated_approximate
+MNE,499,Montenegro,42.75,19.25,curated_approximate
+MNG,496,Mongolia,46.0,105.0,countryinfo
+MNP,580,Northern Mariana Islands,15.2,145.75,countryinfo
+MOZ,508,Mozambique,-18.25,35.0,countryinfo
+MRT,478,Mauritania,20.0,-12.0,countryinfo
+MSR,500,Montserrat,16.75,-62.2,countryinfo
+MTQ,474,Martinique,14.666667,-61.0,countryinfo
+MUS,480,Mauritius,-20.28333333,57.55,countryinfo
+MWI,454,Malawi,-13.5,34.0,countryinfo
+MYS,458,Malaysia,2.5,112.5,countryinfo
+MYT,175,Mayotte,-12.83333333,45.16666666,countryinfo
+NAM,516,Namibia,-22.0,17.0,countryinfo
+NCL,540,New Caledonia,-21.5,165.5,countryinfo
+NER,562,Niger,16.0,8.0,countryinfo
+NFK,574,Norfolk Island,-29.03333333,167.95,countryinfo
+NGA,566,Nigeria,10.0,8.0,countryinfo
+NIC,558,Nicaragua,13.0,-85.0,countryinfo
+NIU,570,Niue,-19.03333333,-169.86666666,countryinfo
+NLD,528,Netherlands,52.5,5.75,countryinfo
+NOR,578,Norway,62.0,10.0,countryinfo
+NPL,524,Nepal,28.0,84.0,countryinfo
+NRU,520,Nauru,-0.53333333,166.91666666,countryinfo
+NZL,554,New Zealand,-41.0,174.0,countryinfo
+OMN,512,Oman,21.0,57.0,countryinfo
+PAK,586,Pakistan,30.0,70.0,countryinfo
+PAN,591,Panama,9.0,-80.0,countryinfo
+PCN,612,Pitcairn,,,
+PER,604,Peru,-10.0,-76.0,countryinfo
+PHL,608,Philippines,13.0,122.0,countryinfo
+PLW,585,Palau,7.5,134.5,countryinfo
+PNG,598,Papua New Guinea,-6.0,147.0,countryinfo
+POL,616,Poland,52.0,20.0,countryinfo
+PRI,630,Puerto Rico,18.25,-66.5,countryinfo
+PRK,408,"Korea, Democratic People's Republic of",40.0,127.0,curated_approximate
+PRT,620,Portugal,39.5,-8.0,countryinfo
+PRY,600,Paraguay,-23.0,-58.0,countryinfo
+PSE,275,"Palestine, State of",31.9,35.2,curated_approximate
+PYF,258,French Polynesia,-15.0,-140.0,countryinfo
+QAT,634,Qatar,25.5,51.25,countryinfo
+REU,638,Réunion,-21.15,55.5,countryinfo
+ROU,642,Romania,46.0,25.0,countryinfo
+RUS,643,Russian Federation,60.0,100.0,countryinfo
+RWA,646,Rwanda,-2.0,30.0,countryinfo
+SAU,682,Saudi Arabia,25.0,45.0,countryinfo
+SDN,729,Sudan,15.0,30.0,countryinfo
+SEN,686,Senegal,14.0,-14.0,countryinfo
+SGP,702,Singapore,1.36666666,103.8,countryinfo
+SGS,239,South Georgia and the South Sandwich Islands,-54.5,-37.0,countryinfo
+SHN,654,"Saint Helena, Ascension and Tristan da Cunha",,,
+SJM,744,Svalbard and Jan Mayen,78.0,20.0,countryinfo
+SLB,90,Solomon Islands,-8.0,159.0,countryinfo
+SLE,694,Sierra Leone,8.5,-11.5,countryinfo
+SLV,222,El Salvador,13.83333333,-88.91666666,countryinfo
+SMR,674,San Marino,43.76666666,12.41666666,countryinfo
+SOM,706,Somalia,10.0,49.0,countryinfo
+SPM,666,Saint Pierre and Miquelon,46.83333333,-56.33333333,countryinfo
+SRB,688,Serbia,44.1305021,16.4284181,countryinfo
+SSD,728,South Sudan,7.0,30.0,countryinfo
+STP,678,Sao Tome and Principe,0.2,6.6,curated_approximate
+SUR,740,Suriname,4.0,-56.0,countryinfo
+SVK,703,Slovakia,48.66666666,19.5,countryinfo
+SVN,705,Slovenia,46.11666666,14.81666666,countryinfo
+SWE,752,Sweden,62.0,15.0,countryinfo
+SWZ,748,Eswatini,-26.5,31.5,curated_approximate
+SYC,690,Seychelles,-4.58333333,55.66666666,countryinfo
+SYR,760,Syrian Arab Republic,35.0,38.0,countryinfo
+TCA,796,Turks and Caicos Islands,21.75,-71.58,curated_approximate
+TCD,148,Chad,15.0,19.0,countryinfo
+TGO,768,Togo,8.0,1.16666666,countryinfo
+THA,764,Thailand,15.0,100.0,countryinfo
+TJK,762,Tajikistan,39.0,71.0,countryinfo
+TKL,772,Tokelau,-9.0,-172.0,countryinfo
+TKM,795,Turkmenistan,40.0,60.0,countryinfo
+TLS,626,Timor-Leste,-8.8,125.75,curated_approximate
+TON,776,Tonga,-20.0,-175.0,countryinfo
+TTO,780,Trinidad and Tobago,11.0,-61.0,countryinfo
+TUN,788,Tunisia,34.0,9.0,countryinfo
+TUR,792,Türkiye,,,
+TUV,798,Tuvalu,-8.0,178.0,countryinfo
+TWN,158,"Taiwan, Province of China",23.7,121.0,curated_approximate
+TZA,834,"Tanzania, United Republic of",-6.0,35.0,curated_approximate
+UGA,800,Uganda,1.0,32.0,countryinfo
+UKR,804,Ukraine,49.0,32.0,countryinfo
+UMI,581,United States Minor Outlying Islands,,,
+URY,858,Uruguay,-33.0,-56.0,countryinfo
+USA,840,United States,38.0,-97.0,countryinfo
+UZB,860,Uzbekistan,41.0,64.0,countryinfo
+VAT,336,Holy See (Vatican City State),,,
+VCT,670,Saint Vincent and the Grenadines,13.25,-61.2,countryinfo
+VEN,862,"Venezuela, Bolivarian Republic of",8.0,-66.0,curated_approximate
+VGB,92,"Virgin Islands, British",18.42,-64.6,curated_approximate
+VIR,850,"Virgin Islands, U.S.",,,
+VNM,704,Viet Nam,16.0,107.5,curated_approximate
+VUT,548,Vanuatu,-16.0,167.0,countryinfo
+WLF,876,Wallis and Futuna,-13.3,-176.2,countryinfo
+WSM,882,Samoa,-13.58333333,-172.33333333,countryinfo
+YEM,887,Yemen,15.0,48.0,countryinfo
+ZAF,710,South Africa,-29.0,24.0,countryinfo
+ZMB,894,Zambia,-15.0,30.0,countryinfo
+ZWE,716,Zimbabwe,-20.0,30.0,countryinfo

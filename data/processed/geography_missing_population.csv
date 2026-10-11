@@ -1,0 +1,30 @@
+tmdb_country,iso3,iso_numeric,standard_name,match_status
+Anguilla,AIA,660,Anguilla,matched
+Antarctica,ATA,10,Antarctica,matched
+Bouvet Island,BVT,74,Bouvet Island,matched
+British Indian Ocean Territory,IOT,86,British Indian Ocean Territory,matched
+Christmas Island,CXR,162,Christmas Island,matched
+Cocos  Islands,CCK,166,Cocos (Keeling) Islands,matched
+Cook Islands,COK,184,Cook Islands,matched
+Falkland Islands,FLK,238,Falkland Islands (Malvinas),matched
+French Guiana,GUF,254,French Guiana,matched
+French Southern Territories,ATF,260,French Southern Territories,matched
+Guadaloupe,GLP,312,Guadeloupe,matched
+Heard and McDonald Islands,HMD,334,Heard Island and McDonald Islands,matched
+Holy See,VAT,336,Holy See (Vatican City State),matched
+Martinique,MTQ,474,Martinique,matched
+Mayotte,MYT,175,Mayotte,matched
+Montserrat,MSR,500,Montserrat,matched
+Niue,NIU,570,Niue,matched
+Norfolk Island,NFK,574,Norfolk Island,matched
+Pitcairn Island,PCN,612,Pitcairn,matched
+Reunion,REU,638,Réunion,matched
+South Georgia and the South Sandwich Islands,SGS,239,South Georgia and the South Sandwich Islands,matched
+St. Helena,SHN,654,"Saint Helena, Ascension and Tristan da Cunha",matched
+St. Pierre and Miquelon,SPM,666,Saint Pierre and Miquelon,matched
+Svalbard & Jan Mayen Islands,SJM,744,Svalbard and Jan Mayen,matched
+Taiwan,TWN,158,"Taiwan, Province of China",matched
+Tokelau,TKL,772,Tokelau,matched
+United States Minor Outlying Islands,UMI,581,United States Minor Outlying Islands,matched
+Wallis and Futuna Islands,WLF,876,Wallis and Futuna,matched
+Western Sahara,ESH,732,Western Sahara,matched

@@ -1,0 +1,13 @@
+chart,eligible_movies,note
+1_world_choropleth,757745,Preliminary eligible record count
+2_genre_streamgraph,868112,Preliminary eligible record count
+3_genre_symbol_map,672180,Preliminary eligible record count
+4_genre_decade_heatmap,868112,Preliminary eligible record count
+5_budget_revenue_scatter,17228,Preliminary eligible record count
+6_financial_performance,16770,Preliminary eligible record count
+7_ratings_dot_plot,23187,Preliminary eligible record count
+8_collaboration_network,730032,Preliminary eligible record count
+9_studio_bump_chart,581019,Preliminary eligible record count
+10_collaboration_lollipop,730032,Preliminary eligible record count
+11_australian_map,0,Requires Screen Australia data
+12_australia_global_genres,9161,Preliminary eligible record count

@@ -1,0 +1,55 @@
+genre,cohort,share_pct
+Action,All Australian features*,8
+Adventure,All Australian features*,8
+Biography,All Australian features*,0
+Comedy,All Australian features*,17
+Crime/Law & Order,All Australian features*,1
+Drama,All Australian features*,19
+Family,All Australian features*,6
+Fantasy,All Australian features*,0
+Horror,All Australian features*,14
+Medical,All Australian features*,0
+Music,All Australian features*,1
+Mystery,All Australian features*,1
+Religion & Ethics,All Australian features*,0
+Romance,All Australian features*,2
+Science Fiction,All Australian features*,5
+Thriller,All Australian features*,16
+War,All Australian features*,0
+Western,All Australian features*,1
+Action,Screen Australia funded features^,4
+Adventure,Screen Australia funded features^,4
+Biography,Screen Australia funded features^,0
+Comedy,Screen Australia funded features^,13
+Crime/Law & Order,Screen Australia funded features^,3
+Drama,Screen Australia funded features^,29
+Family,Screen Australia funded features^,2
+Fantasy,Screen Australia funded features^,0
+Horror,Screen Australia funded features^,27
+Medical,Screen Australia funded features^,0
+Music,Screen Australia funded features^,4
+Mystery,Screen Australia funded features^,0
+Religion & Ethics,Screen Australia funded features^,0
+Romance,Screen Australia funded features^,0
+Science Fiction,Screen Australia funded features^,0
+Thriller,Screen Australia funded features^,9
+War,Screen Australia funded features^,0
+Western,Screen Australia funded features^,1
+Action,Other Australian features,10
+Adventure,Other Australian features,10
+Biography,Other Australian features,0
+Comedy,Other Australian features,19
+Crime/Law & Order,Other Australian features,0
+Drama,Other Australian features,14
+Family,Other Australian features,8
+Fantasy,Other Australian features,0
+Horror,Other Australian features,7
+Medical,Other Australian features,0
+Music,Other Australian features,0
+Mystery,Other Australian features,2
+Religion & Ethics,Other Australian features,0
+Romance,Other Australian features,4
+Science Fiction,Other Australian features,8
+Thriller,Other Australian features,19
+War,Other Australian features,0
+Western,Other Australian features,0

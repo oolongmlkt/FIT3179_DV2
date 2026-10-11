@@ -1,0 +1,250 @@
+tmdb_country,iso3,iso_numeric,standard_name,match_status
+Afghanistan,AFG,4,Afghanistan,matched
+Albania,ALB,8,Albania,matched
+Algeria,DZA,12,Algeria,matched
+American Samoa,ASM,16,American Samoa,matched
+Andorra,AND,20,Andorra,matched
+Angola,AGO,24,Angola,matched
+Anguilla,AIA,660,Anguilla,matched
+Antarctica,ATA,10,Antarctica,matched
+Antigua and Barbuda,ATG,28,Antigua and Barbuda,matched
+Argentina,ARG,32,Argentina,matched
+Armenia,ARM,51,Armenia,matched
+Aruba,ABW,533,Aruba,matched
+Australia,AUS,36,Australia,matched
+Austria,AUT,40,Austria,matched
+Azerbaijan,AZE,31,Azerbaijan,matched
+Bahamas,BHS,44,Bahamas,matched
+Bahrain,BHR,48,Bahrain,matched
+Bangladesh,BGD,50,Bangladesh,matched
+Barbados,BRB,52,Barbados,matched
+Belarus,BLR,112,Belarus,matched
+Belgium,BEL,56,Belgium,matched
+Belize,BLZ,84,Belize,matched
+Benin,BEN,204,Benin,matched
+Bermuda,BMU,60,Bermuda,matched
+Bhutan,BTN,64,Bhutan,matched
+Bolivia,BOL,68,"Bolivia, Plurinational State of",matched
+Bosnia and Herzegovina,BIH,70,Bosnia and Herzegovina,matched
+Botswana,BWA,72,Botswana,matched
+Bouvet Island,BVT,74,Bouvet Island,matched
+Brazil,BRA,76,Brazil,matched
+British Indian Ocean Territory,IOT,86,British Indian Ocean Territory,matched
+British Virgin Islands,VGB,92,"Virgin Islands, British",matched
+Brunei Darussalam,BRN,96,Brunei Darussalam,matched
+Bulgaria,BGR,100,Bulgaria,matched
+Burkina Faso,BFA,854,Burkina Faso,matched
+Burundi,BDI,108,Burundi,matched
+Cambodia,KHM,116,Cambodia,matched
+Cameroon,CMR,120,Cameroon,matched
+Canada,CAN,124,Canada,matched
+Cape Verde,CPV,132,Cabo Verde,matched
+Cayman Islands,CYM,136,Cayman Islands,matched
+Central African Republic,CAF,140,Central African Republic,matched
+Chad,TCD,148,Chad,matched
+Chile,CHL,152,Chile,matched
+China,CHN,156,China,matched
+Christmas Island,CXR,162,Christmas Island,matched
+Cocos  Islands,CCK,166,Cocos (Keeling) Islands,matched
+Colombia,COL,170,Colombia,matched
+Comoros,COM,174,Comoros,matched
+Congo,COG,178,Congo,matched
+Cook Islands,COK,184,Cook Islands,matched
+Costa Rica,CRI,188,Costa Rica,matched
+Cote D'Ivoire,CIV,384,Côte d'Ivoire,matched
+Croatia,HRV,191,Croatia,matched
+Cuba,CUB,192,Cuba,matched
+Cyprus,CYP,196,Cyprus,matched
+Czech Republic,CZE,203,Czechia,matched
+Czechoslovakia,,,,REVIEW_UNMATCHED
+Denmark,DNK,208,Denmark,matched
+Djibouti,DJI,262,Djibouti,matched
+Dominica,DMA,212,Dominica,matched
+Dominican Republic,DOM,214,Dominican Republic,matched
+East Germany,,,,REVIEW_UNMATCHED
+East Timor,TLS,626,Timor-Leste,matched
+Ecuador,ECU,218,Ecuador,matched
+Egypt,EGY,818,Egypt,matched
+El Salvador,SLV,222,El Salvador,matched
+Equatorial Guinea,GNQ,226,Equatorial Guinea,matched
+Eritrea,ERI,232,Eritrea,matched
+Estonia,EST,233,Estonia,matched
+Ethiopia,ETH,231,Ethiopia,matched
+Faeroe Islands,FRO,234,Faroe Islands,matched
+Falkland Islands,FLK,238,Falkland Islands (Malvinas),matched
+Fiji,FJI,242,Fiji,matched
+Finland,FIN,246,Finland,matched
+France,FRA,250,France,matched
+French Guiana,GUF,254,French Guiana,matched
+French Polynesia,PYF,258,French Polynesia,matched
+French Southern Territories,ATF,260,French Southern Territories,matched
+Gabon,GAB,266,Gabon,matched
+Gambia,GMB,270,Gambia,matched
+Georgia,GEO,268,Georgia,matched
+Germany,DEU,276,Germany,matched
+Ghana,GHA,288,Ghana,matched
+Gibraltar,GIB,292,Gibraltar,matched
+Greece,GRC,300,Greece,matched
+Greenland,GRL,304,Greenland,matched
+Grenada,GRD,308,Grenada,matched
+Guadaloupe,GLP,312,Guadeloupe,matched
+Guam,GUM,316,Guam,matched
+Guatemala,GTM,320,Guatemala,matched
+Guinea,GIN,324,Guinea,matched
+Guinea-Bissau,GNB,624,Guinea-Bissau,matched
+Guyana,GUY,328,Guyana,matched
+Haiti,HTI,332,Haiti,matched
+Heard and McDonald Islands,HMD,334,Heard Island and McDonald Islands,matched
+Holy See,VAT,336,Holy See (Vatican City State),matched
+Honduras,HND,340,Honduras,matched
+Hong Kong,HKG,344,Hong Kong,matched
+Hungary,HUN,348,Hungary,matched
+Iceland,ISL,352,Iceland,matched
+India,IND,356,India,matched
+Indonesia,IDN,360,Indonesia,matched
+Iran,IRN,364,"Iran, Islamic Republic of",matched
+Iraq,IRQ,368,Iraq,matched
+Ireland,IRL,372,Ireland,matched
+Israel,ISR,376,Israel,matched
+Italy,ITA,380,Italy,matched
+Jamaica,JAM,388,Jamaica,matched
+Japan,JPN,392,Japan,matched
+Jordan,JOR,400,Jordan,matched
+Kazakhstan,KAZ,398,Kazakhstan,matched
+Kenya,KEN,404,Kenya,matched
+Kiribati,KIR,296,Kiribati,matched
+Kosovo,,,,REVIEW_UNMATCHED
+Kuwait,KWT,414,Kuwait,matched
+Kyrgyz Republic,KGZ,417,Kyrgyzstan,matched
+Lao People's Democratic Republic,LAO,418,Lao People's Democratic Republic,matched
+Latvia,LVA,428,Latvia,matched
+Lebanon,LBN,422,Lebanon,matched
+Lesotho,LSO,426,Lesotho,matched
+Liberia,LBR,430,Liberia,matched
+Libyan Arab Jamahiriya,LBY,434,Libya,matched
+Liechtenstein,LIE,438,Liechtenstein,matched
+Lithuania,LTU,440,Lithuania,matched
+Luxembourg,LUX,442,Luxembourg,matched
+Macao,MAC,446,Macao,matched
+Macedonia,MKD,807,North Macedonia,matched
+Madagascar,MDG,450,Madagascar,matched
+Malawi,MWI,454,Malawi,matched
+Malaysia,MYS,458,Malaysia,matched
+Maldives,MDV,462,Maldives,matched
+Mali,MLI,466,Mali,matched
+Malta,MLT,470,Malta,matched
+Marshall Islands,MHL,584,Marshall Islands,matched
+Martinique,MTQ,474,Martinique,matched
+Mauritania,MRT,478,Mauritania,matched
+Mauritius,MUS,480,Mauritius,matched
+Mayotte,MYT,175,Mayotte,matched
+Mexico,MEX,484,Mexico,matched
+Micronesia,FSM,583,"Micronesia, Federated States of",matched
+Moldova,MDA,498,"Moldova, Republic of",matched
+Monaco,MCO,492,Monaco,matched
+Mongolia,MNG,496,Mongolia,matched
+Montenegro,MNE,499,Montenegro,matched
+Montserrat,MSR,500,Montserrat,matched
+Morocco,MAR,504,Morocco,matched
+Mozambique,MOZ,508,Mozambique,matched
+Myanmar,MMR,104,Myanmar,matched
+Namibia,NAM,516,Namibia,matched
+Nauru,NRU,520,Nauru,matched
+Nepal,NPL,524,Nepal,matched
+Netherlands,NLD,528,Netherlands,matched
+Netherlands Antilles,,,,REVIEW_UNMATCHED
+New Caledonia,NCL,540,New Caledonia,matched
+New Zealand,NZL,554,New Zealand,matched
+Nicaragua,NIC,558,Nicaragua,matched
+Niger,NER,562,Niger,matched
+Nigeria,NGA,566,Nigeria,matched
+Niue,NIU,570,Niue,matched
+Norfolk Island,NFK,574,Norfolk Island,matched
+North Korea,PRK,408,"Korea, Democratic People's Republic of",matched
+Northern Ireland,GBR,826,United Kingdom,matched_historical_or_subnational
+Northern Mariana Islands,MNP,580,Northern Mariana Islands,matched
+Norway,NOR,578,Norway,matched
+Oman,OMN,512,Oman,matched
+Pakistan,PAK,586,Pakistan,matched
+Palau,PLW,585,Palau,matched
+Palestinian Territory,PSE,275,"Palestine, State of",matched
+Panama,PAN,591,Panama,matched
+Papua New Guinea,PNG,598,Papua New Guinea,matched
+Paraguay,PRY,600,Paraguay,matched
+Peru,PER,604,Peru,matched
+Philippines,PHL,608,Philippines,matched
+Pitcairn Island,PCN,612,Pitcairn,matched
+Poland,POL,616,Poland,matched
+Portugal,PRT,620,Portugal,matched
+Puerto Rico,PRI,630,Puerto Rico,matched
+Qatar,QAT,634,Qatar,matched
+Reunion,REU,638,Réunion,matched
+Romania,ROU,642,Romania,matched
+Russia,RUS,643,Russian Federation,matched
+Rwanda,RWA,646,Rwanda,matched
+Samoa,WSM,882,Samoa,matched
+San Marino,SMR,674,San Marino,matched
+Sao Tome and Principe,STP,678,Sao Tome and Principe,matched
+Saudi Arabia,SAU,682,Saudi Arabia,matched
+Senegal,SEN,686,Senegal,matched
+Serbia,SRB,688,Serbia,matched
+Serbia and Montenegro,,,,REVIEW_UNMATCHED
+Seychelles,SYC,690,Seychelles,matched
+Sierra Leone,SLE,694,Sierra Leone,matched
+Singapore,SGP,702,Singapore,matched
+Slovakia,SVK,703,Slovakia,matched
+Slovenia,SVN,705,Slovenia,matched
+Solomon Islands,SLB,90,Solomon Islands,matched
+Somalia,SOM,706,Somalia,matched
+South Africa,ZAF,710,South Africa,matched
+South Georgia and the South Sandwich Islands,SGS,239,South Georgia and the South Sandwich Islands,matched
+South Korea,KOR,410,"Korea, Republic of",matched
+South Sudan,SSD,728,South Sudan,matched
+Soviet Union,,,,REVIEW_UNMATCHED
+Spain,ESP,724,Spain,matched
+Sri Lanka,LKA,144,Sri Lanka,matched
+St. Helena,SHN,654,"Saint Helena, Ascension and Tristan da Cunha",matched
+St. Kitts and Nevis,KNA,659,Saint Kitts and Nevis,matched
+St. Lucia,LCA,662,Saint Lucia,matched
+St. Pierre and Miquelon,SPM,666,Saint Pierre and Miquelon,matched
+St. Vincent and the Grenadines,VCT,670,Saint Vincent and the Grenadines,matched
+Sudan,SDN,729,Sudan,matched
+Suriname,SUR,740,Suriname,matched
+Svalbard & Jan Mayen Islands,SJM,744,Svalbard and Jan Mayen,matched
+Swaziland,SWZ,748,Eswatini,matched
+Sweden,SWE,752,Sweden,matched
+Switzerland,CHE,756,Switzerland,matched
+Syrian Arab Republic,SYR,760,Syrian Arab Republic,matched
+Taiwan,TWN,158,"Taiwan, Province of China",matched
+Tajikistan,TJK,762,Tajikistan,matched
+Tanzania,TZA,834,"Tanzania, United Republic of",matched
+Thailand,THA,764,Thailand,matched
+Timor-Leste,TLS,626,Timor-Leste,matched
+Togo,TGO,768,Togo,matched
+Tokelau,TKL,772,Tokelau,matched
+Tonga,TON,776,Tonga,matched
+Trinidad and Tobago,TTO,780,Trinidad and Tobago,matched
+Tunisia,TUN,788,Tunisia,matched
+Turkey,TUR,792,Türkiye,matched
+Turkmenistan,TKM,795,Turkmenistan,matched
+Turks and Caicos Islands,TCA,796,Turks and Caicos Islands,matched
+Tuvalu,TUV,798,Tuvalu,matched
+US Virgin Islands,VIR,850,"Virgin Islands, U.S.",matched
+Uganda,UGA,800,Uganda,matched
+Ukraine,UKR,804,Ukraine,matched
+United Arab Emirates,ARE,784,United Arab Emirates,matched
+United Kingdom,GBR,826,United Kingdom,matched
+United States Minor Outlying Islands,UMI,581,United States Minor Outlying Islands,matched
+United States of America,USA,840,United States,matched
+Uruguay,URY,858,Uruguay,matched
+Uzbekistan,UZB,860,Uzbekistan,matched
+Vanuatu,VUT,548,Vanuatu,matched
+Venezuela,VEN,862,"Venezuela, Bolivarian Republic of",matched
+Vietnam,VNM,704,Viet Nam,matched
+Wallis and Futuna Islands,WLF,876,Wallis and Futuna,matched
+Western Sahara,ESH,732,Western Sahara,matched
+Yemen,YEM,887,Yemen,matched
+Yugoslavia,,,,REVIEW_UNMATCHED
+Zaire,COD,180,"Congo, The Democratic Republic of the",matched_historical_or_subnational
+Zambia,ZMB,894,Zambia,matched
+Zimbabwe,ZWE,716,Zimbabwe,matched

@@ -1,0 +1,148 @@
+FIT3179 DV2 — PROCESSED DATA VALIDATION
+
+
+=== MOVIES ===
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movie chunk has valid IDs
+PASS: movies.csv: all years within 1980–2025
+PASS: movies.csv: decades match release years
+PASS: Movie release dates are valid and match year
+PASS: budget: no zero/negative non-null values
+PASS: revenue: no zero/negative non-null values
+PASS: vote_average: within 0–10
+PASS: imdb_rating: within 0–10
+PASS: vote_count: no negative vote counts
+PASS: imdb_votes: no negative vote counts
+PASS: Movies table is not empty
+PASS: Movie IDs unique (870,747 rows; 0 duplicates)
+
+=== RELATIONSHIP TABLES ===
+PASS: movie_genres.csv: not empty (1,028,123 rows)
+PASS: movie_genres.csv: no orphan movie IDs (0)
+PASS: movie_genres.csv: no duplicate movie–genre pairs (0)
+PASS: movie_genres.csv: nonblank genre labels
+PASS: movie_genres.csv: valid year/decade values
+PASS: movie_countries.csv: not empty (629,507 rows)
+PASS: movie_countries.csv: no orphan movie IDs (0)
+PASS: movie_countries.csv: no duplicate movie–country pairs (0)
+PASS: movie_countries.csv: nonblank country labels
+PASS: movie_countries.csv: valid year/decade values
+PASS: movie_studios.csv: not empty (696,900 rows)
+PASS: movie_studios.csv: no orphan movie IDs (0)
+PASS: movie_studios.csv: no duplicate movie–studio pairs (0)
+PASS: movie_studios.csv: nonblank studio labels
+PASS: movie_studios.csv: valid year/decade values
+PASS: movie_directors.csv: not empty (852,651 rows)
+PASS: movie_directors.csv: no orphan movie IDs (0)
+PASS: movie_directors.csv: no duplicate movie–director pairs (0)
+PASS: movie_directors.csv: nonblank director labels
+PASS: movie_directors.csv: valid year/decade values
+PASS: movie_cast.csv: not empty (5,524,805 rows)
+PASS: movie_cast.csv: no orphan movie IDs (0)
+PASS: movie_cast.csv: no duplicate movie–actor pairs (0)
+PASS: movie_cast.csv: nonblank actor labels
+PASS: movie_cast.csv: valid year/decade values
+Australian movies found in movie_countries.csv: 8,795
+
+=== SCREEN AUSTRALIA SPENDING ===
+PASS: Only NSW, QLD, VIC, SA receive state symbols
+PASS: No duplicate state–financial-year rows
+PASS: No duplicate financial-year totals
+PASS: State and national financial years match
+PASS: Financial-year labels use YYYY/YY
+PASS: spend_m_aud: no negative expenditure
+PASS: other_m_aud: no negative expenditure
+PASS: total_m_aud: no negative expenditure
+WARN: Some expenditure values are suppressed or missing; do not interpret as zero
+
+=== SCREEN AUSTRALIA GENRES ===
+PASS: No duplicate genre–cohort rows
+PASS: Genre percentages between 0 and 100
+PASS: Genre/cohort labels present
+  All Australian features*: reported shares sum to 99.0%
+  Other Australian features: reported shares sum to 101.0%
+  Screen Australia funded features^: reported shares sum to 96.0%
+
+=== SUMMARY ===
+Checks failed: 0; warnings: 1
+VALIDATION PASSED (review warnings, if any).
+Note: status=Released is enforced upstream but not stored in movies.csv; verify against preprocessing script.

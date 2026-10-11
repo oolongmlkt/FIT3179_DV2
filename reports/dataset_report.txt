@@ -1,0 +1,282 @@
+
+=================================================================
+FIT3179 DV2 - TMDB DATASET FEASIBILITY REPORT
+=================================================================
+Processing chunk 1...
+Processing chunk 2...
+Processing chunk 3...
+Processing chunk 4...
+Processing chunk 5...
+Processing chunk 6...
+Processing chunk 7...
+Processing chunk 8...
+Processing chunk 9...
+Processing chunk 10...
+Processing chunk 11...
+Processing chunk 12...
+Processing chunk 13...
+
+=================================================================
+1. DATASET OVERVIEW
+=================================================================
+Total records: 1,255,749
+Total columns: 30
+Unique movie IDs: 1,255,749
+Duplicate movie IDs: 0
+Missing movie IDs: 0
+
+=================================================================
+2. MISSING VALUES
+=================================================================
+                         missing_count  missing_pct  additional_blank_count
+certification_us               1162256        92.55                       0
+music_composer                 1110216        88.41                       0
+tagline                        1062697        84.63                       0
+director_of_photography         911100        72.55                       0
+keywords                        898610        71.56                       0
+producers                       820815        65.36                       0
+imdb_votes                      775287        61.74                       0
+imdb_rating                     775287        61.74                       0
+production_companies            647026        51.53                       0
+writers                         617472        49.17                       0
+imdb_id                         564989        44.99                       0
+production_countries            465445        37.07                       0
+spoken_languages                458098        36.48                       0
+cast                            396392        31.57                       0
+genres                          335717        26.73                       0
+poster_path                     301386        24.00                       0
+director                        201273        16.03                       0
+overview                        192863        15.36                     229
+release_date                    134648        10.72                       0
+title                               14         0.00                       5
+popularity                           0         0.00                       0
+original_title                      13         0.00                       0
+original_language                    0         0.00                       0
+budget                               0         0.00                       0
+runtime                              0         0.00                       0
+revenue                              0         0.00                       0
+status                               0         0.00                       0
+vote_count                           0         0.00                       0
+vote_average                         0         0.00                       0
+id                                   0         0.00                       0
+
+=================================================================
+3. MOVIE STATUS
+=================================================================
+Released                                1,231,853
+Post Production                             7,400
+In Production                               7,104
+Planned                                     6,914
+Rumored                                     1,276
+Canceled                                    1,202
+
+Released movies: 1,231,853 (98.10%)
+
+=================================================================
+4. RELEASE DATES
+=================================================================
+Valid dates: 1,121,101
+Future release years: 1,111
+
+Movies by decade:
+1880s: 10
+1890s: 2,162
+1900s: 4,097
+1910s: 16,030
+1920s: 16,716
+1930s: 20,682
+1940s: 18,915
+1950s: 28,353
+1960s: 43,171
+1970s: 57,497
+1980s: 67,653
+1990s: 79,639
+2000s: 144,108
+2010s: 285,939
+2020s: 335,015
+
+=================================================================
+5. GENRES
+=================================================================
+Movies with genres: 920,032
+
+Top genres:
+Drama                                     309,362
+Documentary                               239,630
+Comedy                                    182,769
+Horror                                     75,966
+Animation                                  75,765
+Music                                      66,613
+Romance                                    66,525
+Thriller                                   64,432
+Action                                     55,731
+Crime                                      43,608
+Family                                     36,509
+TV Movie                                   33,838
+Fantasy                                    31,813
+Adventure                                  29,578
+Mystery                                    28,388
+Science Fiction                            28,316
+History                                    23,269
+War                                        13,521
+Western                                    10,349
+
+Number of genres per movie:
+0 genres: 335,717
+1 genres: 569,480
+2 genres: 236,759
+3 genres: 88,797
+4 genres: 19,758
+5 genres: 4,147
+6 genres: 853
+7 genres: 167
+8 genres: 37
+9 genres: 17
+10 genres: 6
+11 genres: 5
+12 genres: 3
+16 genres: 1
+19 genres: 2
+
+=================================================================
+6. PRODUCTION COUNTRIES
+=================================================================
+Movies with production countries: 790,304
+
+Top production countries:
+United States of America                  195,170
+France                                     58,763
+United Kingdom                             56,205
+Japan                                      52,908
+Germany                                    48,860
+Canada                                     30,129
+India                                      30,091
+Italy                                      24,285
+Brazil                                     23,796
+Spain                                      21,141
+Mexico                                     17,139
+Russia                                     15,254
+China                                      14,129
+Soviet Union                               13,870
+Argentina                                  13,197
+South Korea                                13,170
+Australia                                  10,765
+Sweden                                     10,423
+Netherlands                                 9,888
+Philippines                                 9,481
+Poland                                      8,910
+Hong Kong                                   8,291
+Belgium                                     8,001
+Czechoslovakia                              7,897
+Indonesia                                   7,118
+Turkey                                      7,055
+Denmark                                     6,486
+Austria                                     6,453
+Switzerland                                 6,402
+Portugal                                    5,638
+
+Number of countries per movie:
+0 countries: 465,445
+1 countries: 726,703
+2 countries: 49,413
+3 countries: 9,916
+4 countries: 2,781
+5 countries: 923
+6 countries: 320
+7 countries: 130
+8 countries: 63
+9 countries: 17
+10 countries: 11
+11 countries: 11
+12 countries: 2
+13 countries: 4
+14 countries: 1
+15 countries: 2
+16 countries: 1
+20 countries: 2
+23 countries: 2
+25 countries: 2
+
+Australian movies: 10,765
+
+=================================================================
+7. FINANCIAL DATA
+=================================================================
+Positive budgets: 85,669 (6.82%)
+Positive revenues: 28,913 (2.30%)
+Released movies with both: 18,708
+Median positive budget: $5,000
+Median positive revenue: $1,294,480
+Median ROI: 37.50%
+
+=================================================================
+8. RATINGS
+=================================================================
+Usable TMDB ratings: 23,260
+Usable IMDb ratings: 189,719
+Movies with both ratings: 23,188
+Median TMDB rating: 6.50
+Median IMDb rating: 6.20
+
+=================================================================
+9. PEOPLE AND COLLABORATIONS
+=================================================================
+Movies with directors: 1,054,476
+Movies with cast: 859,357
+Released movies with both: 761,239
+
+=================================================================
+10. PRODUCTION STUDIOS
+=================================================================
+Movies with studio information: 608,723
+
+Top studios:
+BBC                                         4,221
+ARTE                                        3,729
+ONF | NFB                                   3,331
+Warner Bros. Pictures                       3,165
+Columbia Pictures                           3,006
+Metro-Goldwyn-Mayer                         2,874
+Universal Pictures                          2,833
+Paramount Pictures                          2,829
+ZDF                                         2,793
+Toei Company                                2,716
+Nikkatsu Corporation                        2,268
+TOHO                                        2,186
+France Télévisions                          1,898
+Shochiku                                    1,871
+Česká televize                              1,774
+Mosfilm                                     1,727
+ARD                                         1,669
+20th Century Fox                            1,656
+CNC                                         1,585
+Canal+                                      1,530
+
+=================================================================
+11. AUSTRALIAN MOVIES
+=================================================================
+Movies with Australia as a production country: 10,765
+Australian movies with genres: 9,704
+Australian movies with financial data: 306
+Australian movies with both ratings: 389
+
+=================================================================
+12. VISUALISATION FEASIBILITY
+=================================================================
+1_world_choropleth                          757,745  Preliminary eligible record count
+2_genre_streamgraph                         868,112  Preliminary eligible record count
+3_genre_symbol_map                          672,180  Preliminary eligible record count
+4_genre_decade_heatmap                      868,112  Preliminary eligible record count
+5_budget_revenue_scatter                     17,228  Preliminary eligible record count
+6_financial_performance                      16,770  Preliminary eligible record count
+7_ratings_dot_plot                           23,187  Preliminary eligible record count
+8_collaboration_network                     730,032  Preliminary eligible record count
+9_studio_bump_chart                         581,019  Preliminary eligible record count
+10_collaboration_lollipop                   730,032  Preliminary eligible record count
+11_australian_map                                 0  Requires Screen Australia data
+12_australia_global_genres                    9,161  Preliminary eligible record count
+
+=================================================================
+INSPECTION COMPLETE
+=================================================================
+Reports saved to: /Users/ginayem/Monash/FIT3179_DV2/reports
