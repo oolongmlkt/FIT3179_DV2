@@ -64,3 +64,4 @@ Thumbs.db
 data/raw/tmdb_movies.csv
 data/processed/movie_cast.csv
 data/processed/movies.csv
+data/charts/director_actor_all_edges.csv

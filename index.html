@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 
   <title>FIT3179 DV2 — Movie Collections</title>
 
@@ -230,6 +231,78 @@
 
     </section>
 
+
+    <!-- SECTION 3: BEHIND THE MOVIES -->
+
+    <section id="section3">
+
+      <h2>Behind the Movies</h2>
+
+      <h3>Chart 8 — Director-Actor Collaboration Explorer</h3>
+
+      <p>
+        Explore recurring creative partnerships between
+        directors and actors in TMDB-listed productions.
+        The network initially displays collaborations
+        from 2000–2025.
+      </p>
+
+      <div class="chart8-wrapper">
+
+        <div class="chart8-controls">
+
+          <label for="chart8-period">
+            Period
+          </label>
+
+          <select id="chart8-period">
+            <option value="2000–2025">2000–2025</option>
+            <option value="1980s">1980s</option>
+            <option value="1990s">1990s</option>
+            <option value="2000s">2000s</option>
+            <option value="2010s">2010s</option>
+            <option value="2020s">2020–2025</option>
+            <option value="All years">All years (1980–2025)</option>
+          </select>
+
+          <label for="chart8-director">
+            Director
+          </label>
+
+          <select id="chart8-director">
+            <option value="">Loading directors...</option>
+          </select>
+
+        </div>
+
+        <div id="chart8"></div>
+
+        <div class="chart8-legend">
+          <span>
+            <span class="chart8-dot director-dot"></span>
+            Director
+          </span>
+
+          <span>
+            <span class="chart8-dot actor-dot"></span>
+            Actor
+          </span>
+
+          <span class="chart8-legend-note">
+            Link thickness = shared productions
+          </span>
+        </div>
+
+      </div>
+
+      <p class="chart-note">
+        Each network displays one director and up to ten of their strongest recurring actor partnerships within the
+        selected period. Thicker links represent more shared productions. Only partnerships involving at least five
+        shared productions are considered.
+      </p>
+
+    </section>
+
   </main>
 
   <script>
@@ -314,6 +387,141 @@
     ).catch(error => {
       console.error("Error loading Chart 7:", error);
     });
+
+    /* ==========================================
+       Chart 8 — Director Collaboration Explorer
+       ========================================== */
+
+    async function initialiseChart8() {
+
+      const periodSelect =
+        document.getElementById("chart8-period");
+
+      const directorSelect =
+        document.getElementById("chart8-director");
+
+      const directorDataURL =
+        "data/charts/director_actor_explorer_directors.csv";
+
+      try {
+
+        // Load the available directors for every period.
+        const loader = vega.loader();
+
+        const csvText = await loader.load(
+          directorDataURL
+        );
+
+        const directors = vega.read(csvText, {
+          type: "csv",
+          parse: "auto"
+        });
+
+        // Embed the compact Vega specification.
+        const result = await vegaEmbed(
+          "#chart8",
+          "charts/chart8_network.vg.json",
+          {
+            actions: false,
+            renderer: "svg",
+            tooltip: true
+          }
+        );
+
+        const view = result.view;
+
+        // Populate the director dropdown using
+        // the selected period's ranking.
+        function updateDirectorOptions() {
+
+          const period = periodSelect.value;
+
+          const available = directors
+            .filter(row => row.period === period)
+            .sort((a, b) => a.rank - b.rank);
+
+          directorSelect.innerHTML = "";
+
+          for (const row of available) {
+
+            const option =
+              document.createElement("option");
+
+            option.value = row.director;
+
+            option.textContent =
+              `${row.rank}. ${row.director}`;
+
+            directorSelect.appendChild(option);
+          }
+
+          // Prefer Hiroyuki Tsuji for the initial
+          // default period, if available.
+          const preferred = available.find(
+            row => row.director === "Hiroyuki Tsuji"
+          );
+
+          if (
+            period === "2000–2025" &&
+            preferred
+          ) {
+            directorSelect.value =
+              preferred.director;
+          } else if (available.length > 0) {
+            directorSelect.value =
+              available[0].director;
+          }
+
+          return directorSelect.value;
+        }
+
+        // Update both Vega signals together.
+        async function updateChart() {
+
+          await view
+            .signal(
+              "selectedPeriod",
+              periodSelect.value
+            )
+            .signal(
+              "selectedDirector",
+              directorSelect.value
+            )
+            .runAsync();
+        }
+
+        // Initial chart.
+        updateDirectorOptions();
+        await updateChart();
+
+        // Period interaction.
+        periodSelect.addEventListener(
+          "change",
+          async () => {
+
+            updateDirectorOptions();
+            await updateChart();
+
+          }
+        );
+
+        // Director interaction.
+        directorSelect.addEventListener(
+          "change",
+          updateChart
+        );
+
+      } catch (error) {
+
+        console.error(
+          "Chart 8 failed to initialise:",
+          error
+        );
+
+      }
+    }
+
+    initialiseChart8();
 
   </script>
 

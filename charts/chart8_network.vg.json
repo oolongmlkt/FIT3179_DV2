@@ -1,0 +1,283 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Chart 8 — Compact Director–Actor Collaboration Explorer",
+  "width": 700,
+  "height": 500,
+  "padding": 10,
+  "autosize": "pad",
+  "background": "#ffffff",
+  "signals": [
+    {
+      "name": "selectedPeriod",
+      "value": "2000–2025"
+    },
+    {
+      "name": "selectedDirector",
+      "value": "Hiroyuki Tsuji"
+    },
+    {
+      "name": "centreX",
+      "update": "width / 2"
+    },
+    {
+      "name": "centreY",
+      "update": "height / 2"
+    }
+  ],
+  "data": [
+    {
+      "name": "edgeSource",
+      "url": "data/charts/director_actor_explorer_edges.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "collaboration_count": "number",
+          "first_year": "number",
+          "last_year": "number"
+        }
+      }
+    },
+    {
+      "name": "edges",
+      "source": "edgeSource",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.period === selectedPeriod && datum.director === selectedDirector"
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": ["collaboration_count", "actor"],
+            "order": ["descending", "ascending"]
+          }
+        },
+        {
+          "type": "window",
+          "ops": ["row_number"],
+          "as": ["position"]
+        },
+        {
+          "type": "joinaggregate",
+          "ops": ["count"],
+          "as": ["totalActors"]
+        },
+        {
+          "type": "formula",
+          "as": "angle",
+          "expr": "2 * PI * (datum.position - 1) / datum.totalActors - PI / 2"
+        },
+        {
+          "type": "formula",
+          "as": "actorX",
+          "expr": "centreX + 165 * cos(datum.angle)"
+        },
+        {
+          "type": "formula",
+          "as": "actorY",
+          "expr": "centreY + 105 * sin(datum.angle)"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "linkWidth",
+      "type": "sqrt",
+      "domain": {
+        "data": "edges",
+        "field": "collaboration_count"
+      },
+      "range": [1.5, 6],
+      "zero": false
+    }
+  ],
+  "marks": [
+    {
+      "type": "rule",
+      "name": "collaborationLinks",
+      "from": {
+        "data": "edges"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "centreX"
+          },
+          "y": {
+            "signal": "centreY"
+          },
+          "x2": {
+            "field": "actorX"
+          },
+          "y2": {
+            "field": "actorY"
+          },
+          "stroke": {
+            "value": "#9CA3AF"
+          },
+          "strokeWidth": {
+            "scale": "linkWidth",
+            "field": "collaboration_count"
+          },
+          "strokeOpacity": {
+            "value": 0.65
+          },
+          "tooltip": {
+            "signal": "{'Director': datum.director, 'Actor': datum.actor, 'Shared productions': datum.collaboration_count, 'First collaboration': datum.first_year, 'Most recent collaboration': datum.last_year}"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "directorNode",
+      "encode": {
+        "enter": {
+          "shape": {
+            "value": "circle"
+          },
+          "size": {
+            "value": 500
+          },
+          "fill": {
+            "value": "#377EB8"
+          },
+          "stroke": {
+            "value": "#ffffff"
+          },
+          "strokeWidth": {
+            "value": 2
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "centreX"
+          },
+          "y": {
+            "signal": "centreY"
+          },
+          "tooltip": {
+            "signal": "{'Director': selectedDirector, 'Period': selectedPeriod, 'Displayed collaborators': length(data('edges'))}"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "actorNodes",
+      "from": {
+        "data": "edges"
+      },
+      "encode": {
+        "enter": {
+          "shape": {
+            "value": "circle"
+          },
+          "size": {
+            "value": 140
+          },
+          "fill": {
+            "value": "#F28E2B"
+          },
+          "stroke": {
+            "value": "#ffffff"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          }
+        },
+        "update": {
+          "x": {
+            "field": "actorX"
+          },
+          "y": {
+            "field": "actorY"
+          },
+          "tooltip": {
+            "signal": "{'Actor': datum.actor, 'Director': datum.director, 'Shared productions': datum.collaboration_count, 'First collaboration': datum.first_year, 'Most recent collaboration': datum.last_year}"
+          }
+        },
+        "hover": {
+          "stroke": {
+            "value": "#222222"
+          },
+          "strokeWidth": {
+            "value": 2
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "actorLabels",
+      "from": {
+        "data": "edges"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "actorX"
+          },
+          "y": {
+            "field": "actorY"
+          },
+          "dx": {
+            "signal": "datum.actorX < centreX - 1 ? -9 : datum.actorX > centreX + 1 ? 9 : 0"
+          },
+          "dy": {
+            "signal": "abs(datum.actorX - centreX) <= 1 ? (datum.actorY < centreY ? -12 : 17) : 4"
+          },
+          "align": {
+            "signal": "datum.actorX < centreX - 1 ? 'right' : datum.actorX > centreX + 1 ? 'left' : 'center'"
+          },
+          "text": {
+            "field": "actor"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fill": {
+            "value": "#444444"
+          },
+          "limit": {
+            "value": 95
+          },
+          "ellipsis": {
+            "value": "…"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "directorLabel",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "centreX"
+          },
+          "y": {
+            "signal": "centreY + 23"
+          },
+          "text": {
+            "signal": "selectedDirector"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#244D78"
+          }
+        }
+      }
+    }
+  ]
+}

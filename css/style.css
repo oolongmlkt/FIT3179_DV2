@@ -1,0 +1,74 @@
+
+/* ==========================================
+   Chart 8 — Director Collaboration Explorer
+   ========================================== */
+
+/* Main chart container */
+.chart8-wrapper {
+    width: 100%;
+    max-width: 760px;
+    margin: 20px auto;
+}
+
+/* Dropdown controls */
+.chart8-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+}
+
+.chart8-controls label {
+    font-weight: 600;
+}
+
+.chart8-controls select {
+    padding: 6px 9px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background: #ffffff;
+    font-size: 13px;
+}
+
+/* Chart container */
+#chart8 {
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+/* Legend */
+.chart8-legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #555555;
+}
+
+.chart8-legend > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Coloured legend circles */
+.chart8-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.director-dot {
+    background: #377EB8;
+}
+
+.actor-dot {
+    background: #F28E2B;
+}
