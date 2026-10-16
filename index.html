@@ -206,6 +206,26 @@
           represent actual studio profit.
         </p>
 
+
+        <!-- Chart 7: IMDb vs TMDB Audience Ratings -->
+        <div class="chart-block">
+          <h3>Do IMDb and TMDB Audiences Rate Genres Differently?</h3>
+
+          <p>
+            Comparing average audience ratings across movie genres reveals
+            differences between the two platforms. Each pair of dots represents
+            the mean IMDb and TMDB ratings for the same set of movies.
+          </p>
+
+          <div id="chart7"></div>
+
+          <p class="chart-note">
+            Source: IMDb and TMDB (1980–2025).
+            Only movies with at least 100 votes on both platforms are included.
+            Movies belonging to multiple genres contribute once to each genre.
+          </p>
+        </div>
+
       </div>
 
     </section>
@@ -286,6 +306,14 @@
       }
     ).catch(console.error);
 
+    // Chart 7 — IMDb vs TMDB Audience Ratings
+    vegaEmbed(
+      "#chart7",
+      "charts/chart7_ratings.vg.json",
+      { actions: false }
+    ).catch(error => {
+      console.error("Error loading Chart 7:", error);
+    });
 
   </script>
 

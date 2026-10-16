@@ -1,0 +1,205 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "How Do IMDb and TMDB Ratings Compare Across Genres?",
+    "subtitle": [
+      "Mean audience ratings by genre, 1980–2025",
+      "Only movies with at least 100 votes on both platforms are included."
+    ],
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "offset": 15
+  },
+
+  "data": {
+    "url": "/data/charts/genre_ratings.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "imdb_mean": "number",
+        "tmdb_mean": "number",
+        "difference": "number",
+        "movie_count": "number",
+        "imdb_median": "number",
+        "tmdb_median": "number"
+      }
+    }
+  },
+
+  "width": 700,
+  "height": {
+    "step": 26
+  },
+
+  "transform": [
+    {
+      "filter": "datum.period === 'All years'"
+    },
+    {
+      "filter": "datum.movie_count >= 30"
+    }
+  ],
+
+  "encoding": {
+    "y": {
+      "field": "genre",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "difference",
+        "op": "mean",
+        "order": "ascending"
+      },
+      "axis": {
+        "labelFontSize": 12,
+        "labelPadding": 8,
+        "ticks": false,
+        "domain": false
+      }
+    }
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "stroke": "#A0A0A0",
+        "strokeWidth": 2,
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {
+          "field": "imdb_mean",
+          "type": "quantitative",
+          "title": "Mean Audience Rating (0–10)",
+          "scale": {
+            "domain": [0, 10],
+            "zero": true
+          },
+          "axis": {
+            "grid": true,
+            "tickCount": 11,
+            "labelFontSize": 11,
+            "titleFontSize": 12
+          }
+        },
+        "x2": {
+          "field": "tmdb_mean"
+        },
+        "tooltip": [
+          {
+            "field": "genre",
+            "title": "Genre"
+          },
+          {
+            "field": "imdb_mean",
+            "title": "IMDb Mean",
+            "format": ".2f"
+          },
+          {
+            "field": "tmdb_mean",
+            "title": "TMDB Mean",
+            "format": ".2f"
+          },
+          {
+            "field": "difference",
+            "title": "IMDb - TMDB",
+            "format": "+.2f"
+          },
+          {
+            "field": "movie_count",
+            "title": "Eligible Movies",
+            "format": ","
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "fold": [
+            "imdb_mean",
+            "tmdb_mean"
+          ],
+          "as": [
+            "platform",
+            "rating"
+          ]
+        },
+        {
+          "calculate": "datum.platform === 'imdb_mean' ? 'IMDb' : 'TMDB'",
+          "as": "platform_label"
+        }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "size": 105,
+        "opacity": 1,
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+
+      "encoding": {
+        "x": {
+          "field": "rating",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "platform_label",
+          "type": "nominal",
+          "title": "Rating Platform",
+          "scale": {
+            "domain": ["IMDb", "TMDB"],
+            "range": ["#E3A82B", "#2685A8"]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolType": "circle",
+            "symbolSize": 110,
+            "titleFontSize": 12,
+            "labelFontSize": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "genre",
+            "title": "Genre"
+          },
+          {
+            "field": "platform_label",
+            "title": "Platform"
+          },
+          {
+            "field": "rating",
+            "title": "Mean Rating",
+            "format": ".2f"
+          },
+          {
+            "field": "difference",
+            "title": "IMDb - TMDB",
+            "format": "+.2f"
+          },
+          {
+            "field": "movie_count",
+            "title": "Eligible Movies",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "background": "white",
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
+  }
+}
