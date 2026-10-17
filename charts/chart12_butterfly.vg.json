@@ -1,0 +1,184 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Australian vs Global Movie Genre Representation",
+        "subtitle": [
+            "Percentage of genre-classified movies associated with each genre",
+            "Australia (left) compared with Global (right), 1980–2025"
+        ],
+        "anchor": "start",
+        "fontSize": 17,
+        "subtitleFontSize": 11,
+        "subtitleColor": "#666666",
+        "offset": 15
+    },
+    "width": 700,
+    "height": 500,
+    "data": {
+        "url": "data/charts/australia_global_genres.csv"
+    },
+    "transform": [
+        {
+            "filter": "datum.period === 'All years'"
+        },
+        {
+            "calculate": "datum.region === 'Australia' ? -datum.percentage : datum.percentage",
+            "as": "plot_percentage"
+        },
+        {
+            "calculate": "datum.region === 'Australia' ? datum.percentage : 0",
+            "as": "australia_percentage"
+        },
+        {
+            "calculate": "datum.region === 'Global' ? datum.percentage : 0",
+            "as": "global_percentage"
+        },
+        {
+            "joinaggregate": [
+                {
+                    "op": "max",
+                    "field": "australia_percentage",
+                    "as": "australia_sort"
+                }
+            ],
+            "groupby": [
+                "genre"
+            ]
+        }
+    ],
+    "layer": [
+        {
+            "mark": {
+                "type": "bar",
+                "size": 16
+            },
+            "encoding": {
+                "y": {
+                    "field": "genre",
+                    "type": "nominal",
+                    "sort": {
+                        "field": "australia_sort",
+                        "order": "descending"
+                    },
+                    "axis": {
+                        "title": null,
+                        "labelFontSize": 11,
+                        "labelLimit": 130,
+                        "labelPadding": 8,
+                        "ticks": false,
+                        "domain": false
+                    }
+                },
+                "x": {
+                    "field": "plot_percentage",
+                    "type": "quantitative",
+                    "scale": {
+                        "domain": [
+                            -50,
+                            50
+                        ]
+                    },
+                    "axis": {
+                        "title": "Percentage of movies (%)",
+                        "values": [
+                            -50,
+                            -40,
+                            -30,
+                            -20,
+                            -10,
+                            0,
+                            10,
+                            20,
+                            30,
+                            40,
+                            50
+                        ],
+                        "labelExpr": "abs(datum.value) + '%'",
+                        "grid": true,
+                        "gridColor": "#EAEAEA",
+                        "labelFontSize": 10,
+                        "titlePadding": 12
+                    }
+                },
+                "x2": {
+                    "datum": 0
+                },
+                "color": {
+                    "field": "region",
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                            "Australia",
+                            "Global"
+                        ],
+                        "range": [
+                            "#D97745",
+                            "#438CBA"
+                        ]
+                    },
+                    "legend": {
+                        "title": null,
+                        "orient": "top",
+                        "direction": "horizontal",
+                        "labelFontSize": 11,
+                        "symbolType": "square",
+                        "symbolSize": 120
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "genre",
+                        "type": "nominal",
+                        "title": "Genre"
+                    },
+                    {
+                        "field": "region",
+                        "type": "nominal",
+                        "title": "Region"
+                    },
+                    {
+                        "field": "movie_count",
+                        "type": "quantitative",
+                        "title": "Movies",
+                        "format": ","
+                    },
+                    {
+                        "field": "total_movies",
+                        "type": "quantitative",
+                        "title": "Eligible movies",
+                        "format": ","
+                    },
+                    {
+                        "field": "percentage",
+                        "type": "quantitative",
+                        "title": "Genre representation",
+                        "format": ".1f"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "rule",
+                "color": "#555555",
+                "strokeWidth": 1.3
+            },
+            "encoding": {
+                "x": {
+                    "datum": 0
+                }
+            }
+        }
+    ],
+    "config": {
+        "background": "white",
+        "view": {
+            "stroke": null
+        },
+        "font": "Arial",
+        "axis": {
+            "labelColor": "#444444",
+            "titleColor": "#444444"
+        }
+    }
+}

@@ -370,6 +370,20 @@
 
       </div>
 
+      <!-- Chart 12: Australian vs Global Movie Genres -->
+      <div class="chart-container">
+
+        <h3>Australian vs Global Movie Genres</h3>
+
+        <p>
+          How does Australia's genre representation compare
+          with global filmmaking?
+        </p>
+
+        <div id="chart12"></div>
+
+      </div>
+
     </section>
 
   </main>
@@ -653,6 +667,13 @@
         document.querySelector("#chart11").textContent =
           "Chart 11 failed to load. Check the browser console.";
       });
+
+    // Chart 12: Australian vs Global Movie Genres
+    vegaEmbed(
+      '#chart12',
+      'charts/chart12_butterfly.vg.json',
+      { actions: false }
+    ).catch(console.error);
 
   </script>
 

@@ -1,0 +1,229 @@
+period,genre,region,movie_count,total_movies,percentage
+All years,Action,Australia,466,8022,5.809
+All years,Adventure,Australia,320,8022,3.989
+All years,Animation,Australia,688,8022,8.5764
+All years,Comedy,Australia,1636,8022,20.3939
+All years,Crime,Australia,405,8022,5.0486
+All years,Documentary,Australia,2206,8022,27.4994
+All years,Drama,Australia,2802,8022,34.9289
+All years,Family,Australia,362,8022,4.5126
+All years,Fantasy,Australia,288,8022,3.5901
+All years,History,Australia,184,8022,2.2937
+All years,Horror,Australia,871,8022,10.8576
+All years,Music,Australia,421,8022,5.2481
+All years,Mystery,Australia,295,8022,3.6774
+All years,Romance,Australia,490,8022,6.1082
+All years,Science Fiction,Australia,381,8022,4.7494
+All years,TV Movie,Australia,319,8022,3.9766
+All years,Thriller,Australia,847,8022,10.5585
+All years,War,Australia,102,8022,1.2715
+All years,Western,Australia,62,8022,0.7729
+All years,Action,Global,41963,666184,6.299
+All years,Adventure,Global,18747,666184,2.8141
+All years,Animation,Global,54456,666184,8.1743
+All years,Comedy,Global,124489,666184,18.6869
+All years,Crime,Global,28956,666184,4.3465
+All years,Documentary,Global,188227,666184,28.2545
+All years,Drama,Global,215200,666184,32.3034
+All years,Family,Global,27686,666184,4.1559
+All years,Fantasy,Global,23841,666184,3.5787
+All years,History,Global,16503,666184,2.4772
+All years,Horror,Global,59743,666184,8.9679
+All years,Music,Global,52863,666184,7.9352
+All years,Mystery,Global,20217,666184,3.0347
+All years,Romance,Global,46589,666184,6.9934
+All years,Science Fiction,Global,22103,666184,3.3179
+All years,TV Movie,Global,27114,666184,4.07
+All years,Thriller,Global,49401,666184,7.4155
+All years,War,Global,7541,666184,1.132
+All years,Western,Global,2484,666184,0.3729
+1980s,Action,Australia,55,622,8.8424
+1980s,Adventure,Australia,57,622,9.164
+1980s,Animation,Australia,76,622,12.2186
+1980s,Comedy,Australia,95,622,15.2733
+1980s,Crime,Australia,38,622,6.1093
+1980s,Documentary,Australia,144,622,23.1511
+1980s,Drama,Australia,242,622,38.9068
+1980s,Family,Australia,54,622,8.6817
+1980s,Fantasy,Australia,29,622,4.6624
+1980s,History,Australia,25,622,4.0193
+1980s,Horror,Australia,53,622,8.5209
+1980s,Music,Australia,24,622,3.8585
+1980s,Mystery,Australia,28,622,4.5016
+1980s,Romance,Australia,39,622,6.2701
+1980s,Science Fiction,Australia,38,622,6.1093
+1980s,TV Movie,Australia,70,622,11.254
+1980s,Thriller,Australia,49,622,7.8778
+1980s,War,Australia,18,622,2.8939
+1980s,Western,Australia,7,622,1.1254
+1980s,Action,Global,4726,52817,8.9479
+1980s,Adventure,Global,2259,52817,4.277
+1980s,Animation,Global,5175,52817,9.798
+1980s,Comedy,Global,10831,52817,20.5067
+1980s,Crime,Global,3006,52817,5.6913
+1980s,Documentary,Global,9738,52817,18.4372
+1980s,Drama,Global,20394,52817,38.6126
+1980s,Family,Global,3140,52817,5.9451
+1980s,Fantasy,Global,2187,52817,4.1407
+1980s,History,Global,1461,52817,2.7662
+1980s,Horror,Global,3328,52817,6.301
+1980s,Music,Global,3637,52817,6.886
+1980s,Mystery,Global,1231,52817,2.3307
+1980s,Romance,Global,3694,52817,6.994
+1980s,Science Fiction,Global,1685,52817,3.1903
+1980s,TV Movie,Global,4972,52817,9.4136
+1980s,Thriller,Global,2688,52817,5.0893
+1980s,War,Global,1117,52817,2.1148
+1980s,Western,Global,241,52817,0.4563
+1990s,Action,Australia,50,694,7.2046
+1990s,Adventure,Australia,41,694,5.9078
+1990s,Animation,Australia,82,694,11.8156
+1990s,Comedy,Australia,152,694,21.902
+1990s,Crime,Australia,42,694,6.0519
+1990s,Documentary,Australia,159,694,22.9107
+1990s,Drama,Australia,228,694,32.853
+1990s,Family,Australia,48,694,6.9164
+1990s,Fantasy,Australia,30,694,4.3228
+1990s,History,Australia,17,694,2.4496
+1990s,Horror,Australia,36,694,5.1873
+1990s,Music,Australia,41,694,5.9078
+1990s,Mystery,Australia,26,694,3.7464
+1990s,Romance,Australia,71,694,10.2305
+1990s,Science Fiction,Australia,36,694,5.1873
+1990s,TV Movie,Australia,76,694,10.951
+1990s,Thriller,Australia,63,694,9.0778
+1990s,War,Australia,11,694,1.585
+1990s,Western,Australia,3,694,0.4323
+1990s,Action,Global,6302,60979,10.3347
+1990s,Adventure,Global,2070,60979,3.3946
+1990s,Animation,Global,5646,60979,9.2589
+1990s,Comedy,Global,12592,60979,20.6497
+1990s,Crime,Global,4211,60979,6.9057
+1990s,Documentary,Global,13758,60979,22.5619
+1990s,Drama,Global,20755,60979,34.0363
+1990s,Family,Global,3502,60979,5.743
+1990s,Fantasy,Global,2437,60979,3.9965
+1990s,History,Global,1587,60979,2.6025
+1990s,Horror,Global,3938,60979,6.458
+1990s,Music,Global,4526,60979,7.4222
+1990s,Mystery,Global,1383,60979,2.268
+1990s,Romance,Global,4896,60979,8.029
+1990s,Science Fiction,Global,1960,60979,3.2142
+1990s,TV Movie,Global,5133,60979,8.4177
+1990s,Thriller,Global,4526,60979,7.4222
+1990s,War,Global,781,60979,1.2808
+1990s,Western,Global,270,60979,0.4428
+2000s,Action,Australia,71,1217,5.834
+2000s,Adventure,Australia,48,1217,3.9441
+2000s,Animation,Australia,100,1217,8.2169
+2000s,Comedy,Australia,263,1217,21.6105
+2000s,Crime,Australia,69,1217,5.6697
+2000s,Documentary,Australia,366,1217,30.074
+2000s,Drama,Australia,391,1217,32.1282
+2000s,Family,Australia,69,1217,5.6697
+2000s,Fantasy,Australia,35,1217,2.8759
+2000s,History,Australia,32,1217,2.6294
+2000s,Horror,Australia,100,1217,8.2169
+2000s,Music,Australia,107,1217,8.7921
+2000s,Mystery,Australia,44,1217,3.6154
+2000s,Romance,Australia,77,1217,6.327
+2000s,Science Fiction,Australia,36,1217,2.9581
+2000s,TV Movie,Australia,71,1217,5.834
+2000s,Thriller,Australia,111,1217,9.1208
+2000s,War,Australia,12,1217,0.986
+2000s,Western,Australia,7,1217,0.5752
+2000s,Action,Global,7200,107364,6.7062
+2000s,Adventure,Global,3092,107364,2.8799
+2000s,Animation,Global,8684,107364,8.0884
+2000s,Comedy,Global,20887,107364,19.4544
+2000s,Crime,Global,4735,107364,4.4102
+2000s,Documentary,Global,32058,107364,29.8592
+2000s,Drama,Global,30901,107364,28.7815
+2000s,Family,Global,5297,107364,4.9337
+2000s,Fantasy,Global,3082,107364,2.8706
+2000s,History,Global,2700,107364,2.5148
+2000s,Horror,Global,8297,107364,7.7279
+2000s,Music,Global,12515,107364,11.6566
+2000s,Mystery,Global,2543,107364,2.3686
+2000s,Romance,Global,8113,107364,7.5565
+2000s,Science Fiction,Global,2839,107364,2.6443
+2000s,TV Movie,Global,5026,107364,4.6813
+2000s,Thriller,Global,6822,107364,6.3541
+2000s,War,Global,1285,107364,1.1969
+2000s,Western,Global,297,107364,0.2766
+2010s,Action,Australia,120,2545,4.7151
+2010s,Adventure,Australia,80,2545,3.1434
+2010s,Animation,Australia,250,2545,9.8232
+2010s,Comedy,Australia,479,2545,18.8212
+2010s,Crime,Australia,117,2545,4.5972
+2010s,Documentary,Australia,744,2545,29.2338
+2010s,Drama,Australia,873,2545,34.3026
+2010s,Family,Australia,99,2545,3.89
+2010s,Fantasy,Australia,83,2545,3.2613
+2010s,History,Australia,59,2545,2.3183
+2010s,Horror,Australia,266,2545,10.4519
+2010s,Music,Australia,128,2545,5.0295
+2010s,Mystery,Australia,75,2545,2.947
+2010s,Romance,Australia,121,2545,4.7544
+2010s,Science Fiction,Australia,126,2545,4.9509
+2010s,TV Movie,Australia,59,2545,2.3183
+2010s,Thriller,Australia,258,2545,10.1375
+2010s,War,Australia,36,2545,1.4145
+2010s,Western,Australia,17,2545,0.668
+2010s,Action,Global,11938,215639,5.5361
+2010s,Adventure,Global,6010,215639,2.7871
+2010s,Animation,Global,16622,215639,7.7083
+2010s,Comedy,Global,39554,215639,18.3427
+2010s,Crime,Global,8151,215639,3.7799
+2010s,Documentary,Global,65342,215639,30.3016
+2010s,Drama,Global,67272,215639,31.1966
+2010s,Family,Global,8375,215639,3.8838
+2010s,Fantasy,Global,7246,215639,3.3602
+2010s,History,Global,5719,215639,2.6521
+2010s,Horror,Global,19815,215639,9.189
+2010s,Music,Global,17094,215639,7.9271
+2010s,Mystery,Global,6308,215639,2.9253
+2010s,Romance,Global,15516,215639,7.1954
+2010s,Science Fiction,Global,7237,215639,3.3561
+2010s,TV Movie,Global,6481,215639,3.0055
+2010s,Thriller,Global,15100,215639,7.0024
+2010s,War,Global,2418,215639,1.1213
+2010s,Western,Global,678,215639,0.3144
+2020s,Action,Australia,170,2944,5.7745
+2020s,Adventure,Australia,94,2944,3.1929
+2020s,Animation,Australia,180,2944,6.1141
+2020s,Comedy,Australia,647,2944,21.9769
+2020s,Crime,Australia,139,2944,4.7215
+2020s,Documentary,Australia,793,2944,26.9361
+2020s,Drama,Australia,1068,2944,36.2772
+2020s,Family,Australia,92,2944,3.125
+2020s,Fantasy,Australia,111,2944,3.7704
+2020s,History,Australia,51,2944,1.7323
+2020s,Horror,Australia,416,2944,14.1304
+2020s,Music,Australia,121,2944,4.1101
+2020s,Mystery,Australia,122,2944,4.144
+2020s,Romance,Australia,182,2944,6.1821
+2020s,Science Fiction,Australia,145,2944,4.9253
+2020s,TV Movie,Australia,43,2944,1.4606
+2020s,Thriller,Australia,366,2944,12.4321
+2020s,War,Australia,25,2944,0.8492
+2020s,Western,Australia,28,2944,0.9511
+2020s,Action,Global,11797,229385,5.1429
+2020s,Adventure,Global,5316,229385,2.3175
+2020s,Animation,Global,18329,229385,7.9905
+2020s,Comedy,Global,40625,229385,17.7104
+2020s,Crime,Global,8853,229385,3.8595
+2020s,Documentary,Global,67331,229385,29.3528
+2020s,Drama,Global,75878,229385,33.0789
+2020s,Family,Global,7372,229385,3.2138
+2020s,Fantasy,Global,8889,229385,3.8751
+2020s,History,Global,5036,229385,2.1954
+2020s,Horror,Global,24365,229385,10.6219
+2020s,Music,Global,15091,229385,6.5789
+2020s,Mystery,Global,8752,229385,3.8154
+2020s,Romance,Global,14370,229385,6.2646
+2020s,Science Fiction,Global,8382,229385,3.6541
+2020s,TV Movie,Global,5502,229385,2.3986
+2020s,Thriller,Global,20265,229385,8.8345
+2020s,War,Global,1940,229385,0.8457
+2020s,Western,Global,998,229385,0.4351
