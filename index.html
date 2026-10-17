@@ -327,6 +327,8 @@
 
       </div>
 
+      <div id="chart10"></div>
+
     </section>
 
   </main>
@@ -564,6 +566,27 @@
       })
       .catch(function (error) {
         console.error("Chart 9 failed to load:", error);
+      });
+
+    // ==========================================
+    // Chart 10: Director–Actor Collaborations
+    // ==========================================
+    vegaEmbed(
+      "#chart10",
+      "charts/chart10_lollipop.vg.json",
+      {
+        actions: false,
+        renderer: "svg"
+      }
+    )
+      .then(function (result) {
+        console.log("Chart 10 loaded successfully.");
+      })
+      .catch(function (error) {
+        console.error("Chart 10 failed:", error);
+
+        document.querySelector("#chart10").textContent =
+          "Chart 10 failed to load. Check the browser console.";
       });
 
   </script>
