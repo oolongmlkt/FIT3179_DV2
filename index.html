@@ -301,6 +301,32 @@
         shared productions are considered.
       </p>
 
+      <!-- ====================================== -->
+      <!-- Chart 9: Production Company Rankings   -->
+      <!-- ====================================== -->
+
+      <div class="chart-block" id="chart9-block">
+
+        <h3>How Have Leading Production Companies Changed Rank?</h3>
+
+        <p class="chart-description">
+          Explore how the rankings of the ten most prolific production
+          companies changed between 2000 and 2025. Companies are selected
+          by their total number of credited movies across the full period,
+          then ranked within this group for each reporting interval.
+        </p>
+
+        <div id="chart9"></div>
+
+        <p class="chart-note">
+          Note: Rankings are calculated among the ten selected companies,
+          not all production companies in the dataset. The final interval
+          (2020–2025) covers six years; all preceding intervals cover five.
+          Each movie is counted once for every credited production company.
+        </p>
+
+      </div>
+
     </section>
 
   </main>
@@ -522,6 +548,23 @@
     }
 
     initialiseChart8();
+
+    // ==========================================
+    // Chart 9: Production Company Ranking
+    // ==========================================
+    vegaEmbed(
+      "#chart9",
+      "charts/chart9_bump.vg.json",
+      {
+        actions: false
+      }
+    )
+      .then(function (result) {
+        console.log("Chart 9 loaded successfully.");
+      })
+      .catch(function (error) {
+        console.error("Chart 9 failed to load:", error);
+      });
 
   </script>
 

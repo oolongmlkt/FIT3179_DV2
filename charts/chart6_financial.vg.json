@@ -10,7 +10,7 @@
     "width": 700,
     "height": 520,
     "data": {
-        "url": "/data/charts/genre_financials.csv",
+        "url": "data/charts/genre_financials.csv",
         "format": {
             "type": "csv",
             "parse": {

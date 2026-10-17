@@ -1,0 +1,177 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ranking trajectories of the ten most prolific TMDB production companies, 2000–2025.",
+
+  "width": 700,
+  "height": 450,
+
+  "background": "transparent",
+
+  "data": {
+    "url": "data/charts/studio_rankings.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "company_name": "string",
+        "period": "string",
+        "period_order": "number",
+        "movie_count": "number",
+        "rank": "number",
+        "overall_rank": "number",
+        "total_movies": "number",
+        "selection_rank": "number",
+        "active": "boolean"
+      }
+    }
+  },
+
+  "transform": [
+    {
+      "filter": "datum.active && isValid(datum.rank)"
+    }
+  ],
+
+  "encoding": {
+    "x": {
+      "field": "period",
+      "type": "ordinal",
+      "sort": [
+        "2000–2004",
+        "2005–2009",
+        "2010–2014",
+        "2015–2019",
+        "2020–2025"
+      ],
+      "axis": {
+        "title": "Release period",
+        "labelAngle": 0,
+        "labelPadding": 12,
+        "titlePadding": 20,
+        "grid": false,
+        "tickSize": 0
+      }
+    },
+
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "scale": {
+        "domain": [1, 10],
+        "reverse": true,
+        "nice": false,
+        "zero": false
+      },
+      "axis": {
+        "title": "Rank among selected companies",
+        "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "format": "d",
+        "grid": true,
+        "gridOpacity": 0.15,
+        "titlePadding": 15,
+        "tickSize": 0
+      }
+    },
+
+    "color": {
+      "field": "company_name",
+      "type": "nominal",
+      "title": "Production company",
+      "scale": {
+        "scheme": "tableau10"
+      },
+      "legend": {
+        "orient": "bottom",
+        "columns": 5,
+        "symbolType": "stroke",
+        "symbolStrokeWidth": 3,
+        "labelLimit": 160,
+        "titlePadding": 12,
+        "offset": 25
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "company_name",
+        "type": "nominal",
+        "title": "Production company"
+      },
+      {
+        "field": "period",
+        "type": "ordinal",
+        "title": "Period"
+      },
+      {
+        "field": "rank",
+        "type": "quantitative",
+        "title": "Cohort rank",
+        "format": ".0f"
+      },
+      {
+        "field": "overall_rank",
+        "type": "quantitative",
+        "title": "Overall period rank",
+        "format": ",.0f"
+      },
+      {
+        "field": "movie_count",
+        "type": "quantitative",
+        "title": "Credited movies",
+        "format": ",.0f"
+      },
+      {
+        "field": "total_movies",
+        "type": "quantitative",
+        "title": "Total movies (2000–2025)",
+        "format": ",.0f"
+      }
+    ]
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "detail": {
+          "field": "company_name",
+          "type": "nominal"
+        },
+        "order": {
+          "field": "period_order",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 100,
+        "filled": true,
+        "stroke": "white",
+        "strokeWidth": 1
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "labelColor": "#555555",
+      "titleColor": "#333333",
+      "domain": false
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 13
+    }
+  }
+}

@@ -72,3 +72,37 @@
 .actor-dot {
     background: #F28E2B;
 }
+
+
+/* ==========================================
+   Chart 9 — Production Company Rankings
+   ========================================== */
+
+#chart9-block {
+    margin-top: 2.5rem;
+}
+
+#chart9 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+#chart9 .vega-embed {
+    max-width: 100%;
+}
+
+#chart9-block .chart-description {
+    max-width: 850px;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+#chart9-block .chart-note {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.75;
+    margin-top: 1rem;
+}

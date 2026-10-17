@@ -15,7 +15,7 @@
   },
 
   "data": {
-    "url": "/data/charts/genre_ratings.csv",
+    "url": "data/charts/genre_ratings.csv",
     "format": {
       "type": "csv",
       "parse": {

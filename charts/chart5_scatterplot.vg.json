@@ -9,7 +9,7 @@
         "offset": 18
     },
     "data": {
-        "url": "/data/charts/movie_financials.csv",
+        "url": "data/charts/movie_financials.csv",
         "format": {
             "type": "csv",
             "parse": {
