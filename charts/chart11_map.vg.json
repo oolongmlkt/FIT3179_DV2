@@ -1,0 +1,150 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+    "text": "Where Is Australia's Screen Production Expenditure Concentrated?",
+    "subtitle": [
+      "Reported production expenditure by state, 2024/25",
+      "Circle area represents expenditure (AUD millions)"
+    ],
+    "anchor": "start",
+    "fontSize": 17,
+    "subtitleFontSize": 12,
+    "subtitleColor": "#666666",
+    "offset": 15
+  },
+
+  "width": 700,
+  "height": 480,
+
+  "background": "white",
+
+  "projection": {
+    "type": "mercator",
+    "center": [134, -28],
+    "scale": 650,
+    "translate": [350, 240]
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "data/charts/australia_states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F0F1F3",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.3
+      }
+    },
+
+    {
+      "data": {
+        "url": "data/charts/australia_spend.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "year": "string",
+            "year_start": "number",
+            "state": "string",
+            "state_code": "string",
+            "spend_m": "number",
+            "longitude": "number",
+            "latitude": "number",
+            "total_m": "number",
+            "share_pct": "number"
+          }
+        }
+      },
+
+      "transform": [
+        {
+          "filter": "datum.year === '2024/25'"
+        }
+      ],
+
+      "mark": {
+        "type": "circle",
+        "color": "#168A9C",
+        "opacity": 0.75,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+
+        "size": {
+          "field": "spend_m",
+          "type": "quantitative",
+          "scale": {
+            "type": "linear",
+            "domain": [0, 500],
+            "range": [0, 7000]
+          },
+          "legend": {
+            "title": "Expenditure (AUD $m)",
+            "orient": "right",
+            "values": [50, 150, 300, 500],
+            "format": ".0f"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "year",
+            "type": "nominal",
+            "title": "Financial year"
+          },
+          {
+            "field": "spend_m",
+            "type": "quantitative",
+            "title": "Expenditure (AUD $m)",
+            "format": ",.0f"
+          },
+          {
+            "field": "share_pct",
+            "type": "quantitative",
+            "title": "Share of national total (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "total_m",
+            "type": "quantitative",
+            "title": "Published national total ($m)",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

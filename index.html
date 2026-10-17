@@ -327,7 +327,48 @@
 
       </div>
 
+
       <div id="chart10"></div>
+
+    </section>
+
+    <!-- SECTION 4: AUSTRALIAN FILM INDUSTRY -->
+    <section id="section4">
+
+      <div class="section-intro">
+        <h2>Australia's Screen Production Landscape</h2>
+
+        <p>
+          How is screen production expenditure distributed across
+          Australia? Explore the geographic concentration of
+          reported production expenditure across Australian states
+          from 1995/96 to 2024/25.
+        </p>
+      </div>
+
+      <!-- Chart 11: Australian Production Expenditure Map -->
+
+      <div class="chart-container">
+
+        <h3>Where Is Australia's Screen Production Expenditure Concentrated?</h3>
+
+        <p>
+          Larger circles represent greater reported production
+          expenditure. Hover over each state to explore its
+          expenditure and contribution to the national total.
+        </p>
+
+        <div id="chart11" class="vis"></div>
+
+        <p class="chart-note">
+          Source: Screen Australia, Spend by Location.
+          Values are reported in AUD millions.
+          Only NSW, QLD, VIC and SA are individually mapped.
+          Other* is reported separately and is not assigned
+          to an individual geographic location.
+        </p>
+
+      </div>
 
     </section>
 
@@ -587,6 +628,30 @@
 
         document.querySelector("#chart10").textContent =
           "Chart 10 failed to load. Check the browser console.";
+      });
+
+    // ==========================================
+    // Chart 11: Australian Expenditure Map
+    // ==========================================
+    vegaEmbed(
+      "#chart11",
+      "charts/chart11_map.vg.json",
+      {
+        actions: false,
+        renderer: "svg",
+        loader: vega.loader({
+          baseURL: new URL("./", document.baseURI).href
+        })
+      }
+    )
+      .then(function (result) {
+        console.log("Chart 11 loaded successfully.");
+      })
+      .catch(function (error) {
+        console.error("Chart 11 failed:", error);
+
+        document.querySelector("#chart11").textContent =
+          "Chart 11 failed to load. Check the browser console.";
       });
 
   </script>
