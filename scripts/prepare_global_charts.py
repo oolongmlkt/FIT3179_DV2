@@ -140,9 +140,58 @@ def main():
                 pairs[(a, b)] += 1
             else:
                 excluded_pairs[(a, b)] += 1
-    rows = [{'source_iso3': a, 'target_iso3': b, 'movie_count': n}
-            for (a, b), n in sorted(pairs.items())]
-    flow = pd.DataFrame(rows, columns=['source_iso3', 'target_iso3', 'movie_count'])
+    
+    # Build Chart 3 country-pair dataset.
+    # Each country pair remains undirected and counted once per film.
+
+    rows = [
+        {
+            'source_iso3': a,
+            'target_iso3': b,
+            'movie_count': n
+        }
+        for (a, b), n in sorted(pairs.items())
+    ]
+
+    flow = pd.DataFrame(
+        rows,
+        columns=['source_iso3', 'target_iso3', 'movie_count']
+    )
+
+    # Add readable country names for Chart 3 tooltips.
+    # Reuse the existing country lookup used by Chart 1.
+
+    country_names = (
+        lookup[lookup.iso3.ne('')]
+        [['iso3', 'standard_name']]
+        .drop_duplicates('iso3')
+    )
+
+    flow = flow.merge(
+        country_names.rename(columns={
+            'iso3': 'source_iso3',
+            'standard_name': 'source_name'
+        }),
+        on='source_iso3',
+        how='left',
+        validate='many_to_one'
+    )
+
+    flow = flow.merge(
+        country_names.rename(columns={
+            'iso3': 'target_iso3',
+            'standard_name': 'target_name'
+        }),
+        on='target_iso3',
+        how='left',
+        validate='many_to_one'
+    )
+
+    # Use ISO3 codes only if a readable name is unavailable.
+
+    flow['source_name'] = flow['source_name'].fillna(flow['source_iso3'])
+    flow['target_name'] = flow['target_name'].fillna(flow['target_iso3'])
+
     flow = flow.merge(coord.rename(columns={'iso3': 'source_iso3', 'latitude': 'source_lat',
                                             'longitude': 'source_lon'}), on='source_iso3', how='left')
     flow = flow.merge(coord.rename(columns={'iso3': 'target_iso3', 'latitude': 'target_lat',

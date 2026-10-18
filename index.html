@@ -70,7 +70,10 @@
           <div class="chart2-insight">
             <h4>What does the streamgraph reveal?</h4>
             <p>
-              Drama and Documentary account for some of the largest recorded genre volumes with Drama increasing from 1,897 genre credits in 1980 to 16,392 in 2025. Documentary also expanded substantially, reaching 12,336 credits in 2025. Horror and Thriller show notable growth in later years, contributing to the widening streamgraph. These trends reflect changes in TMDB's recorded genre distribution.
+              Drama and Documentary account for some of the largest recorded genre volumes with Drama increasing from
+              1,897 genre credits in 1980 to 16,392 in 2025. Documentary also expanded substantially, reaching 12,336
+              credits in 2025. Horror and Thriller show notable growth in later years, contributing to the widening
+              streamgraph. These trends reflect changes in TMDB's recorded genre distribution.
             </p>
           </div>
           <p class="chart-note">
@@ -81,19 +84,75 @@
             Changes in TMDB coverage over time may influence the
             observed trends.
           </p>
-
         </div>
-
       </article>
 
-      <article id="chart3-section" class="chart-card chart-full">
-        <h3>Connecting the World Through Film</h3>
-        <p>International film production connects countries through shared creative and financial partnerships. Explore
-          the strongest co-production relationships recorded in TMDB between 1980 and 2025.</p>
-        <div id="chart3" class="vis"></div>
-        <p class="chart-note">Each connection represents films jointly credited to two production countries. Thicker
-          lines indicate more shared productions. Use the minimum shared films slider to filter weaker relationships, or
-          select a country to explore its international co-production network.</p>
+      <!-- Chart 3 — International Co-production Map -->
+      <article id="chart3-block" class="chart-card chart-full">
+        <div class="chart3-content">
+          <h3>Connecting the World Through Film</h3>
+          <p class="chart3-description">
+            International film production connects countries through shared
+            creative and financial partnerships. Explore the strongest
+            co-production relationships recorded in TMDB between 1980 and 2025.
+          </p>
+
+          <!-- Chart 3 visualisation -->
+          <div id="chart3" class="vis"></div>
+
+          <!-- Custom line thickness legend -->
+          <div class="chart3-legend">
+            <h4>Number of shared film credits</h4>
+            <div class="chart3-legend-items">
+              <div class="chart3-legend-item">
+                <span class="chart3-legend-line line-100"></span>
+                <span>100 films</span>
+              </div>
+              <div class="chart3-legend-item">
+                <span class="chart3-legend-line line-1000"></span>
+                <span>1,000 films</span>
+              </div>
+              <div class="chart3-legend-item">
+                <span class="chart3-legend-line line-3000"></span>
+                <span>3,000 films</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive controls -->
+          <div id="chart3-controls" class="chart3-controls"></div>
+
+          <p class="chart3-instruction">
+            Hover over a connection to view its shared film credits.
+            Use the slider to explore stronger or weaker relationships,
+            or filter the network by country.
+          </p>
+
+          <div class="chart3-insight">
+            <h4>What does the map reveal?</h4>
+            <p>
+              Canada-United States (3,840 shared film credits) and
+              United Kingdom-United States (3,739) are the strongest
+              recorded co-production relationships. Europe also forms
+              a prominent collaboration network, particularly
+              Belgium-France (2,215) and Germany-France (1,867).
+              Australia's strongest recorded connections are with
+              the United States (528) and United Kingdom (309).
+              Increasing the minimum shared-films threshold helps
+              distinguish these established relationships from
+              less frequent country partnerships.
+            </p>
+          </div>
+
+          <p class="chart-note">
+            Source: TMDB, 1980-2025. Each line connects two countries credited
+            on the same film, with thickness representing the number of shared
+            film credits. Films involving more than two production countries
+            contribute to multiple country pairs. Connections represent recorded
+            production-country associations rather than physical movement of
+            films, people or funding.
+          </p>
+        </div>
       </article>
     </section>
 
@@ -217,7 +276,7 @@
           Australia is defined by production-country credit and is also included in the global total.</p>
       </article>
     </section>
-    <footer class="site-footer">FIT3179 · Movie Collections · Data visualisation project</footer>
+    <footer class="site-footer">FIT3179 · Gina Pov Chy Yem (28780353)</footer>
   </main>
   <script>
 
@@ -249,10 +308,18 @@
         'Chart 2 failed to load. Check the browser console.';
     });
 
-    // Chart 3: Co-production Flowmap
-    vegaEmbed('#chart3', 'charts/chart3_flowmap.vg.json', {
-      actions: false
-    }).catch(console.error);
+    // Chart 3 — International Co-production Map
+    vegaEmbed(
+      "#chart3",
+      "charts/chart3_flowmap.vg.json",
+      {
+        actions: false,
+        renderer: "svg",
+        bind: "#chart3-controls"
+      }
+    ).catch(error => {
+      console.error("Chart 3 failed to load:", error);
+    });
 
     // Chart 4: Genre × Decade Heatmap
     vegaEmbed(
