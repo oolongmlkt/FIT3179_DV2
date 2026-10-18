@@ -250,6 +250,88 @@ h1 {
 }
 
 /* ==========================================
+   Chart 2 — Genre Streamgraph
+   ========================================== */
+
+/* Centre all Chart 2 content within its card */
+
+#chart2-block .chart2-content {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Description */
+
+#chart2-block .chart2-description {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4A596B;
+}
+
+/* Centre the streamgraph and its genre legend */
+
+#vis2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 12px 0 18px;
+}
+
+#vis2 .vega-embed {
+    flex: 0 0 auto;
+}
+
+/* Interaction instructions */
+
+#chart2-block .chart2-instruction {
+    margin: 8px 0 18px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #637185;
+    text-align: center;
+}
+
+/* Analytical insight */
+
+#chart2-block .chart2-insight {
+    margin-top: 12px;
+    padding: 16px 18px;
+    background: #F5F8FC;
+    border-left: 3px solid #42638B;
+    border-radius: 0 6px 6px 0;
+}
+
+#chart2-block .chart2-insight h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: var(--cinema-navy);
+    letter-spacing: 0.01em;
+}
+
+#chart2-block .chart2-insight p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #526176;
+}
+
+/* Source and methodology note */
+
+#chart2-block .chart-note {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid #E0E6ED;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #637185;
+}
+
+/* ==========================================
    Chart 8 — Director Collaboration Explorer
    ========================================== */
 

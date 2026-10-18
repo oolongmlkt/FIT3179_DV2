@@ -39,7 +39,11 @@
           <div class="chart1-insight">
             <h4>What does the map reveal?</h4>
             <p>
-              Northern Europe stands out for its high recorded film-production intensity, particularly Iceland (72.56), Estonia (21.86) and Denmark (17.48) average annual movie credits per million residents. In contrast, the United States records a lower population-adjusted rate (9.17), despite having substantially more total movie credits. This demonstrates how adjusting for population reveals a different geographical pattern from comparing production volumes alone.
+              Northern Europe stands out for its high recorded film-production intensity, particularly Iceland (72.56),
+              Estonia (21.86) and Denmark (17.48) average annual movie credits per million residents. In contrast, the
+              United States records a lower population-adjusted rate (9.17), despite having substantially more total
+              movie credits. This demonstrates how adjusting for population reveals a different geographical pattern
+              from comparing production volumes alone.
             </p>
           </div>
           <p class="chart-note">
@@ -51,20 +55,37 @@
           </p>
         </div>
       </article>
-      <article class="chart-card chart-full">
-        <h3>The Evolution of Movie Genres</h3>
-        <p>How has the composition of film production changed over time? Explore different movie genres between 1980 and
-          2025.</p>
-        <p class="chart-note">Each coloured band represents a movie genre. Its thickness indicates the number of
-          TMDB-listed productions associated with that genre in a given year.</p>
-        <div id="vis2" class="vis" aria-label="Streamgraph showing the evolution of movie genres from 1980 to 2025">
+
+      <!-- Chart 2: Genre Streamgraph -->
+      <article class="chart-card chart-full" id="chart2-block">
+        <div class="chart2-content">
+          <h3>The Evolution of Movie Genres</h3>
+          <div id="vis2" class="vis"
+            aria-label="Interactive streamgraph showing the evolution of movie genres from 1980 to 2025">
+          </div>
+          <p class="chart2-instruction">
+            Click one or more genres in the legend to highlight their
+            trends. Hover over a stream to view its annual genre credits.
+          </p>
+          <div class="chart2-insight">
+            <h4>What does the streamgraph reveal?</h4>
+            <p>
+              Drama and Documentary account for some of the largest recorded genre volumes with Drama increasing from 1,897 genre credits in 1980 to 16,392 in 2025. Documentary also expanded substantially, reaching 12,336 credits in 2025. Horror and Thriller show notable growth in later years, contributing to the widening streamgraph. These trends reflect changes in TMDB's recorded genre distribution.
+            </p>
+          </div>
+          <p class="chart-note">
+            Source: TMDB, 1980-2025. Each band represents a genre,
+            with its thickness indicating the annual number of
+            associated movies. Movies assigned multiple genres contribute
+            once to each genre, so counts are not mutually exclusive.
+            Changes in TMDB coverage over time may influence the
+            observed trends.
+          </p>
+
         </div>
-        <p class="chart-note"><strong>Reading the trend:</strong> The overall stream expands considerably in later
-          years, indicating an increase in recorded genre credits. This reflects trends within TMDB and may also be
-          influenced by changes in database coverage over time.</p>
-        <p class="chart-note">Source: TMDB. Each movie contributes one count to every genre assigned to it; genre counts
-          are not mutually exclusive. Click a genre in the legend to highlight it.</p>
+
       </article>
+
       <article id="chart3-section" class="chart-card chart-full">
         <h3>Connecting the World Through Film</h3>
         <p>International film production connects countries through shared creative and financial partnerships. Explore
