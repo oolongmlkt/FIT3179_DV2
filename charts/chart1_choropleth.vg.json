@@ -3,8 +3,7 @@
   "title": {
     "text": "Where Is Film Production Most Concentrated?",
     "subtitle": [
-      "Average annual TMDB-listed movie productions per million residents, 1980–2025",
-      "Countries are credited in full for international co-productions; grey indicates unavailable data."
+      "Average annual TMDB-listed movie productions per million residents, 1980-2025"
     ],
     "anchor": "start",
     "fontSize": 20,
@@ -14,13 +13,21 @@
   "width": 900,
   "height": 460,
   "background": "white",
-  "projection": {"type": "equalEarth"},
+  "projection": {
+    "type": "equalEarth"
+  },
   "data": {
     "url": "https://cdn.jsdelivr.net/npm/vega-datasets@2/data/world-110m.json",
-    "format": {"type": "topojson", "feature": "countries"}
+    "format": {
+      "type": "topojson",
+      "feature": "countries"
+    }
   },
   "transform": [
-    {"calculate": "toNumber(datum.id)", "as": "map_country_id"},
+    {
+      "calculate": "toNumber(datum.id)",
+      "as": "map_country_id"
+    },
     {
       "lookup": "map_country_id",
       "from": {
@@ -29,20 +36,18 @@
           "format": {
             "type": "csv",
             "parse": {
-              "iso_numeric": "number",
               "average_annual_movies_per_million": "number",
               "valid_population_years": "number",
-              "movies_in_valid_years": "number",
-              "first_valid_year": "number",
-              "last_valid_year": "number"
+              "movies_in_valid_years": "number"
             }
           }
         },
         "key": "iso_numeric",
         "fields": [
-          "standard_name", "iso3", "average_annual_movies_per_million",
-          "valid_population_years", "movies_in_valid_years",
-          "first_valid_year", "last_valid_year"
+          "standard_name",
+          "average_annual_movies_per_million",
+          "valid_population_years",
+          "movies_in_valid_years"
         ]
       }
     },
@@ -53,36 +58,85 @@
   ],
   "layer": [
     {
-      "mark": {"type": "geoshape", "fill": "#e6e8eb", "stroke": "#ffffff", "strokeWidth": 0.45}
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e6e8eb",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.45
+      }
     },
     {
-      "transform": [{"filter": "isValid(datum.production_rate)"}],
-      "mark": {"type": "geoshape", "stroke": "#ffffff", "strokeWidth": 0.45},
+      "transform": [
+        {
+          "filter": "isValid(datum.production_rate)"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 0.45
+      },
       "encoding": {
         "color": {
           "field": "production_rate",
           "type": "quantitative",
           "title": "Movies per million / year",
-          "scale": {"type": "symlog", "constant": 1, "scheme": "blues"},
+          "scale": {
+            "type": "symlog",
+            "constant": 1,
+            "scheme": "blues"
+          },
           "legend": {
-            "orient": "bottom", "direction": "horizontal",
-            "gradientLength": 300, "format": ".1f"
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 360,
+            "gradientThickness": 14,
+            "values": [
+              0,
+              1,
+              5,
+              20,
+              60
+            ],
+            "format": ".0f",
+            "labelFontSize": 12,
+            "titleFontSize": 13,
+            "titlePadding": 10,
+            "labelOffset": 5
           }
         },
         "tooltip": [
-          {"field": "standard_name", "type": "nominal", "title": "Country"},
-          {"field": "production_rate", "type": "quantitative", "title": "Avg. movies / million / year", "format": ".2f"},
-          {"field": "movies_in_valid_years", "type": "quantitative", "title": "Movie-country credits", "format": ",d"},
-          {"field": "valid_population_years", "type": "quantitative", "title": "Population years", "format": "d"},
-          {"field": "first_valid_year", "type": "quantitative", "title": "First valid year", "format": "d"},
-          {"field": "last_valid_year", "type": "quantitative", "title": "Last valid year", "format": "d"}
+          {
+            "field": "standard_name",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "production_rate",
+            "type": "quantitative",
+            "title": "Movies per million / year",
+            "format": ".2f"
+          },
+          {
+            "field": "movies_in_valid_years",
+            "type": "quantitative",
+            "title": "Movie credits (valid years)",
+            "format": ",d"
+          },
+          {
+            "field": "valid_population_years",
+            "type": "quantitative",
+            "title": "Years with population data",
+            "format": "d"
+          }
         ]
       }
     }
   ],
   "config": {
-    "view": {"stroke": null},
-    "font": "Arial",
-    "axis": {"labelFont": "Arial", "titleFont": "Arial"}
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial"
   }
 }

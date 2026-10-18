@@ -1,9 +1,258 @@
+/* ==========================================
+   Movie Collections — Global Theme
+   ========================================== */
+
+:root {
+    --cinema-navy: #17243A;
+    --cinema-gold: #B28A45;
+    --cinema-ivory: #F8F6F1;
+    --cinema-border: #E6E1D8;
+}
+
+/* Global reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cinema-ivory);
+    color: var(--cinema-navy);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Page Layout
+   ========================================== */
+
+.page {
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 32px 64px;
+}
+
+/* ==========================================
+   Header and Navigation
+   ========================================== */
+
+.site-header {
+    padding: 64px 0 42px;
+    border-bottom: 1px solid #DCE3EB;
+    margin-bottom: 54px;
+}
+
+h1 {
+    font-size: clamp(38px, 5vw, 56px);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    margin: 0 0 16px;
+}
+
+.site-subtitle {
+    max-width: 780px;
+    font-size: 18px;
+    color: #526176;
+    margin: 0 0 24px;
+}
+
+/* Section navigation */
+
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.section-nav a {
+    color: #284C75;
+    background: #FFFFFF;
+    border: 1px solid #DCE3EB;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.section-nav a:hover,
+.section-nav a:focus-visible {
+    background: #F4EBD9;
+    border-color: var(--cinema-gold);
+    color: var(--cinema-navy);
+}
+
+/* ==========================================
+   Story Sections
+   ========================================== */
+
+.story-section {
+    margin-bottom: 70px;
+    scroll-margin-top: 24px;
+}
+
+.section-intro {
+    margin: 0 0 26px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #D8B66A;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #92703A;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.section-intro h2 {
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.2;
+    color: var(--cinema-navy);
+    margin: 0 0 10px;
+}
+
+.section-intro>p:last-child {
+    color: #526176;
+    max-width: 900px;
+    margin: 0;
+}
+
+/* ==========================================
+   Chart Cards and Grid Layout
+   ========================================== */
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+    align-items: stretch;
+}
+
+.chart-card {
+    min-width: 0;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid var(--cinema-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(23, 36, 58, 0.045);
+}
+
+.chart-full {
+    margin-bottom: 24px;
+}
+
+.chart-card h3 {
+    font-size: 19px;
+    line-height: 1.35;
+    color: var(--cinema-navy);
+    margin: 0 0 12px;
+}
+
+.chart-card>p:not(.chart-note) {
+    margin: 0 0 16px;
+    color: #4A596B;
+    font-size: 14px;
+}
+
+/* General chart notes */
+
+.chart-note,
+.note {
+    color: #637185;
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 16px 0 0;
+}
+
+/* ==========================================
+   Vega Visualisation Containers
+   ========================================== */
+
+.vis {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 6px 0;
+}
+
+.vis .vega-embed {
+    max-width: none;
+}
+
+/* ==========================================
+   Chart 1 — World Choropleth
+   ========================================== */
+
+/* Centre all Chart 1 content within its card */
+
+#chart1-block .chart1-content {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Centre the Vega-Lite map */
+
+#chart1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 12px 0 18px;
+}
+
+#chart1 .vega-embed {
+    flex: 0 0 auto;
+}
+
+/* Data interpretation */
+
+#chart1-block .chart1-insight {
+    margin-top: 12px;
+    padding: 16px 18px;
+    background: #F5F8FC;
+    border-left: 3px solid #42638B;
+    border-radius: 0 6px 6px 0;
+}
+
+#chart1-block .chart1-insight h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: var(--cinema-navy);
+    letter-spacing: 0.01em;
+}
+
+#chart1-block .chart1-insight p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #526176;
+}
+
+/* Source and methodology note */
+
+#chart1-block .chart-note {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid #E0E6ED;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #637185;
+}
 
 /* ==========================================
    Chart 8 — Director Collaboration Explorer
    ========================================== */
 
-/* Main chart container */
 .chart8-wrapper {
     width: 100%;
     max-width: 760px;
@@ -11,6 +260,7 @@
 }
 
 /* Dropdown controls */
+
 .chart8-controls {
     display: flex;
     align-items: center;
@@ -26,20 +276,23 @@
 
 .chart8-controls select {
     padding: 6px 9px;
-    border: 1px solid #cccccc;
+    border: 1px solid #CCCCCC;
     border-radius: 4px;
-    background: #ffffff;
+    background: #FFFFFF;
     font-size: 13px;
+    max-width: 100%;
 }
 
 /* Chart container */
+
 #chart8 {
     width: 100%;
     max-width: 740px;
     margin: 0 auto;
 }
 
-/* Legend */
+/* Network legend */
+
 .chart8-legend {
     display: flex;
     align-items: center;
@@ -51,13 +304,12 @@
     color: #555555;
 }
 
-.chart8-legend > span {
+.chart8-legend>span {
     display: inline-flex;
     align-items: center;
     gap: 5px;
 }
 
-/* Coloured legend circles */
 .chart8-dot {
     display: inline-block;
     width: 10px;
@@ -73,26 +325,9 @@
     background: #F28E2B;
 }
 
-
 /* ==========================================
    Chart 9 — Production Company Rankings
    ========================================== */
-
-#chart9-block {
-    margin-top: 2.5rem;
-}
-
-#chart9 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    overflow-x: auto;
-    padding: 1rem 0;
-}
-
-#chart9 .vega-embed {
-    max-width: 100%;
-}
 
 #chart9-block .chart-description {
     max-width: 850px;
@@ -105,4 +340,48 @@
     line-height: 1.5;
     opacity: 0.75;
     margin-top: 1rem;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+.site-footer {
+    padding-top: 24px;
+    border-top: 1px solid #DCE3EB;
+    color: #637185;
+    font-size: 12px;
+}
+
+/* ==========================================
+   Responsive Layout
+   ========================================== */
+
+/* Stack paired charts on narrower screens */
+
+@media (max-width: 1450px) {
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    .page {
+        padding: 0 14px 36px;
+    }
+
+    .site-header {
+        padding-top: 38px;
+        margin-bottom: 34px;
+    }
+
+    .chart-card {
+        padding: 16px;
+    }
+
+    .story-section {
+        margin-bottom: 46px;
+    }
 }

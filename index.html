@@ -4,395 +4,205 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Collections</title>
   <link rel="stylesheet" href="css/style.css">
-
-  <title>FIT3179 DV2 — Movie Collections</title>
-
-  <!-- Vega libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 2rem auto;
-      max-width: 1050px;
-      padding: 0 1rem;
-      color: #252525;
-    }
-
-    .vis {
-      width: 100%;
-      overflow-x: auto;
-    }
-
-    .chart-section {
-      margin-bottom: 4rem;
-    }
-
-    .note {
-      font-size: .85rem;
-      color: #555;
-      line-height: 1.5;
-    }
-  </style>
 </head>
 
 <body>
+  <main class="page">
+    <header class="site-header">
+      <h1>BEHIND THE SCENES</h1>
+      <p class="site-subtitle">Exploring film production, genres, financial performance and creative partnerships from
+        1980 to 2025.</p>
+      <nav class="section-nav" aria-label="Jump to section">
+        <a href="#section1">Global landscape</a>
+        <a href="#section2">Movie success</a>
+        <a href="#section3">Creative partnerships</a>
+        <a href="#section4">Australia</a>
+      </nav>
+    </header>
 
-  <main>
-
-    <!-- Chart 1: World Choropleth -->
-    <section class="chart-section">
-
-      <h2>Global Film Production</h2>
-
-      <div id="vis1" class="vis" aria-label="World choropleth of average annual movie production per million residents">
-      </div>
-
-      <p class="note">
-        Source: TMDB movie production-country credits and World Bank
-        population (SP.POP.TOTL). Released films, 1980–2025.
-        A multi-country production contributes one credit to each
-        credited country. Annual rates are averaged across years
-        with valid population; missing values are not zero.
-      </p>
-
-    </section>
-
-    <!-- Chart 2: Genre Streamgraph -->
-    <section class="chart-section">
-
-      <h2>The Evolution of Movie Genres</h2>
-
-      <p>
-        How has the composition of film production changed over time?
-        Explore the evolution of different movie genres between
-        1980 and 2025.
-      </p>
-
-
-      <p class="note">
-        Each coloured band represents a movie genre.
-        The thickness of the band indicates the number of
-        TMDB-listed productions associated with that genre
-        in a given year.
-      </p>
-
-
-      <div id="vis2" class="vis" aria-label="Streamgraph showing the evolution of movie genres from 1980 to 2025">
-      </div>
-
-
-      <p class="note">
-        <strong>Reading the trend:</strong>
-        The overall stream expands considerably in later years,
-        indicating an increase in recorded genre credits.
-        This reflects trends within the TMDB dataset and may
-        also be influenced by changes in database coverage
-        over time.
-      </p>
-
-
-      <p class="note">
-        Source: TMDB. Each movie contributes one count to every
-        genre assigned to it. Genre counts are therefore not
-        mutually exclusive. Click a genre in the legend to highlight it.
-      </p>
-
-    </section>
-
-
-    <section id="chart3-section">
-      <h2>Connecting the World Through Film</h2>
-
-      <p>
-        International film production connects countries through
-        shared creative and financial partnerships. Explore the
-        strongest co-production relationships recorded in TMDB
-        between 1980 and 2025.
-      </p>
-
-      <div id="chart3"></div>
-
-
-      <p class="chart-note">
-        Each connection represents films jointly credited to
-        two production countries. Thicker lines indicate more
-        shared productions.
-
-        Use the minimum shared films slider to filter weaker
-        relationships, or select a country to explore its
-        international co-production network.
-      </p>
-
-    </section>
-
-
-    <!-- SECTION 2: WHAT MAKES A MOVIE SUCCESSFUL? -->
-
-    <section id="movie-success">
-
+    <section id="section1" class="story-section">
       <div class="section-intro">
-        <h2>What Makes a Movie Successful?</h2>
-
-        <p>
-          Movie production has evolved significantly over the
-          decades, but which genres have consistently dominated
-          the industry? We begin by examining the changing
-          distribution of movie genres.
-        </p>
+        <p class="eyebrow">01 / GLOBAL LANDSCAPE</p>
+        <h2>Films Around the World</h2>
+        <p>Explore where movies are produced, how genres have evolved, and how countries collaborate.</p>
       </div>
-
-      <!-- Chart 4: Genre × Decade Heatmap -->
-
-      <div class="chart-container">
-
-        <h3>Which Movie Genres Have Dominated Each Decade?</h3>
-
-        <p>
-          Explore the number of movies produced within each
-          genre across five release periods. Darker cells
-          indicate higher production volumes.
-        </p>
-
-        <div id="chart4"></div>
-
-        <p class="chart-note">
-          Source: TMDB. Movies with multiple genres are counted
-          once within each assigned genre. The final period
-          covers 2020–2025 only.
-        </p>
-
-      </div>
-
-
-      <div class="chart-container">
-        <h3>Does a Bigger Budget Mean Bigger Box Office Returns?</h3>
-
-        <p>
-          Explore the relationship between production budgets and
-          worldwide box-office revenue. Each point represents one movie.
-          Both axes use logarithmic scales to accommodate the wide
-          variation in movie finances.
-        </p>
-
-        <div id="chart5"></div>
-
-        <p class="chart-note">
-          Source: TMDB. Only movies with reported positive budgets
-          and revenues are included. Revenue is worldwide box-office
-          gross, not studio profit.
-        </p>
-      </div>
-
-
-      <!-- Chart 6: Financial Performance by Genre -->
-      <div class="chart-container">
-
-        <h3>Which Movie Genres Deliver the Highest Returns?</h3>
-
-        <p>
-          This chart compares the median reported return on
-          investment across movie genres from 1980 to 2025.
-          Movies are counted in every genre assigned to them.
-        </p>
-
-        <div id="chart6"></div>
-
-        <p class="chart-note">
-          Note: ROI is calculated from reported production
-          budgets and worldwide revenues. It does not
-          represent actual studio profit.
-        </p>
-
-
-        <!-- Chart 7: IMDb vs TMDB Audience Ratings -->
-        <div class="chart-block">
-          <h3>Do IMDb and TMDB Audiences Rate Genres Differently?</h3>
-
-          <p>
-            Comparing average audience ratings across movie genres reveals
-            differences between the two platforms. Each pair of dots represents
-            the mean IMDb and TMDB ratings for the same set of movies.
-          </p>
-
-          <div id="chart7"></div>
-
+      <article class="chart-card chart-full" id="chart1-block">
+        <div class="chart1-content">
+          <div id="chart1" class="vis"
+            aria-label="World choropleth of average annual movie production per million residents">
+          </div>
+          <div class="chart1-insight">
+            <h4>What does the map reveal?</h4>
+            <p>
+              Northern Europe stands out for its high recorded film-production intensity, particularly Iceland (72.56), Estonia (21.86) and Denmark (17.48) average annual movie credits per million residents. In contrast, the United States records a lower population-adjusted rate (9.17), despite having substantially more total movie credits. This demonstrates how adjusting for population reveals a different geographical pattern from comparing production volumes alone.
+            </p>
+          </div>
           <p class="chart-note">
-            Source: IMDb and TMDB (1980–2025).
-            Only movies with at least 100 votes on both platforms are included.
-            Movies belonging to multiple genres contribute once to each genre.
+            Source: TMDB movie production-country credits and World Bank
+            population (SP.POP.TOTL). Released films, 1980-2025.
+            A multi-country production contributes one credit to each
+            credited country. Annual rates are averaged across years
+            with valid population; missing values are not zero.
           </p>
         </div>
-
-      </div>
-
+      </article>
+      <article class="chart-card chart-full">
+        <h3>The Evolution of Movie Genres</h3>
+        <p>How has the composition of film production changed over time? Explore different movie genres between 1980 and
+          2025.</p>
+        <p class="chart-note">Each coloured band represents a movie genre. Its thickness indicates the number of
+          TMDB-listed productions associated with that genre in a given year.</p>
+        <div id="vis2" class="vis" aria-label="Streamgraph showing the evolution of movie genres from 1980 to 2025">
+        </div>
+        <p class="chart-note"><strong>Reading the trend:</strong> The overall stream expands considerably in later
+          years, indicating an increase in recorded genre credits. This reflects trends within TMDB and may also be
+          influenced by changes in database coverage over time.</p>
+        <p class="chart-note">Source: TMDB. Each movie contributes one count to every genre assigned to it; genre counts
+          are not mutually exclusive. Click a genre in the legend to highlight it.</p>
+      </article>
+      <article id="chart3-section" class="chart-card chart-full">
+        <h3>Connecting the World Through Film</h3>
+        <p>International film production connects countries through shared creative and financial partnerships. Explore
+          the strongest co-production relationships recorded in TMDB between 1980 and 2025.</p>
+        <div id="chart3" class="vis"></div>
+        <p class="chart-note">Each connection represents films jointly credited to two production countries. Thicker
+          lines indicate more shared productions. Use the minimum shared films slider to filter weaker relationships, or
+          select a country to explore its international co-production network.</p>
+      </article>
     </section>
 
-
-    <!-- SECTION 3: BEHIND THE MOVIES -->
-
-    <section id="section3">
-
-      <h2>Behind the Movies</h2>
-
-      <h3>Chart 8 — Director-Actor Collaboration Explorer</h3>
-
-      <p>
-        Explore recurring creative partnerships between
-        directors and actors in TMDB-listed productions.
-        The network initially displays collaborations
-        from 2000–2025.
-      </p>
-
-      <div class="chart8-wrapper">
-
-        <div class="chart8-controls">
-
-          <label for="chart8-period">
-            Period
-          </label>
-
-          <select id="chart8-period">
-            <option value="2000–2025">2000–2025</option>
-            <option value="1980s">1980s</option>
-            <option value="1990s">1990s</option>
-            <option value="2000s">2000s</option>
-            <option value="2010s">2010s</option>
-            <option value="2020s">2020–2025</option>
-            <option value="All years">All years (1980–2025)</option>
-          </select>
-
-          <label for="chart8-director">
-            Director
-          </label>
-
-          <select id="chart8-director">
-            <option value="">Loading directors...</option>
-          </select>
-
-        </div>
-
-        <div id="chart8"></div>
-
-        <div class="chart8-legend">
-          <span>
-            <span class="chart8-dot director-dot"></span>
-            Director
-          </span>
-
-          <span>
-            <span class="chart8-dot actor-dot"></span>
-            Actor
-          </span>
-
-          <span class="chart8-legend-note">
-            Link thickness = shared productions
-          </span>
-        </div>
-
-      </div>
-
-      <p class="chart-note">
-        Each network displays one director and up to ten of their strongest recurring actor partnerships within the
-        selected period. Thicker links represent more shared productions. Only partnerships involving at least five
-        shared productions are considered.
-      </p>
-
-      <!-- ====================================== -->
-      <!-- Chart 9: Production Company Rankings   -->
-      <!-- ====================================== -->
-
-      <div class="chart-block" id="chart9-block">
-
-        <h3>How Have Leading Production Companies Changed Rank?</h3>
-
-        <p class="chart-description">
-          Explore how the rankings of the ten most prolific production
-          companies changed between 2000 and 2025. Companies are selected
-          by their total number of credited movies across the full period,
-          then ranked within this group for each reporting interval.
-        </p>
-
-        <div id="chart9"></div>
-
-        <p class="chart-note">
-          Note: Rankings are calculated among the ten selected companies,
-          not all production companies in the dataset. The final interval
-          (2020–2025) covers six years; all preceding intervals cover five.
-          Each movie is counted once for every credited production company.
-        </p>
-
-      </div>
-
-
-      <div id="chart10"></div>
-
-    </section>
-
-    <!-- SECTION 4: AUSTRALIAN FILM INDUSTRY -->
-    <section id="section4">
-
+    <section id="section2" class="story-section">
       <div class="section-intro">
-        <h2>Australia's Screen Production Landscape</h2>
-
-        <p>
-          How is screen production expenditure distributed across
-          Australia? Explore the geographic concentration of
-          reported production expenditure across Australian states
-          from 1995/96 to 2024/25.
-        </p>
+        <p class="eyebrow">02 / MOVIE SUCCESS</p>
+        <h2>What Makes a Movie Successful?</h2>
+        <p>Compare genre popularity, production budgets, reported financial returns and audience ratings.</p>
       </div>
-
-      <!-- Chart 11: Australian Production Expenditure Map -->
-
-      <div class="chart-container">
-
-        <h3>Where Is Australia's Screen Production Expenditure Concentrated?</h3>
-
-        <p>
-          Larger circles represent greater reported production
-          expenditure. Hover over each state to explore its
-          expenditure and contribution to the national total.
-        </p>
-
-        <div id="chart11" class="vis"></div>
-
-        <p class="chart-note">
-          Source: Screen Australia, Spend by Location.
-          Values are reported in AUD millions.
-          Only NSW, QLD, VIC and SA are individually mapped.
-          Other* is reported separately and is not assigned
-          to an individual geographic location.
-        </p>
-
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>Which Movie Genres Have Dominated Each Decade?</h3>
+          <p>Explore the number of movies produced within each genre across five release periods. Darker cells indicate
+            higher production volumes.</p>
+          <div id="chart4" class="vis"></div>
+          <p class="chart-note">Source: TMDB. Movies with multiple genres are counted once within each assigned genre.
+            The final period covers 2020–2025 only.</p>
+        </article>
+        <article class="chart-card">
+          <h3>Does a Bigger Budget Mean Bigger Box Office Returns?</h3>
+          <p>Explore production budgets and worldwide box-office revenue. Each point represents one movie. Both axes use
+            logarithmic scales.</p>
+          <div id="chart5" class="vis"></div>
+          <p class="chart-note">Source: TMDB. Only movies with reported positive budgets and revenues are included.
+            Revenue is worldwide box-office gross, not studio profit.</p>
+        </article>
       </div>
-
-      <!-- Chart 12: Australian vs Global Movie Genres -->
-      <div class="chart-container">
-
-        <h3>Australian vs Global Movie Genres</h3>
-
-        <p>
-          How does Australia's genre representation compare
-          with global filmmaking?
-        </p>
-
-        <div id="chart12"></div>
-
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>Which Movie Genres Deliver the Highest Returns?</h3>
+          <p>Compare median reported return on investment across genres from 1980 to 2025. Movies are counted in every
+            assigned genre.</p>
+          <div id="chart6" class="vis"></div>
+          <p class="chart-note">ROI is calculated from reported production budgets and worldwide revenues; it does not
+            represent actual studio profit.</p>
+        </article>
+        <article class="chart-card">
+          <h3>Do IMDb and TMDB Audiences Rate Genres Differently?</h3>
+          <p>Each pair of dots compares mean IMDb and TMDB ratings for the same set of movies within a genre.</p>
+          <div id="chart7" class="vis"></div>
+          <p class="chart-note">Source: IMDb and TMDB (1980–2025). Only movies with at least 100 votes on both platforms
+            are included. Multi-genre movies contribute once to each genre.</p>
+        </article>
       </div>
-
     </section>
 
-  </main>
+    <section id="section3" class="story-section">
+      <div class="section-intro">
+        <p class="eyebrow">03 / CREATIVE PARTNERSHIPS</p>
+        <h2>Creative Partnerships</h2>
+        <p>Explore the creative relationships and production organisations shaping film.</p>
+      </div>
+      <article class="chart-card chart-full">
+        <h3>Director–Actor Collaboration Explorer</h3>
+        <p>Explore recurring creative partnerships between directors and actors in TMDB-listed productions. The network
+          initially displays collaborations from 2000–2025.</p>
+        <div class="chart8-wrapper">
+          <div class="chart8-controls"><label for="chart8-period">Period</label><select id="chart8-period">
+              <option value="2000–2025">2000–2025</option>
+              <option value="1980s">1980s</option>
+              <option value="1990s">1990s</option>
+              <option value="2000s">2000s</option>
+              <option value="2010s">2010s</option>
+              <option value="2020s">2020–2025</option>
+              <option value="All years">All years (1980–2025)</option>
+            </select><label for="chart8-director">Director</label><select id="chart8-director">
+              <option value="">Loading directors...</option>
+            </select></div>
+          <div id="chart8" class="vis"></div>
+          <div class="chart8-legend"><span><span class="chart8-dot director-dot"></span>Director</span><span><span
+                class="chart8-dot actor-dot"></span>Actor</span><span class="chart8-legend-note">Link thickness = shared
+              productions</span></div>
+        </div>
+        <p class="chart-note">Each network displays one director and up to ten of their strongest recurring actor
+          partnerships within the selected period. Thicker links represent more shared productions. Only partnerships
+          involving at least five shared productions are considered.</p>
+      </article>
+      <div class="chart-grid">
+        <article class="chart-card" id="chart9-block">
+          <h3>How Have Leading Production Companies Changed Rank?</h3>
+          <p class="chart-description">Explore how rankings of the ten most prolific production companies changed
+            between 2000 and 2025. Companies are selected by total credited movies across the full period, then ranked
+            within this group for each interval.</p>
+          <div id="chart9" class="vis"></div>
+          <p class="chart-note">Rankings are among the ten selected companies, not all companies in the dataset. The
+            final interval (2020–2025) covers six years; preceding intervals cover five. Each movie is counted once for
+            every credited production company.</p>
+        </article>
+        <article class="chart-card" id="chart10-block">
+          <h3>Which Director–Actor Partnerships Recur Most Often?</h3>
+          <p>Explore the most frequent director–actor partnerships by the number of distinct movies they have worked on
+            together. Use the chart's period selector to compare eras.</p>
+          <div id="chart10" class="vis"></div>
+          <p class="chart-note">Source: TMDB director and cast credits. Partnerships are ranked by distinct shared
+            productions within the selected period.</p>
+        </article>
+      </div>
+    </section>
 
+    <section id="section4" class="story-section">
+      <div class="section-intro">
+        <p class="eyebrow">04 / AUSTRALIA</p>
+        <h2>Australia's Screen Production Landscape</h2>
+        <p>Explore reported production expenditure across Australian states and compare Australia's genre representation
+          with global filmmaking.</p>
+      </div>
+      <article class="chart-card chart-full">
+        <h3>Where Is Australia's Screen Production Expenditure Concentrated?</h3>
+        <p>Larger circles represent greater reported production expenditure. Hover over each state to explore its
+          expenditure and contribution to the national total.</p>
+        <div id="chart11" class="vis"></div>
+        <p class="chart-note">Source: Screen Australia, Spend by Location. Values are in AUD millions. Only NSW, QLD,
+          VIC and SA are individually mapped. Other* is reported separately and is not assigned to an individual
+          geographic location.</p>
+      </article>
+      <article class="chart-card chart-full">
+        <h3>Australian vs Global Movie Genres</h3>
+        <p>How does Australia's genre representation compare with global filmmaking?</p>
+        <div id="chart12" class="vis"></div>
+        <p class="chart-note">Source: TMDB, 1980–2025. Movies with multiple genres contribute to each assigned genre;
+          Australia is defined by production-country credit and is also included in the global total.</p>
+      </article>
+    </section>
+    <footer class="site-footer">FIT3179 · Movie Collections · Data visualisation project</footer>
+  </main>
   <script>
 
     // Chart 1: World Choropleth
     vegaEmbed(
-      '#vis1',
+      '#chart1',
       'charts/chart1_choropleth.vg.json',
       {
         actions: false,
@@ -400,7 +210,7 @@
       }
     ).catch(error => {
       console.error('Chart 1 error:', error);
-      document.querySelector('#vis1').textContent =
+      document.querySelector('#chart1').textContent =
         'Chart 1 failed to load. Check the browser console.';
     });
 
