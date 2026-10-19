@@ -1,13 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Does a Bigger Budget Mean Bigger Box Office Returns?",
-        "subtitle": "Production budget versus worldwide revenue, 1980–2025",
-        "anchor": "start",
-        "fontSize": 17,
-        "subtitleFontSize": 12,
-        "offset": 18
-    },
     "data": {
         "url": "data/charts/movie_financials.csv",
         "format": {
@@ -27,14 +19,23 @@
             "filter": "isValid(datum.budget_m) && isValid(datum.revenue_m) && datum.budget_m > 0 && datum.revenue_m > 0"
         }
     ],
-    "width": 700,
+    "params": [
+        {
+            "name": "genreSelection",
+            "select": {
+                "type": "point",
+                "fields": [
+                    "genre"
+                ]
+            },
+            "bind": "legend"
+        }
+    ],
+    "width": 500,
     "height": 450,
     "mark": {
         "type": "circle",
-        "size": 55,
-        "opacity": 0.45,
-        "stroke": "white",
-        "strokeWidth": 0.3
+        "size": 30
     },
     "encoding": {
         "x": {
@@ -63,6 +64,13 @@
             "field": "genre",
             "type": "nominal",
             "title": "Genre"
+        },
+        "opacity": {
+            "condition": {
+                "param": "genreSelection",
+                "value": 0.75
+            },
+            "value": 0.04
         },
         "tooltip": [
             {

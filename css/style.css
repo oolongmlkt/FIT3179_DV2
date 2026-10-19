@@ -160,9 +160,7 @@ h1 {
     font-size: 14px;
 }
 
-/* General chart notes */
-
-.chart-note,
+/* General notes outside chart cards */
 .note {
     color: #637185;
     font-size: 12px;
@@ -214,41 +212,6 @@ h1 {
     flex: 0 0 auto;
 }
 
-/* Data interpretation */
-
-#chart1-block .chart1-insight {
-    margin-top: 12px;
-    padding: 16px 18px;
-    background: #F5F8FC;
-    border-left: 3px solid #42638B;
-    border-radius: 0 6px 6px 0;
-}
-
-#chart1-block .chart1-insight h4 {
-    margin: 0 0 6px;
-    font-size: 14px;
-    color: var(--cinema-navy);
-    letter-spacing: 0.01em;
-}
-
-#chart1-block .chart1-insight p {
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.65;
-    color: #526176;
-}
-
-/* Source and methodology note */
-
-#chart1-block .chart-note {
-    margin: 18px 0 0;
-    padding-top: 14px;
-    border-top: 1px solid #E0E6ED;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
-}
-
 /* ==========================================
    Chart 2 — Genre Streamgraph
    ========================================== */
@@ -259,15 +222,6 @@ h1 {
     width: 100%;
     max-width: 1050px;
     margin: 0 auto;
-}
-
-/* Description */
-
-#chart2-block .chart2-description {
-    margin: 0 0 16px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #4A596B;
 }
 
 /* Centre the streamgraph and its genre legend */
@@ -294,41 +248,6 @@ h1 {
     line-height: 1.6;
     color: #637185;
     text-align: center;
-}
-
-/* Analytical insight */
-
-#chart2-block .chart2-insight {
-    margin-top: 12px;
-    padding: 16px 18px;
-    background: #F5F8FC;
-    border-left: 3px solid #42638B;
-    border-radius: 0 6px 6px 0;
-}
-
-#chart2-block .chart2-insight h4 {
-    margin: 0 0 6px;
-    font-size: 14px;
-    color: var(--cinema-navy);
-    letter-spacing: 0.01em;
-}
-
-#chart2-block .chart2-insight p {
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.65;
-    color: #526176;
-}
-
-/* Source and methodology note */
-
-#chart2-block .chart-note {
-    margin: 18px 0 0;
-    padding-top: 14px;
-    border-top: 1px solid #E0E6ED;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
 }
 
 /* ==========================================
@@ -490,45 +409,6 @@ h1 {
     text-align: center;
 }
 
-/* ==========================================
-   Chart 3 — Interpretation
-   ========================================== */
-
-#chart3-block .chart3-insight {
-    margin-top: 12px;
-    padding: 16px 18px;
-    background: #F5F8FC;
-    border-left: 3px solid #42638B;
-    border-radius: 0 6px 6px 0;
-    text-align: left;
-}
-
-#chart3-block .chart3-insight h4 {
-    margin: 0 0 6px;
-    font-size: 14px;
-    color: var(--cinema-navy);
-    letter-spacing: 0.01em;
-}
-
-#chart3-block .chart3-insight p {
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.65;
-    color: #526176;
-}
-
-/* Source and methodology */
-
-#chart3-block .chart-note {
-    margin: 18px 0 0;
-    padding-top: 14px;
-    border-top: 1px solid #E0E6ED;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
-    text-align: left;
-}
-
 /* Responsive controls */
 
 @media (max-width: 700px) {
@@ -566,47 +446,28 @@ h1 {
 }
 
 /* ==========================================
-   Chart 4 — Analytical Interpretation
+   Chart 5 — Budget vs Revenue Scatterplot
    ========================================== */
 
-#chart4-block .chart4-insight {
-    margin-top: 12px;
-    padding: 16px 18px;
-
-    background: #F5F8FC;
-    border-left: 3px solid #42638B;
-    border-radius: 0 6px 6px 0;
-
-    text-align: left;
+#chart5 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 0 18px;
 }
 
-#chart4-block .chart4-insight h4 {
-    margin: 0 0 6px;
-
-    font-size: 14px;
-    color: var(--cinema-navy);
-    letter-spacing: 0.01em;
+/* Keep Vega's rendered chart within its card */
+#chart5 .vega-embed {
+    flex: 0 0 auto;
+    max-width: 100%;
 }
 
-#chart4-block .chart4-insight p {
-    margin: 0;
-
-    font-size: 13px;
-    line-height: 1.65;
-    color: #526176;
-}
-
-/* Source and methodology */
-
-#chart4-block .chart-note {
-    margin: 18px 0 0;
-    padding-top: 14px;
-
-    border-top: 1px solid #E0E6ED;
-
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
+/* Scale the SVG down if it exceeds the card width */
+#chart5 svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ==========================================
@@ -695,13 +556,6 @@ h1 {
     margin-bottom: 1.25rem;
 }
 
-#chart9-block .chart-note {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    opacity: 0.75;
-    margin-top: 1rem;
-}
-
 /* ==========================================
    Footer
    ========================================== */
@@ -744,4 +598,47 @@ h1 {
     .story-section {
         margin-bottom: 46px;
     }
+}
+
+/* ==========================================
+   Shared Chart Insights
+   ========================================== */
+
+.chart-insight {
+    width: 100%;
+    background: #F3F7FB;
+    border-left: 3px solid #365D86;
+    padding: 14px 16px;
+    margin: 18px 0 14px;
+    border-radius: 0 4px 4px 0;
+    text-align: left;
+}
+
+.chart-insight p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #17243A;
+}
+
+/* ==========================================
+   Shared Source Notes — All Charts
+   ========================================== */
+
+.chart-card .chart-note {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid #E0E6ED;
+
+    font-size: 12px;
+    line-height: 1.6;
+    color: #637185;
+}
+
+/* Shared chart interaction instructions */
+.chart-interaction {
+    font-size: 12px;
+    color: #637185;
+    line-height: 1.5;
+    margin: 8px 0 12px;
 }

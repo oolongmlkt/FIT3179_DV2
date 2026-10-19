@@ -31,13 +31,13 @@
         <h2>Films Around the World</h2>
         <p>Explore where movies are produced, how genres have evolved, and how countries collaborate.</p>
       </div>
+
       <article class="chart-card chart-full" id="chart1-block">
         <div class="chart1-content">
           <div id="chart1" class="vis"
             aria-label="World choropleth of average annual movie production per million residents">
           </div>
-          <div class="chart1-insight">
-            <h4>What does the map reveal?</h4>
+          <div class="chart-insight">
             <p>
               Northern Europe stands out for its high recorded film-production intensity, particularly Iceland (72.56),
               Estonia (21.86) and Denmark (17.48) average annual movie credits per million residents. In contrast, the
@@ -67,8 +67,7 @@
             Click one or more genres in the legend to highlight their
             trends. Hover over a stream to view its annual genre credits.
           </p>
-          <div class="chart2-insight">
-            <h4>What does the streamgraph reveal?</h4>
+          <div class="chart-insight">
             <p>
               Drama and Documentary account for some of the largest recorded genre volumes with Drama increasing from
               1,897 genre credits in 1980 to 16,392 in 2025. Documentary also expanded substantially, reaching 12,336
@@ -128,8 +127,7 @@
             or filter the network by country.
           </p>
 
-          <div class="chart3-insight">
-            <h4>What does the map reveal?</h4>
+          <div class="chart-insight">
             <p>
               Canada-United States (3,840 shared film credits) and
               United Kingdom-United States (3,739) are the strongest
@@ -175,8 +173,7 @@
             shifted from the 1980s to 2020-2025.
           </p>
           <div id="chart4" class="vis"></div>
-          <div class="chart4-insight">
-            <h4>What does the heatmap reveal?</h4>
+          <div class="chart-insight">
             <p>
               Drama remains one of the most consistently represented
               genres, increasing from 20,394 recorded films in the
@@ -195,15 +192,37 @@
           </p>
         </article>
 
-        <article class="chart-card">
+        <!-- Chart 5: Budget vs Revenue Scatterplot -->
+        <article class="chart-card" id="chart5-block">
           <h3>Does a Bigger Budget Mean Bigger Box Office Returns?</h3>
-          <p>Explore production budgets and worldwide box-office revenue. Each point represents one movie. Both axes use
-            logarithmic scales.</p>
+          <p>
+            Do higher production budgets lead to greater box-office returns?
+            Explore the relationship between production spending and worldwide
+            revenue across 14,939 films released between 1980 and 2025.
+            Each point represents one movie, with logarithmic scales revealing
+            financial differences across productions of all sizes.
+          </p>
           <div id="chart5" class="vis"></div>
-          <p class="chart-note">Source: TMDB. Only movies with reported positive budgets and revenues are included.
-            Revenue is worldwide box-office gross, not studio profit.</p>
+          <p class="chart-interaction">
+            Click a genre in the legend to highlight its movies.
+            Hold Shift while clicking to select multiple genres.
+            Hover over a point to view movie details.
+          </p>
+          <div class="chart-insight">
+            <p>
+              Higher production budgets are generally associated with greater worldwide box-office revenue, although outcomes vary considerably between films. Some lower-budget productions generate revenue far exceeding their reported production costs, while others earn comparatively little despite substantial investment.
+            </p>
+          </div>
+          <p class="chart-note">
+            Source: TMDB, 1980-2025. Only films with reported positive budgets
+            and revenues are included. Both axes use logarithmic scales.
+            Worldwide box-office revenue is not equivalent to studio profit,
+            as distribution, marketing and other costs are excluded.
+          </p>
         </article>
+
       </div>
+
       <div class="chart-grid">
         <article class="chart-card">
           <h3>Which Movie Genres Deliver the Highest Returns?</h3>
@@ -354,7 +373,6 @@
       }
     ).catch(console.error);
 
-
     // Chart 5: Budget × Revenue Scatterplot
     vegaEmbed(
       '#chart5',
@@ -363,17 +381,12 @@
         actions: false,
         renderer: 'svg'
       }
-    )
-      .then(result => {
-        console.log('Chart 5 embedded successfully.');
-        console.log(result);
-      })
-      .catch(error => {
-        console.error('Chart 5 failed:', error);
+    ).catch(error => {
+      console.error('Chart 5 failed:', error);
 
-        document.querySelector('#chart5').textContent =
-          'Chart 5 failed to load. Check the browser console.';
-      });
+      document.querySelector('#chart5').textContent =
+        'Chart 5 failed to load. Check the browser console.';
+    });
 
     // Chart 6: ROI by Genre Bar Chart
     vegaEmbed(
