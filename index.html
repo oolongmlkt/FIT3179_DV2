@@ -160,17 +160,41 @@
       <div class="section-intro">
         <p class="eyebrow">02 / MOVIE SUCCESS</p>
         <h2>What Makes a Movie Successful?</h2>
-        <p>Compare genre popularity, production budgets, reported financial returns and audience ratings.</p>
+        <p>From genre representation to box-office performance and audience ratings, explore how different measures
+          reveal different perspectives on movie success.</p>
       </div>
       <div class="chart-grid">
-        <article class="chart-card">
+
+        <!-- Chart 4: Genre × Decade Heatmap -->
+        <article class="chart-card" id="chart4-block">
           <h3>Which Movie Genres Have Dominated Each Decade?</h3>
-          <p>Explore the number of movies produced within each genre across five release periods. Darker cells indicate
-            higher production volumes.</p>
+          <p>
+            Drama and Documentary dominate recorded movie production
+            across the decades, while Horror has steadily gained
+            representation. Compare how each genre's presence has
+            shifted from the 1980s to 2020-2025.
+          </p>
           <div id="chart4" class="vis"></div>
-          <p class="chart-note">Source: TMDB. Movies with multiple genres are counted once within each assigned genre.
-            The final period covers 2020–2025 only.</p>
+          <div class="chart4-insight">
+            <h4>What does the heatmap reveal?</h4>
+            <p>
+              Drama remains one of the most consistently represented
+              genres, increasing from 20,394 recorded films in the
+              1980s to 75,878 in 2020-2025. Documentary also expanded
+              substantially, reaching 67,331 films in the final period.
+              Meanwhile, Horror's share of genre assignments increased
+              from 3.9% to 7.0%, suggesting a shift in the relative
+              composition of TMDB's recorded productions.
+            </p>
+          </div>
+          <p class="chart-note">
+            Source: TMDB, 1980-2025. Movies with multiple genres are
+            counted once within each assigned genre. The final period
+            covers six years rather than ten. Changes in TMDB coverage
+            over time may influence the observed trends.
+          </p>
         </article>
+
         <article class="chart-card">
           <h3>Does a Bigger Budget Mean Bigger Box Office Returns?</h3>
           <p>Explore production budgets and worldwide box-office revenue. Each point represents one movie. Both axes use
@@ -208,7 +232,7 @@
       <article class="chart-card chart-full">
         <h3>Director–Actor Collaboration Explorer</h3>
         <p>Explore recurring creative partnerships between directors and actors in TMDB-listed productions. The network
-          initially displays collaborations from 2000–2025.</p>
+          initially displays collaborations from 2000-2025.</p>
         <div class="chart8-wrapper">
           <div class="chart8-controls"><label for="chart8-period">Period</label><select id="chart8-period">
               <option value="2000–2025">2000–2025</option>

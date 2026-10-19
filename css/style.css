@@ -540,6 +540,76 @@ h1 {
 }
 
 /* ==========================================
+   Chart 4 — Genre × Decade Heatmap
+   ========================================== */
+
+#chart4 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px 0 18px;
+}
+
+#chart4 .vega-embed {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+#chart4 svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================
+   Chart 4 — Analytical Interpretation
+   ========================================== */
+
+#chart4-block .chart4-insight {
+    margin-top: 12px;
+    padding: 16px 18px;
+
+    background: #F5F8FC;
+    border-left: 3px solid #42638B;
+    border-radius: 0 6px 6px 0;
+
+    text-align: left;
+}
+
+#chart4-block .chart4-insight h4 {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+    color: var(--cinema-navy);
+    letter-spacing: 0.01em;
+}
+
+#chart4-block .chart4-insight p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.65;
+    color: #526176;
+}
+
+/* Source and methodology */
+
+#chart4-block .chart-note {
+    margin: 18px 0 0;
+    padding-top: 14px;
+
+    border-top: 1px solid #E0E6ED;
+
+    font-size: 12px;
+    line-height: 1.6;
+    color: #637185;
+}
+
+/* ==========================================
    Chart 8 — Director Collaboration Explorer
    ========================================== */
 

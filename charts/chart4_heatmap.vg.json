@@ -1,30 +1,16 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
-  "title": {
-    "text": "Which Movie Genres Have Dominated Each Decade?",
-    "subtitle": "Number of TMDB-listed films by genre and release period (1980–2025)",
-    "anchor": "start",
-    "fontSize": 18,
-    "subtitleFontSize": 12,
-    "offset": 18
-  },
-
-  "width": 650,
+  "width": 480,
   "height": 480,
-
   "data": {
     "url": "data/charts/genre_by_decade.csv"
   },
-
   "mark": {
     "type": "rect",
     "stroke": "white",
     "strokeWidth": 1,
     "cornerRadius": 2
   },
-
   "encoding": {
     "x": {
       "field": "decade",
@@ -43,7 +29,6 @@
         "titlePadding": 12
       }
     },
-
     "y": {
       "field": "genre",
       "type": "nominal",
@@ -55,7 +40,6 @@
         "titlePadding": 12
       }
     },
-
     "color": {
       "field": "movie_count",
       "type": "quantitative",
@@ -65,11 +49,11 @@
       },
       "legend": {
         "title": "Number of movies",
-        "orient": "right",
-        "gradientLength": 240
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 220
       }
     },
-
     "tooltip": [
       {
         "field": "genre",
@@ -101,7 +85,6 @@
       }
     ]
   },
-
   "config": {
     "view": {
       "stroke": null
