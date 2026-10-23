@@ -210,7 +210,9 @@
           </p>
           <div class="chart-insight">
             <p>
-              Higher production budgets are generally associated with greater worldwide box-office revenue, although outcomes vary considerably between films. Some lower-budget productions generate revenue far exceeding their reported production costs, while others earn comparatively little despite substantial investment.
+              Higher production budgets are generally associated with greater worldwide box-office revenue, although
+              outcomes vary considerably between films. Some lower-budget productions generate revenue far exceeding
+              their reported production costs, while others earn comparatively little despite substantial investment.
             </p>
           </div>
           <p class="chart-note">
@@ -224,14 +226,52 @@
       </div>
 
       <div class="chart-grid">
-        <article class="chart-card">
+
+        <!-- Chart 6: Median ROI by Genre -->
+        <article class="chart-card" id="chart6-block">
           <h3>Which Movie Genres Deliver the Highest Returns?</h3>
-          <p>Compare median reported return on investment across genres from 1980 to 2025. Movies are counted in every
-            assigned genre.</p>
+          <p>
+            Which movie genres generate the strongest reported financial
+            returns? Compare median return on investment (ROI) across
+            genres and explore how their rankings change between decades.
+          </p>
+
+          <!-- Interactive controls -->
+          <div id="chart6-controls"></div>
+
+          <!-- Visualisation -->
           <div id="chart6" class="vis"></div>
-          <p class="chart-note">ROI is calculated from reported production budgets and worldwide revenues; it does not
-            represent actual studio profit.</p>
+
+          <!-- Interaction instructions -->
+          <p class="chart-interaction">
+            Select a release period to compare genre rankings.
+            Hover over a bar or gold marker to explore its financial
+            statistics. Gold markers indicate a median ROI of exactly 0%.
+          </p>
+
+          <!-- Analytical insight -->
+          <div class="chart-insight">
+            <p>
+              Across 1980-2025, Family records the highest median reported
+              ROI (+74.27%), followed by Adventure (+66.84%) and Action
+              (+57.59%). Western is the only genre with a negative overall
+              median ROI (-33.05%), highlighting differences in recorded
+              financial outcomes between genres.
+            </p>
+          </div>
+
+          <!-- Source and methodology -->
+          <p class="chart-note">
+            Source: TMDB, 1980-2025. ROI is calculated as
+            (worldwide revenue - production budget) / production budget x 100.
+            Only films with positive reported budgets and revenues are included.
+            Multi-genre films contribute once to each assigned genre.
+            Genre-period combinations with fewer than 30 eligible movies are
+            excluded. The 2020s period covers 2020-2025. Reported ROI is not
+            equivalent to actual studio profit.
+          </p>
         </article>
+
         <article class="chart-card">
           <h3>Do IMDb and TMDB Audiences Rate Genres Differently?</h3>
           <p>Each pair of dots compares mean IMDb and TMDB ratings for the same set of movies within a genre.</p>
@@ -388,14 +428,18 @@
         'Chart 5 failed to load. Check the browser console.';
     });
 
-    // Chart 6: ROI by Genre Bar Chart
+    // Chart 6: ROI by Genre
     vegaEmbed(
       "#chart6",
       "charts/chart6_financial.vg.json",
       {
-        actions: false
+        actions: false,
+        renderer: "svg",
+        bind: "#chart6-controls"
       }
-    ).catch(console.error);
+    ).catch(error => {
+      console.error("Chart 6 failed:", error);
+    });
 
     // Chart 7 — IMDb vs TMDB Audience Ratings
     vegaEmbed(

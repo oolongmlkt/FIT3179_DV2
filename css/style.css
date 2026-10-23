@@ -470,6 +470,80 @@ h1 {
     height: auto;
 }
 
+/* Centre Chart 6 without unnecessary scrolling */
+
+#chart6 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+    min-width: 0;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    padding: 12px 0 18px;
+}
+
+#chart6 .vega-embed {
+    flex: 0 1 auto;
+    max-width: 100%;
+}
+
+#chart6 svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Chart 6 — Interactive Controls */
+
+#chart6-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    width: 100%;
+
+    margin: 12px auto 18px;
+    padding: 12px 16px;
+
+    background: #F8F6F1;
+    border: 1px solid #E6E1D8;
+    border-radius: 6px;
+}
+
+#chart6-controls .vega-bind {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+    color: #17243A;
+}
+
+#chart6-controls select {
+    padding: 6px 10px;
+
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+
+    background: #FFFFFF;
+    color: #17243A;
+
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#chart6-controls select:focus-visible {
+    outline: 2px solid #B28A45;
+    outline-offset: 2px;
+}
+
 /* ==========================================
    Chart 8 — Director Collaboration Explorer
    ========================================== */
