@@ -444,7 +444,7 @@
           <div class="chart-insight">
             <p>
               Recurring partnerships are concentrated around
-                a few directors.
+              a few directors.
               Hiroyuki Tsuji appears in seven of the top 15 partnerships
               between 2000 and 2025, including the top four.
               His collaboration with Hitoshi Ozawa ranks first with
@@ -473,15 +473,49 @@
         <p>Explore reported production expenditure across Australian states and compare Australia's genre representation
           with global filmmaking.</p>
       </div>
-      <article class="chart-card chart-full">
-        <h3>Where Is Australia's Screen Production Expenditure Concentrated?</h3>
-        <p>Larger circles represent greater reported production expenditure. Hover over each state to explore its
-          expenditure and contribution to the national total.</p>
-        <div id="chart11" class="vis"></div>
-        <p class="chart-note">Source: Screen Australia, Spend by Location. Values are in AUD millions. Only NSW, QLD,
-          VIC and SA are individually mapped. Other* is reported separately and is not assigned to an individual
-          geographic location.</p>
+
+      <!-- Chart 11: Australian Production Expenditure Map -->
+      <article class="chart-card chart-full" id="chart11-block">
+        <div class="chart11-content">
+          <h3>Where Is Australia's Screen Production Expenditure Concentrated?</h3>
+          <p class="chart11-description">
+            Explore how reported screen production expenditure is distributed
+            across Australian states. Larger circles represent greater expenditure,
+            highlighting differences in production activity between states.
+          </p>
+          <!-- Vega-Lite visualisation -->
+          <div id="chart11" class="vis"></div>
+          <!-- Interaction instructions -->
+          <p class="chart-interaction">
+            Hover over a circle to view the state's expenditure,
+            financial year and share of the published national total.
+          </p>
+          <!-- Analytical insight -->
+          <div class="chart-insight">
+            <p>
+              In 2024/25, Victoria recorded the highest reported screen production
+              expenditure among the four individually reported states, at
+              $168 million (44.3% of the national total). New South Wales
+              followed with $90 million (23.7%), while Queensland recorded
+              $82 million (21.6%) and South Australia $23 million (6.1%).
+              Together, these four states accounted for approximately
+              95.8% of the published national total, highlighting the
+              concentration of reported expenditure in Victoria,
+              New South Wales and Queensland.
+            </p>
+          </div>
+          <!-- Source and methodology -->
+          <p class="chart-note">
+            Source: Screen Australia, Spend by Location, 2024/25.
+            Expenditure is reported in AUD millions. Only NSW, QLD,
+            VIC and SA are individually mapped. The remaining expenditure
+            is reported under Other* and is not assigned to individual
+            geographic locations. Figures are rounded as published.
+            Circle areas are proportional to expenditure.
+          </p>
+        </div>
       </article>
+
       <article class="chart-card chart-full">
         <h3>Australian vs Global Movie Genres</h3>
         <p>How does Australia's genre representation compare with global filmmaking?</p>
@@ -751,21 +785,12 @@
       "charts/chart11_map.vg.json",
       {
         actions: false,
-        renderer: "svg",
+        renderer: "canvas",
         loader: vega.loader({
           baseURL: new URL("./", document.baseURI).href
         })
       }
-    )
-      .then(function (result) {
-        console.log("Chart 11 loaded successfully.");
-      })
-      .catch(function (error) {
-        console.error("Chart 11 failed:", error);
-
-        document.querySelector("#chart11").textContent =
-          "Chart 11 failed to load. Check the browser console.";
-      });
+    ).catch(console.error);
 
     // Chart 12: Australian vs Global Movie Genres
     vegaEmbed(
