@@ -1,13 +1,9 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Ranking trajectories of the ten most prolific TMDB production companies, 2000–2025.",
-
-  "width": 700,
+  "width": 550,
   "height": 450,
-
   "background": "transparent",
-
   "data": {
     "url": "data/charts/studio_rankings.csv",
     "format": {
@@ -25,13 +21,11 @@
       }
     }
   },
-
   "transform": [
     {
       "filter": "datum.active && isValid(datum.rank)"
     }
   ],
-
   "encoding": {
     "x": {
       "field": "period",
@@ -52,19 +46,32 @@
         "tickSize": 0
       }
     },
-
     "y": {
       "field": "rank",
       "type": "quantitative",
       "scale": {
-        "domain": [1, 10],
+        "domain": [
+          1,
+          10
+        ],
         "reverse": true,
         "nice": false,
         "zero": false
       },
       "axis": {
         "title": "Rank among selected companies",
-        "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
         "format": "d",
         "grid": true,
         "gridOpacity": 0.15,
@@ -72,7 +79,6 @@
         "tickSize": 0
       }
     },
-
     "color": {
       "field": "company_name",
       "type": "nominal",
@@ -90,7 +96,6 @@
         "offset": 25
       }
     },
-
     "tooltip": [
       {
         "field": "company_name",
@@ -123,12 +128,11 @@
       {
         "field": "total_movies",
         "type": "quantitative",
-        "title": "Total movies (2000–2025)",
+        "title": "Total movies (2000-2025)",
         "format": ",.0f"
       }
     ]
   },
-
   "layer": [
     {
       "mark": {
@@ -157,7 +161,6 @@
       }
     }
   ],
-
   "config": {
     "view": {
       "stroke": null

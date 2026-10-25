@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Movie Collections</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Chart 8: align title, chart, insight and source in one centred column -->
   <style>
     #chart8-block .chart8-content {
       width: 100%;
@@ -401,13 +400,23 @@
             between 2000 and 2025. Companies are selected by total credited movies across the full period, then ranked
             within this group for each interval.</p>
           <div id="chart9" class="vis"></div>
-          <p class="chart-note">Rankings are among the ten selected companies, not all companies in the dataset. The
-            final interval (2020–2025) covers six years; preceding intervals cover five. Each movie is counted once for
-            every credited production company.</p>
+          <div class="chart-insight">
+            <p>
+              BBC held first place among the selected companies for the first three periods, before ARTE took the lead
+              in 2015-2019 and retained it in 2020-2025. France Télévisions made the largest ranking gain, rising from
+              10th to 2nd, while Lifetime climbed from 9th to 3rd. These changes reflect shifts in TMDB's recorded
+              production-company credits, rather than necessarily changes in industry-wide production dominance.
+            </p>
+          </div>
+          <p class="chart-note">Source: TMDB production-company credits, 2000-2025. Rankings are among the ten
+            selected companies, not all companies in the dataset. The final interval (2020-2025) covers six years;
+            preceding intervals cover five. Each movie is counted once for every credited production company.
+            Changes in TMDB coverage may influence the observed rankings.</p>
         </article>
+        
         <article class="chart-card" id="chart10-block">
-          <h3>Which Director–Actor Partnerships Recur Most Often?</h3>
-          <p>Explore the most frequent director–actor partnerships by the number of distinct movies they have worked on
+          <h3>Which Director-Actor Partnerships Recur Most Often?</h3>
+          <p>Explore the most frequent director-actor partnerships by the number of distinct movies they have worked on
             together. Use the chart's period selector to compare eras.</p>
           <div id="chart10" class="vis"></div>
           <p class="chart-note">Source: TMDB director and cast credits. Partnerships are ranked by distinct shared

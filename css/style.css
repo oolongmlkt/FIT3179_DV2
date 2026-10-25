@@ -680,6 +680,27 @@ h1 {
     margin-bottom: 1.25rem;
 }
 
+#chart9 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    padding: 12px 0 18px;
+}
+
+#chart9 .vega-embed {
+    max-width: 100%;
+    min-width: 0;
+}
+
+#chart9 canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* ==========================================
    Footer
    ========================================== */
