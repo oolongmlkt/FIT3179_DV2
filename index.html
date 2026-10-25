@@ -13,11 +13,13 @@
       margin: 0 auto;
       box-sizing: border-box;
     }
+
     #chart8-block .chart8-wrapper {
       width: 100%;
       max-width: 760px;
       margin: 20px auto;
     }
+
     #chart8-block .chart8-instruction {
       margin: 8px 0 12px;
       font-size: 12px;
@@ -346,7 +348,8 @@
         <div class="chart8-content">
           <h3>Director-Actor Collaboration Explorer</h3>
           <p>
-            Explore recurring creative partnerships between directors and actors in TMDB-listed productions. The network initially displays collaborations from 2000-2025.
+            Explore recurring creative partnerships between directors and actors in TMDB-listed productions. The network
+            initially displays collaborations from 2000-2025.
           </p>
 
           <div class="chart8-wrapper">
@@ -369,7 +372,8 @@
             </div>
 
             <p class="chart8-instruction">
-              Select a period and director to explore recurring collaborations. Hover over an actor, director or connecting line to view collaboration details, including shared production counts and relevant years.
+              Select a period and director to explore recurring collaborations. Hover over an actor, director or
+              connecting line to view collaboration details, including shared production counts and relevant years.
             </p>
 
             <div id="chart8" class="vis"></div>
@@ -383,12 +387,20 @@
 
           <div class="chart-insight">
             <p>
-              In the 2000-2025 view, Hiroyuki Tsuji's strongest recurring collaboration is with Hitoshi Ozawa, with 128 shared productions. Yasukaze Motomiya (107) and Yoshiyuki Yamaguchi (92) are also frequent collaborators. These recurring partnerships illustrate how directors may repeatedly work with familiar groups of performers across productions.
+              In the 2000-2025 view, Hiroyuki Tsuji's strongest recurring collaboration is with Hitoshi Ozawa, with 128
+              shared productions. Yasukaze Motomiya (107) and Yoshiyuki Yamaguchi (92) are also frequent collaborators.
+              These recurring partnerships illustrate how directors may repeatedly work with familiar groups of
+              performers across productions.
             </p>
           </div>
 
           <p class="chart-note">
-            Source: TMDB director and cast credits, 1980-2025. Each collaboration represents a distinct production crediting both the selected director and actor. The explorer offers 15 ranked directors per period and displays up to ten of each director's strongest recurring actor partnerships. Only partnerships involving at least five shared productions are included. Titles beginning with WWE or WWF were excluded. People are matched using credited names rather than unique person identifiers, so identical names may occasionally be combined.
+            Source: TMDB director and cast credits, 1980-2025. Each collaboration represents a distinct production
+            crediting both the selected director and actor. The explorer offers 15 ranked directors per period and
+            displays up to ten of each director's strongest recurring actor partnerships. Only partnerships involving at
+            least five shared productions are included. Titles beginning with WWE or WWF were excluded. People are
+            matched using credited names rather than unique person identifiers, so identical names may occasionally be
+            combined.
           </p>
         </div>
       </article>
@@ -413,15 +425,44 @@
             preceding intervals cover five. Each movie is counted once for every credited production company.
             Changes in TMDB coverage may influence the observed rankings.</p>
         </article>
-        
+
+        <!-- Chart 10: Director–Actor Partnerships -->
         <article class="chart-card" id="chart10-block">
           <h3>Which Director-Actor Partnerships Recur Most Often?</h3>
-          <p>Explore the most frequent director-actor partnerships by the number of distinct movies they have worked on
-            together. Use the chart's period selector to compare eras.</p>
+          <p>
+            Explore the most frequently recurring director-actor
+            partnerships in TMDB-listed movies from 2000 to 2025.
+            Each horizontal line represents a partnership, ranked
+            by the number of distinct movies they have worked on together.
+          </p>
           <div id="chart10" class="vis"></div>
-          <p class="chart-note">Source: TMDB director and cast credits. Partnerships are ranked by distinct shared
-            productions within the selected period.</p>
+          <p class="chart-instruction">
+            Hover over a dot or line to view the director, actor,
+            collaboration count and first and last recorded
+            collaboration years.
+          </p>
+          <div class="chart-insight">
+            <p>
+              Recurring partnerships are concentrated around
+                a few directors.
+              Hiroyuki Tsuji appears in seven of the top 15 partnerships
+              between 2000 and 2025, including the top four.
+              His collaboration with Hitoshi Ozawa ranks first with
+              128 shared movies, followed by Yasukaze Motomiya (107)
+              and Yoshiyuki Yamaguchi (92).
+              This suggests that repeated collaborations within TMDB's
+              recorded productions are strongly concentrated around
+              certain directors and their recurring performers.
+            </p>
+          </div>
+          <p class="chart-note">
+            Source: TMDB director and cast credits (2000-2025).
+            Each distinct movie contributes one count to every credited
+            director-actor pairing. Rankings reflect recorded credits,
+            not necessarily the complete filmography of each individual.
+          </p>
         </article>
+
       </div>
     </section>
 
@@ -692,26 +733,15 @@
         console.error("Chart 9 failed to load:", error);
       });
 
-    // ==========================================
-    // Chart 10: Director–Actor Collaborations
-    // ==========================================
+    // Chart 10 — Director–Actor Partnerships
     vegaEmbed(
       "#chart10",
       "charts/chart10_lollipop.vg.json",
       {
         actions: false,
-        renderer: "svg"
+        renderer: "canvas"
       }
-    )
-      .then(function (result) {
-        console.log("Chart 10 loaded successfully.");
-      })
-      .catch(function (error) {
-        console.error("Chart 10 failed:", error);
-
-        document.querySelector("#chart10").textContent =
-          "Chart 10 failed to load. Check the browser console.";
-      });
+    ).catch(console.error);
 
     // ==========================================
     // Chart 11: Australian Expenditure Map

@@ -1,15 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Top 15 director–actor partnerships by distinct shared movies, 2000–2025.",
-    "title": {
-        "text": "The Most Frequent Director–Actor Partnerships",
-        "subtitle": "Top 15 partnerships by shared movies, 2000–2025",
-        "anchor": "start",
-        "fontSize": 18,
-        "subtitleFontSize": 12,
-        "offset": 16
-    },
-    "width": 700,
+    "description": "Top 15 director-actor partnerships by distinct shared movies, 2000-2025.",
+    "width": 450,
     "height": 500,
     "background": "transparent",
     "data": {
