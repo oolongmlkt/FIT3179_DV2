@@ -272,13 +272,45 @@
           </p>
         </article>
 
-        <article class="chart-card">
+
+        <!-- Chart 7: IMDb vs TMDB Audience Ratings -->
+        <article class="chart-card" id="chart7-block">
           <h3>Do IMDb and TMDB Audiences Rate Genres Differently?</h3>
-          <p>Each pair of dots compares mean IMDb and TMDB ratings for the same set of movies within a genre.</p>
+          <p>
+            Compare mean ratings across 19 movie genres using the same
+            set of films on both platforms. The distance between each
+            pair of dots reveals the difference in their recorded ratings.
+          </p>
+          <!-- Visualisation -->
           <div id="chart7" class="vis"></div>
-          <p class="chart-note">Source: IMDb and TMDB (1980–2025). Only movies with at least 100 votes on both platforms
-            are included. Multi-genre movies contribute once to each genre.</p>
+          <!-- Interaction instructions -->
+          <p class="chart-interaction">
+            Hover over a dot or connecting line to compare IMDb and TMDB
+            ratings and view the number of eligible movies in each genre.
+          </p>
+          <!-- Analytical insight -->
+          <div class="chart-insight">
+            <p>
+              TMDB records higher average ratings than IMDb for 17 of the
+              19 genres. Family shows the largest difference, with TMDB
+              averaging 6.59 compared with IMDb's 6.14 (0.45-point gap).
+              Horror also shows a notable difference (0.38 points).
+              Documentary is an exception with IMDb averaging 0.14 points
+              higher than TMDB.
+            </p>
+          </div>
+          <!-- Source and methodology -->
+          <p class="chart-note">
+            Source: IMDb and TMDB, 1980-2025. Ratings are measured on a
+            0-10 scale, with the displayed axis narrowed to 5-8 to
+            emphasise differences. Only movies with valid ratings and
+            at least 100 votes on both platforms are included.
+            Multi-genre movies contribute once to each assigned genre.
+            Each genre's mean is calculated using the same eligible
+            movies on both platforms.
+          </p>
         </article>
+
       </div>
     </section>
 

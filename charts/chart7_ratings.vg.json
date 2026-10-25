@@ -1,19 +1,5 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
-  "title": {
-    "text": "How Do IMDb and TMDB Ratings Compare Across Genres?",
-    "subtitle": [
-      "Mean audience ratings by genre, 1980–2025",
-      "Only movies with at least 100 votes on both platforms are included."
-    ],
-    "anchor": "start",
-    "fontSize": 17,
-    "subtitleFontSize": 12,
-    "offset": 15
-  },
-
   "data": {
     "url": "data/charts/genre_ratings.csv",
     "format": {
@@ -28,12 +14,8 @@
       }
     }
   },
-
-  "width": 700,
-  "height": {
-    "step": 26
-  },
-
+  "width": 480,
+  "height": 520,
   "transform": [
     {
       "filter": "datum.period === 'All years'"
@@ -42,7 +24,6 @@
       "filter": "datum.movie_count >= 30"
     }
   ],
-
   "encoding": {
     "y": {
       "field": "genre",
@@ -61,7 +42,6 @@
       }
     }
   },
-
   "layer": [
     {
       "mark": {
@@ -74,14 +54,26 @@
         "x": {
           "field": "imdb_mean",
           "type": "quantitative",
-          "title": "Mean Audience Rating (0–10)",
+          "title": "Mean Audience Rating (0–10 scale)",
           "scale": {
-            "domain": [0, 10],
-            "zero": true
+            "domain": [
+              5,
+              8
+            ],
+            "zero": false,
+            "nice": false
           },
           "axis": {
             "grid": true,
-            "tickCount": 11,
+            "values": [
+              5,
+              5.5,
+              6,
+              6.5,
+              7,
+              7.5,
+              8
+            ],
             "labelFontSize": 11,
             "titleFontSize": 12
           }
@@ -117,7 +109,6 @@
         ]
       }
     },
-
     {
       "transform": [
         {
@@ -135,7 +126,6 @@
           "as": "platform_label"
         }
       ],
-
       "mark": {
         "type": "circle",
         "size": 105,
@@ -143,7 +133,6 @@
         "stroke": "white",
         "strokeWidth": 0.8
       },
-
       "encoding": {
         "x": {
           "field": "rating",
@@ -154,8 +143,14 @@
           "type": "nominal",
           "title": "Rating Platform",
           "scale": {
-            "domain": ["IMDb", "TMDB"],
-            "range": ["#E3A82B", "#2685A8"]
+            "domain": [
+              "IMDb",
+              "TMDB"
+            ],
+            "range": [
+              "#E3A82B",
+              "#2685A8"
+            ]
           },
           "legend": {
             "orient": "top",
@@ -194,7 +189,6 @@
       }
     }
   ],
-
   "config": {
     "background": "white",
     "view": {

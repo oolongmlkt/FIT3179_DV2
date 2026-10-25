@@ -545,6 +545,35 @@ h1 {
 }
 
 /* ==========================================
+   Chart 7 — IMDb vs TMDB Ratings
+   ========================================== */
+
+#chart7 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+    min-width: 0;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    padding: 12px 0 18px;
+}
+
+#chart7 .vega-embed {
+    flex: 0 1 auto;
+    max-width: 100%;
+}
+
+#chart7 canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================
    Chart 8 — Director Collaboration Explorer
    ========================================== */
 
