@@ -1,9 +1,8 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Chart 8 — Compact Director–Actor Collaboration Explorer",
+  "description": "Chart 8 — Compact Director-Actor Collaboration Explorer",
   "width": 700,
-  "height": 500,
+  "height": 360,
   "padding": 10,
   "autosize": "pad",
   "background": "#ffffff",
@@ -49,19 +48,33 @@
         {
           "type": "collect",
           "sort": {
-            "field": ["collaboration_count", "actor"],
-            "order": ["descending", "ascending"]
+            "field": [
+              "collaboration_count",
+              "actor"
+            ],
+            "order": [
+              "descending",
+              "ascending"
+            ]
           }
         },
         {
           "type": "window",
-          "ops": ["row_number"],
-          "as": ["position"]
+          "ops": [
+            "row_number"
+          ],
+          "as": [
+            "position"
+          ]
         },
         {
           "type": "joinaggregate",
-          "ops": ["count"],
-          "as": ["totalActors"]
+          "ops": [
+            "count"
+          ],
+          "as": [
+            "totalActors"
+          ]
         },
         {
           "type": "formula",
@@ -71,12 +84,12 @@
         {
           "type": "formula",
           "as": "actorX",
-          "expr": "centreX + 165 * cos(datum.angle)"
+          "expr": "centreX + 225 * cos(datum.angle)"
         },
         {
           "type": "formula",
           "as": "actorY",
-          "expr": "centreY + 105 * sin(datum.angle)"
+          "expr": "centreY + 125 * sin(datum.angle)"
         }
       ]
     }
@@ -89,7 +102,10 @@
         "data": "edges",
         "field": "collaboration_count"
       },
-      "range": [1.5, 6],
+      "range": [
+        1.5,
+        6
+      ],
       "zero": false
     }
   ],
@@ -236,13 +252,13 @@
             "field": "actor"
           },
           "fontSize": {
-            "value": 10
+            "value": 11
           },
           "fill": {
             "value": "#444444"
           },
           "limit": {
-            "value": 95
+            "value": 150
           },
           "ellipsis": {
             "value": "…"
@@ -268,7 +284,7 @@
             "value": "center"
           },
           "fontSize": {
-            "value": 12
+            "value": 13
           },
           "fontWeight": {
             "value": "bold"

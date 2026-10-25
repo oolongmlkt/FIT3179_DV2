@@ -6,6 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Movie Collections</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Chart 8: align title, chart, insight and source in one centred column -->
+  <style>
+    #chart8-block .chart8-content {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    #chart8-block .chart8-wrapper {
+      width: 100%;
+      max-width: 760px;
+      margin: 20px auto;
+    }
+    #chart8-block .chart8-instruction {
+      margin: 8px 0 12px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #637185;
+      text-align: center;
+    }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -320,31 +341,59 @@
         <h2>Creative Partnerships</h2>
         <p>Explore the creative relationships and production organisations shaping film.</p>
       </div>
-      <article class="chart-card chart-full">
-        <h3>Director–Actor Collaboration Explorer</h3>
-        <p>Explore recurring creative partnerships between directors and actors in TMDB-listed productions. The network
-          initially displays collaborations from 2000-2025.</p>
-        <div class="chart8-wrapper">
-          <div class="chart8-controls"><label for="chart8-period">Period</label><select id="chart8-period">
-              <option value="2000–2025">2000–2025</option>
-              <option value="1980s">1980s</option>
-              <option value="1990s">1990s</option>
-              <option value="2000s">2000s</option>
-              <option value="2010s">2010s</option>
-              <option value="2020s">2020–2025</option>
-              <option value="All years">All years (1980–2025)</option>
-            </select><label for="chart8-director">Director</label><select id="chart8-director">
-              <option value="">Loading directors...</option>
-            </select></div>
-          <div id="chart8" class="vis"></div>
-          <div class="chart8-legend"><span><span class="chart8-dot director-dot"></span>Director</span><span><span
-                class="chart8-dot actor-dot"></span>Actor</span><span class="chart8-legend-note">Link thickness = shared
-              productions</span></div>
+
+      <!-- Chart 8: Director–Actor Collaboration Explorer -->
+      <article class="chart-card chart-full" id="chart8-block">
+        <div class="chart8-content">
+          <h3>Director-Actor Collaboration Explorer</h3>
+          <p>
+            Explore recurring creative partnerships between directors and actors in TMDB-listed productions. The network initially displays collaborations from 2000-2025.
+          </p>
+
+          <div class="chart8-wrapper">
+            <div class="chart8-controls">
+              <label for="chart8-period">Period</label>
+              <select id="chart8-period">
+                <option value="2000–2025">2000-2025</option>
+                <option value="1980s">1980s</option>
+                <option value="1990s">1990s</option>
+                <option value="2000s">2000s</option>
+                <option value="2010s">2010s</option>
+                <option value="2020s">2020-2025</option>
+                <option value="All years">All years (1980-2025)</option>
+              </select>
+
+              <label for="chart8-director">Director</label>
+              <select id="chart8-director">
+                <option value="">Loading directors...</option>
+              </select>
+            </div>
+
+            <p class="chart8-instruction">
+              Select a period and director to explore recurring collaborations. Hover over an actor, director or connecting line to view collaboration details, including shared production counts and relevant years.
+            </p>
+
+            <div id="chart8" class="vis"></div>
+
+            <div class="chart8-legend">
+              <span><span class="chart8-dot director-dot"></span>Director</span>
+              <span><span class="chart8-dot actor-dot"></span>Actor</span>
+              <span class="chart8-legend-note">Link thickness = shared productions</span>
+            </div>
+          </div>
+
+          <div class="chart-insight">
+            <p>
+              In the 2000-2025 view, Hiroyuki Tsuji's strongest recurring collaboration is with Hitoshi Ozawa, with 128 shared productions. Yasukaze Motomiya (107) and Yoshiyuki Yamaguchi (92) are also frequent collaborators. These recurring partnerships illustrate how directors may repeatedly work with familiar groups of performers across productions.
+            </p>
+          </div>
+
+          <p class="chart-note">
+            Source: TMDB director and cast credits, 1980-2025. Each collaboration represents a distinct production crediting both the selected director and actor. The explorer offers 15 ranked directors per period and displays up to ten of each director's strongest recurring actor partnerships. Only partnerships involving at least five shared productions are included. Titles beginning with WWE or WWF were excluded. People are matched using credited names rather than unique person identifiers, so identical names may occasionally be combined.
+          </p>
         </div>
-        <p class="chart-note">Each network displays one director and up to ten of their strongest recurring actor
-          partnerships within the selected period. Thicker links represent more shared productions. Only partnerships
-          involving at least five shared productions are considered.</p>
       </article>
+
       <div class="chart-grid">
         <article class="chart-card" id="chart9-block">
           <h3>How Have Leading Production Companies Changed Rank?</h3>
