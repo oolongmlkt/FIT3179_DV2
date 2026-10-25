@@ -1,17 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Australian vs Global Movie Genre Representation",
-        "subtitle": [
-            "Percentage of genre-classified movies associated with each genre",
-            "Australia (left) compared with Global (right), 1980–2025"
-        ],
-        "anchor": "start",
-        "fontSize": 17,
-        "subtitleFontSize": 11,
-        "subtitleColor": "#666666",
-        "offset": 15
-    },
     "width": 700,
     "height": 500,
     "data": {

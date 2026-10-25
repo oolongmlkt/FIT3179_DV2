@@ -516,13 +516,54 @@
         </div>
       </article>
 
-      <article class="chart-card chart-full">
-        <h3>Australian vs Global Movie Genres</h3>
-        <p>How does Australia's genre representation compare with global filmmaking?</p>
-        <div id="chart12" class="vis"></div>
-        <p class="chart-note">Source: TMDB, 1980–2025. Movies with multiple genres contribute to each assigned genre;
-          Australia is defined by production-country credit and is also included in the global total.</p>
+
+      <!-- Chart 12: Australian vs Global Movie Genres -->
+      <article class="chart-card chart-full" id="chart12-block">
+        <div class="chart12-content">
+          <h3>Australian vs Global Movie Genres</h3>
+          <p class="chart12-description">
+            How does Australia's genre representation compare with
+            global filmmaking? Compare the percentage of movies
+            associated with each genre, with Australian productions
+            on the left and global productions on the right.
+          </p>
+          <!-- Vega-Lite visualisation -->
+          <div id="chart12" class="vis"></div>
+          <!-- Interaction instructions -->
+          <p class="chart-interaction">
+            Hover over a bar to view the genre's movie count
+            and percentage of eligible productions.
+          </p>
+          <!-- Analytical insight -->
+          <div class="chart-insight">
+            <p>
+              Drama is the most represented genre in both Australian
+              (34.9%) and global (32.3%) productions, with Australia
+              recording a 2.6 percentage-point higher share.
+              Thriller (10.6% versus 7.4%) and Horror
+              (10.9% versus 9.0%) are also more strongly represented
+              in Australia's recorded productions. In contrast,
+              Music has a lower share in Australia (5.2%) than
+              globally (7.9%). These differences suggest that
+              Australia's recorded genre composition broadly follows
+              global patterns, while placing relatively greater
+              emphasis on certain dramatic and suspense-oriented genres.
+            </p>
+          </div>
+          <!-- Source and methodology -->
+          <p class="chart-note">
+            Source: TMDB, 1980-2025. Percentages represent the share
+            of genre-classified movies associated with each genre.
+            Movies with multiple genres contribute once to each
+            assigned genre, so percentages do not sum to 100%.
+            Australia is defined by production-country credit and
+            is also included in the global total. Results reflect
+            TMDB's recorded coverage rather than a complete census
+            of film production.
+          </p>
+        </div>
       </article>
+
     </section>
     <footer class="site-footer">FIT3179 · Gina Pov Chy Yem (28780353)</footer>
   </main>
@@ -773,7 +814,6 @@
       "charts/chart10_lollipop.vg.json",
       {
         actions: false,
-        renderer: "canvas"
       }
     ).catch(console.error);
 
@@ -785,7 +825,6 @@
       "charts/chart11_map.vg.json",
       {
         actions: false,
-        renderer: "canvas",
         loader: vega.loader({
           baseURL: new URL("./", document.baseURI).href
         })
