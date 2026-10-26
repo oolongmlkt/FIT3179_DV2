@@ -8,20 +8,15 @@
         "imdb_mean": "number",
         "tmdb_mean": "number",
         "difference": "number",
-        "movie_count": "number",
-        "imdb_median": "number",
-        "tmdb_median": "number"
+        "movie_count": "number"
       }
     }
   },
-  "width": 480,
+  "width": "container",
   "height": 520,
   "transform": [
     {
-      "filter": "datum.period === 'All years'"
-    },
-    {
-      "filter": "datum.movie_count >= 30"
+      "filter": "datum.period === 'All years' && datum.movie_count >= 30"
     }
   ],
   "encoding": {
@@ -129,7 +124,6 @@
       "mark": {
         "type": "circle",
         "size": 105,
-        "opacity": 1,
         "stroke": "white",
         "strokeWidth": 0.8
       },
@@ -155,10 +149,7 @@
           "legend": {
             "orient": "top",
             "direction": "horizontal",
-            "symbolType": "circle",
-            "symbolSize": 110,
-            "titleFontSize": 12,
-            "labelFontSize": 12
+            "symbolType": "circle"
           }
         },
         "tooltip": [
@@ -188,12 +179,5 @@
         ]
       }
     }
-  ],
-  "config": {
-    "background": "white",
-    "view": {
-      "stroke": null
-    },
-    "font": "Arial"
-  }
+  ]
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
+  "width": "container",
   "height": 480,
-  "background": "white",
   "projection": {
     "type": "mercator",
-    "center": [134, -28],
-    "scale": 650,
-    "translate": [350, 240]
+    "center": [
+      134,
+      -28
+    ]
   },
   "layer": [
     {
@@ -18,7 +18,6 @@
           "property": "features"
         }
       },
-
       "mark": {
         "type": "geoshape",
         "fill": "#F0F1F3",
@@ -32,10 +31,6 @@
         "format": {
           "type": "csv",
           "parse": {
-            "year": "string",
-            "year_start": "number",
-            "state": "string",
-            "state_code": "string",
             "spend_m": "number",
             "longitude": "number",
             "latitude": "number",
@@ -69,14 +64,24 @@
           "field": "spend_m",
           "type": "quantitative",
           "scale": {
-            "type": "linear",
-            "domain": [0, 500],
-            "range": [0, 7000]
+            "domain": [
+              0,
+              500
+            ],
+            "range": [
+              0,
+              7000
+            ]
           },
           "legend": {
             "title": "Expenditure (AUD $m)",
             "orient": "right",
-            "values": [50, 150, 300, 500],
+            "values": [
+              50,
+              150,
+              300,
+              500
+            ],
             "format": ".0f"
           }
         },
@@ -112,14 +117,5 @@
         ]
       }
     }
-  ],
-  "config": {
-    "view": {
-      "stroke": null
-    },
-    "legend": {
-      "labelFontSize": 11,
-      "titleFontSize": 12
-    }
-  }
+  ]
 }

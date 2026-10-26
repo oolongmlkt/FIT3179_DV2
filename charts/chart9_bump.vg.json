@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Ranking trajectories of the ten most prolific TMDB production companies, 2000–2025.",
-  "width": 550,
+  "width": "container",
   "height": 450,
   "background": "transparent",
   "data": {
@@ -9,14 +8,11 @@
     "format": {
       "type": "csv",
       "parse": {
-        "company_name": "string",
-        "period": "string",
         "period_order": "number",
         "movie_count": "number",
         "rank": "number",
         "overall_rank": "number",
         "total_movies": "number",
-        "selection_rank": "number",
         "active": "boolean"
       }
     }
@@ -110,7 +106,7 @@
       {
         "field": "rank",
         "type": "quantitative",
-        "title": "Cohort rank",
+        "title": "Rank among selected 10",
         "format": ".0f"
       },
       {
@@ -155,26 +151,9 @@
       "mark": {
         "type": "circle",
         "size": 100,
-        "filled": true,
         "stroke": "white",
         "strokeWidth": 1
       }
     }
-  ],
-  "config": {
-    "view": {
-      "stroke": null
-    },
-    "axis": {
-      "labelFontSize": 12,
-      "titleFontSize": 13,
-      "labelColor": "#555555",
-      "titleColor": "#333333",
-      "domain": false
-    },
-    "legend": {
-      "labelFontSize": 12,
-      "titleFontSize": 13
-    }
-  }
+  ]
 }

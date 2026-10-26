@@ -1,14 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 480,
+    "width": "container",
     "height": 520,
     "data": {
         "url": "data/charts/genre_financials.csv",
         "format": {
             "type": "csv",
             "parse": {
-                "genre": "string",
-                "period": "string",
                 "movie_count": "number",
                 "median_roi": "number",
                 "median_budget": "number",
@@ -36,10 +34,7 @@
     ],
     "transform": [
         {
-            "filter": "datum.period === selectedPeriod"
-        },
-        {
-            "filter": "datum.movie_count >= 30"
+            "filter": "datum.period === selectedPeriod && datum.movie_count >= 30"
         }
     ],
     "encoding": {
@@ -57,7 +52,43 @@
                 "ticks": false,
                 "domain": false
             }
-        }
+        },
+        "tooltip": [
+            {
+                "field": "genre",
+                "type": "nominal",
+                "title": "Genre"
+            },
+            {
+                "field": "period",
+                "type": "nominal",
+                "title": "Release Period"
+            },
+            {
+                "field": "median_roi",
+                "type": "quantitative",
+                "title": "Median ROI (%)",
+                "format": "+.2f"
+            },
+            {
+                "field": "movie_count",
+                "type": "quantitative",
+                "title": "Eligible Movies",
+                "format": ","
+            },
+            {
+                "field": "median_budget",
+                "type": "quantitative",
+                "title": "Median Budget (USD)",
+                "format": "$,.0f"
+            },
+            {
+                "field": "median_revenue",
+                "type": "quantitative",
+                "title": "Median Revenue (USD)",
+                "format": "$,.0f"
+            }
+        ]
     },
     "layer": [
         {
@@ -88,55 +119,11 @@
                         "test": "datum.median_roi >= 0",
                         "value": "#438EAA"
                     },
-                    "value": "#D17A68",
-                    "legend": null
-                },
-                "tooltip": [
-                    {
-                        "field": "genre",
-                        "type": "nominal",
-                        "title": "Genre"
-                    },
-                    {
-                        "field": "period",
-                        "type": "nominal",
-                        "title": "Release Period"
-                    },
-                    {
-                        "field": "median_roi",
-                        "type": "quantitative",
-                        "title": "Median ROI (%)",
-                        "format": "+.2f"
-                    },
-                    {
-                        "field": "movie_count",
-                        "type": "quantitative",
-                        "title": "Eligible Movies",
-                        "format": ","
-                    },
-                    {
-                        "field": "median_budget",
-                        "type": "quantitative",
-                        "title": "Median Budget (USD)",
-                        "format": "$,.0f"
-                    },
-                    {
-                        "field": "median_revenue",
-                        "type": "quantitative",
-                        "title": "Median Revenue (USD)",
-                        "format": "$,.0f"
-                    }
-                ]
+                    "value": "#D17A68"
+                }
             }
         },
         {
-            "data": {
-                "values": [
-                    {
-                        "zero": 0
-                    }
-                ]
-            },
             "mark": {
                 "type": "rule",
                 "color": "#17243A",
@@ -145,14 +132,7 @@
             },
             "encoding": {
                 "x": {
-                    "field": "zero",
-                    "type": "quantitative"
-                },
-                "y": {
-                    "value": 0
-                },
-                "y2": {
-                    "value": 520
+                    "datum": 0
                 }
             }
         },
@@ -174,56 +154,8 @@
                 "x": {
                     "field": "median_roi",
                     "type": "quantitative"
-                },
-                "tooltip": [
-                    {
-                        "field": "genre",
-                        "type": "nominal",
-                        "title": "Genre"
-                    },
-                    {
-                        "field": "period",
-                        "type": "nominal",
-                        "title": "Release Period"
-                    },
-                    {
-                        "field": "median_roi",
-                        "type": "quantitative",
-                        "title": "Median ROI (%)",
-                        "format": "+.2f"
-                    },
-                    {
-                        "field": "movie_count",
-                        "type": "quantitative",
-                        "title": "Eligible Movies",
-                        "format": ","
-                    },
-                    {
-                        "field": "median_budget",
-                        "type": "quantitative",
-                        "title": "Median Budget (USD)",
-                        "format": "$,.0f"
-                    },
-                    {
-                        "field": "median_revenue",
-                        "type": "quantitative",
-                        "title": "Median Revenue (USD)",
-                        "format": "$,.0f"
-                    }
-                ]
+                }
             }
         }
-    ],
-    "config": {
-        "background": "transparent",
-        "view": {
-            "stroke": null
-        },
-        "axis": {
-            "labelFont": "Arial",
-            "titleFont": "Arial",
-            "gridColor": "#E6E6E6",
-            "gridOpacity": 0.7
-        }
-    }
+    ]
 }

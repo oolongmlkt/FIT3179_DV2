@@ -1,18 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Evolution of TMDB-listed movie genres from 1980 to 2025.",
-    "width": 850,
+    "width": "container",
     "height": 380,
-    "background": "transparent",
     "data": {
-        "url": "data/charts/genre_by_year.csv",
-        "format": {
-            "type": "csv",
-            "parse": {
-                "year": "number",
-                "movie_count": "number"
-            }
-        }
+        "url": "data/charts/genre_by_year.csv"
     },
     "params": [
         {
@@ -50,14 +41,7 @@
             "axis": {
                 "format": "d",
                 "tickCount": 10,
-                "labelAngle": 0,
-                "labelFontSize": 12,
-                "titleFontSize": 13,
-                "grid": false,
-                "domain": false,
-                "tickColor": "#CCCCCC",
-                "labelColor": "#555555",
-                "titleColor": "#333333"
+                "grid": false
             }
         },
         "y": {
@@ -75,13 +59,8 @@
             },
             "legend": {
                 "orient": "right",
-                "direction": "vertical",
-                "titleFontSize": 13,
-                "labelFontSize": 11,
                 "symbolType": "square",
-                "symbolSize": 130,
-                "rowPadding": 5,
-                "offset": 20
+                "symbolSize": 130
             }
         },
         "opacity": {
@@ -99,27 +78,17 @@
         "tooltip": [
             {
                 "field": "genre",
-                "type": "nominal",
                 "title": "Movie Genre"
             },
             {
                 "field": "year",
-                "type": "quantitative",
-                "title": "Release Year",
-                "format": "d"
+                "title": "Release Year"
             },
             {
                 "field": "movie_count",
-                "type": "quantitative",
                 "title": "Genre Credits",
                 "format": ","
             }
         ]
-    },
-    "config": {
-        "view": {
-            "stroke": null
-        },
-        "font": "Arial"
     }
 }

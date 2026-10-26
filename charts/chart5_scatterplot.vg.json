@@ -1,22 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-        "url": "data/charts/movie_financials.csv",
-        "format": {
-            "type": "csv",
-            "parse": {
-                "budget_m": "number",
-                "revenue_m": "number",
-                "budget": "number",
-                "revenue": "number",
-                "roi": "number",
-                "year": "number"
-            }
-        }
+        "url": "data/charts/movie_financials.csv"
     },
     "transform": [
         {
-            "filter": "isValid(datum.budget_m) && isValid(datum.revenue_m) && datum.budget_m > 0 && datum.revenue_m > 0"
+            "filter": "datum.budget_m > 0 && datum.revenue_m > 0"
         }
     ],
     "params": [
@@ -31,7 +20,7 @@
             "bind": "legend"
         }
     ],
-    "width": 500,
+    "width": "container",
     "height": 450,
     "mark": {
         "type": "circle",
@@ -45,8 +34,7 @@
                 "type": "log"
             },
             "axis": {
-                "title": "Production Budget (USD millions)",
-                "grid": true
+                "title": "Production Budget (USD millions)"
             }
         },
         "y": {
@@ -56,8 +44,7 @@
                 "type": "log"
             },
             "axis": {
-                "title": "Worldwide Revenue (USD millions)",
-                "grid": true
+                "title": "Worldwide Revenue (USD millions)"
             }
         },
         "color": {
@@ -108,14 +95,5 @@
                 "title": "Budget-based ROI (%)"
             }
         ]
-    },
-    "config": {
-        "view": {
-            "stroke": null
-        },
-        "axis": {
-            "labelFontSize": 11,
-            "titleFontSize": 12
-        }
     }
 }

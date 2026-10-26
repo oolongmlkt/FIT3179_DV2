@@ -1,11 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Chart 8 — Compact Director-Actor Collaboration Explorer",
   "width": 700,
   "height": 360,
   "padding": 10,
-  "autosize": "pad",
-  "background": "#ffffff",
   "signals": [
     {
       "name": "selectedPeriod",
@@ -151,9 +148,6 @@
       "name": "directorNode",
       "encode": {
         "enter": {
-          "shape": {
-            "value": "circle"
-          },
           "size": {
             "value": 500
           },
@@ -188,9 +182,6 @@
       },
       "encode": {
         "enter": {
-          "shape": {
-            "value": "circle"
-          },
           "size": {
             "value": 140
           },
@@ -259,9 +250,6 @@
           },
           "limit": {
             "value": 150
-          },
-          "ellipsis": {
-            "value": "…"
           }
         }
       }

@@ -1,33 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Movie Collections</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    #chart8-block .chart8-content {
-      width: 100%;
-      max-width: 760px;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-
-    #chart8-block .chart8-wrapper {
-      width: 100%;
-      max-width: 760px;
-      margin: 20px auto;
-    }
-
-    #chart8-block .chart8-instruction {
-      margin: 8px 0 12px;
-      font-size: 12px;
-      line-height: 1.6;
-      color: #637185;
-      text-align: center;
-    }
-  </style>
+  <link href="css/style.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -35,30 +13,28 @@
 
 <body>
   <main class="page">
+
     <header class="site-header">
       <h1>BEHIND THE SCENES</h1>
       <p class="site-subtitle">Exploring film production, genres, financial performance and creative partnerships from
         1980 to 2025.</p>
-      <nav class="section-nav" aria-label="Jump to section">
-        <a href="#section1">Global landscape</a>
-        <a href="#section2">Movie success</a>
-        <a href="#section3">Creative partnerships</a>
-        <a href="#section4">Australia</a>
-      </nav>
     </header>
 
-    <section id="section1" class="story-section">
+    <section class="story-section" id="section1">
+
       <div class="section-intro">
         <p class="eyebrow">01 / GLOBAL LANDSCAPE</p>
         <h2>Films Around the World</h2>
         <p>Explore where movies are produced, how genres have evolved, and how countries collaborate.</p>
       </div>
 
+      <!-- Chart 1: World Choropleth -->
       <article class="chart-card chart-full" id="chart1-block">
-        <div class="chart1-content">
-          <div id="chart1" class="vis"
-            aria-label="World choropleth of average annual movie production per million residents">
-          </div>
+        <div class="chart-content">
+          <h3>Where Are Movies Produced?</h3>
+          <p class="chart-description">Average annual TMDB-listed movie productions per million residents, 1980-2025.
+          </p>
+          <div id="chart1" class="vis"></div>
           <div class="chart-insight">
             <p>
               Northern Europe stands out for its high recorded film-production intensity, particularly Iceland (72.56),
@@ -80,12 +56,12 @@
 
       <!-- Chart 2: Genre Streamgraph -->
       <article class="chart-card chart-full" id="chart2-block">
-        <div class="chart2-content">
+        <div class="chart-content">
           <h3>The Evolution of Movie Genres</h3>
-          <div id="vis2" class="vis"
-            aria-label="Interactive streamgraph showing the evolution of movie genres from 1980 to 2025">
-          </div>
-          <p class="chart2-instruction">
+          <p class="chart-description">Explore how the number of movies associated with each genre has changed from 1980
+            to 2025.</p>
+          <div id="chart2" class="vis"></div>
+          <p class="chart-instruction">
             Click one or more genres in the legend to highlight their
             trends. Hover over a stream to view its annual genre credits.
           </p>
@@ -109,19 +85,15 @@
       </article>
 
       <!-- Chart 3 — International Co-production Map -->
-      <article id="chart3-block" class="chart-card chart-full">
-        <div class="chart3-content">
+      <article class="chart-card chart-full" id="chart3-block">
+        <div class="chart-content">
           <h3>Connecting the World Through Film</h3>
-          <p class="chart3-description">
+          <p class="chart-description">
             International film production connects countries through shared
             creative and financial partnerships. Explore the strongest
             co-production relationships recorded in TMDB between 1980 and 2025.
           </p>
-
-          <!-- Chart 3 visualisation -->
           <div id="chart3" class="vis"></div>
-
-          <!-- Custom line thickness legend -->
           <div class="chart3-legend">
             <h4>Number of shared film credits</h4>
             <div class="chart3-legend-items">
@@ -139,16 +111,12 @@
               </div>
             </div>
           </div>
-
-          <!-- Interactive controls -->
-          <div id="chart3-controls" class="chart3-controls"></div>
-
-          <p class="chart3-instruction">
+          <div class="chart3-controls" id="chart3-controls"></div>
+          <p class="chart-instruction">
             Hover over a connection to view its shared film credits.
             Use the slider to explore stronger or weaker relationships,
             or filter the network by country.
           </p>
-
           <div class="chart-insight">
             <p>
               Canada-United States (3,840 shared film credits) and
@@ -163,7 +131,6 @@
               less frequent country partnerships.
             </p>
           </div>
-
           <p class="chart-note">
             Source: TMDB, 1980-2025. Each line connects two countries credited
             on the same film, with thickness representing the number of shared
@@ -174,21 +141,24 @@
           </p>
         </div>
       </article>
+
     </section>
 
-    <section id="section2" class="story-section">
+    <section class="story-section" id="section2">
+
       <div class="section-intro">
         <p class="eyebrow">02 / MOVIE SUCCESS</p>
         <h2>What Makes a Movie Successful?</h2>
         <p>From genre representation to box-office performance and audience ratings, explore how different measures
           reveal different perspectives on movie success.</p>
       </div>
+
       <div class="chart-grid">
 
         <!-- Chart 4: Genre × Decade Heatmap -->
         <article class="chart-card" id="chart4-block">
           <h3>Which Movie Genres Have Dominated Each Decade?</h3>
-          <p>
+          <p class="chart-description">
             Drama and Documentary dominate recorded movie production
             across the decades, while Horror has steadily gained
             representation. Compare how each genre's presence has
@@ -206,6 +176,7 @@
               composition of TMDB's recorded productions.
             </p>
           </div>
+
           <p class="chart-note">
             Source: TMDB, 1980-2025. Movies with multiple genres are
             counted once within each assigned genre. The final period
@@ -217,7 +188,7 @@
         <!-- Chart 5: Budget vs Revenue Scatterplot -->
         <article class="chart-card" id="chart5-block">
           <h3>Does a Bigger Budget Mean Bigger Box Office Returns?</h3>
-          <p>
+          <p class="chart-description">
             Do higher production budgets lead to greater box-office returns?
             Explore the relationship between production spending and worldwide
             revenue across 14,939 films released between 1980 and 2025.
@@ -225,7 +196,7 @@
             financial differences across productions of all sizes.
           </p>
           <div id="chart5" class="vis"></div>
-          <p class="chart-interaction">
+          <p class="chart-instruction">
             Click a genre in the legend to highlight its movies.
             Hold Shift while clicking to select multiple genres.
             Hover over a point to view movie details.
@@ -252,26 +223,17 @@
         <!-- Chart 6: Median ROI by Genre -->
         <article class="chart-card" id="chart6-block">
           <h3>Which Movie Genres Deliver the Highest Returns?</h3>
-          <p>
-            Which movie genres generate the strongest reported financial
-            returns? Compare median return on investment (ROI) across
+          <p class="chart-description">
+            Compare median return on investment (ROI) across
             genres and explore how their rankings change between decades.
           </p>
-
-          <!-- Interactive controls -->
           <div id="chart6-controls"></div>
-
-          <!-- Visualisation -->
           <div id="chart6" class="vis"></div>
-
-          <!-- Interaction instructions -->
-          <p class="chart-interaction">
+          <p class="chart-instruction">
             Select a release period to compare genre rankings.
             Hover over a bar or gold marker to explore its financial
             statistics. Gold markers indicate a median ROI of exactly 0%.
           </p>
-
-          <!-- Analytical insight -->
           <div class="chart-insight">
             <p>
               Across 1980-2025, Family records the highest median reported
@@ -281,8 +243,6 @@
               financial outcomes between genres.
             </p>
           </div>
-
-          <!-- Source and methodology -->
           <p class="chart-note">
             Source: TMDB, 1980-2025. ROI is calculated as
             (worldwide revenue - production budget) / production budget x 100.
@@ -294,23 +254,19 @@
           </p>
         </article>
 
-
         <!-- Chart 7: IMDb vs TMDB Audience Ratings -->
         <article class="chart-card" id="chart7-block">
           <h3>Do IMDb and TMDB Audiences Rate Genres Differently?</h3>
-          <p>
+          <p class="chart-description">
             Compare mean ratings across 19 movie genres using the same
             set of films on both platforms. The distance between each
             pair of dots reveals the difference in their recorded ratings.
           </p>
-          <!-- Visualisation -->
           <div id="chart7" class="vis"></div>
-          <!-- Interaction instructions -->
-          <p class="chart-interaction">
+          <p class="chart-instruction">
             Hover over a dot or connecting line to compare IMDb and TMDB
             ratings and view the number of eligible movies in each genre.
           </p>
-          <!-- Analytical insight -->
           <div class="chart-insight">
             <p>
               TMDB records higher average ratings than IMDb for 17 of the
@@ -321,7 +277,6 @@
               higher than TMDB.
             </p>
           </div>
-          <!-- Source and methodology -->
           <p class="chart-note">
             Source: IMDb and TMDB, 1980-2025. Ratings are measured on a
             0-10 scale, with the displayed axis narrowed to 5-8 to
@@ -334,9 +289,11 @@
         </article>
 
       </div>
+
     </section>
 
-    <section id="section3" class="story-section">
+    <section class="story-section" id="section3">
+
       <div class="section-intro">
         <p class="eyebrow">03 / CREATIVE PARTNERSHIPS</p>
         <h2>Creative Partnerships</h2>
@@ -345,13 +302,12 @@
 
       <!-- Chart 8: Director–Actor Collaboration Explorer -->
       <article class="chart-card chart-full" id="chart8-block">
-        <div class="chart8-content">
+        <div class="chart-content">
           <h3>Director-Actor Collaboration Explorer</h3>
-          <p>
+          <p class="chart-description">
             Explore recurring creative partnerships between directors and actors in TMDB-listed productions. The network
             initially displays collaborations from 2000-2025.
           </p>
-
           <div class="chart8-wrapper">
             <div class="chart8-controls">
               <label for="chart8-period">Period</label>
@@ -364,27 +320,22 @@
                 <option value="2020s">2020-2025</option>
                 <option value="All years">All years (1980-2025)</option>
               </select>
-
               <label for="chart8-director">Director</label>
               <select id="chart8-director">
                 <option value="">Loading directors...</option>
               </select>
             </div>
-
-            <p class="chart8-instruction">
-              Select a period and director to explore recurring collaborations. Hover over an actor, director or
-              connecting line to view collaboration details, including shared production counts and relevant years.
-            </p>
-
             <div id="chart8" class="vis"></div>
-
             <div class="chart8-legend">
               <span><span class="chart8-dot director-dot"></span>Director</span>
               <span><span class="chart8-dot actor-dot"></span>Actor</span>
               <span class="chart8-legend-note">Link thickness = shared productions</span>
             </div>
+            <p class="chart-instruction">
+              Select a period and director to explore recurring collaborations. Hover over an actor, director or
+              connecting line to view collaboration details, including shared production counts and relevant years.
+            </p>
           </div>
-
           <div class="chart-insight">
             <p>
               In the 2000-2025 view, Hiroyuki Tsuji's strongest recurring collaboration is with Hitoshi Ozawa, with 128
@@ -393,7 +344,6 @@
               performers across productions.
             </p>
           </div>
-
           <p class="chart-note">
             Source: TMDB director and cast credits, 1980-2025. Each collaboration represents a distinct production
             crediting both the selected director and actor. The explorer offers 15 ranked directors per period and
@@ -406,6 +356,8 @@
       </article>
 
       <div class="chart-grid">
+
+        <!-- Chart 9: Production Company Bump Chart -->
         <article class="chart-card" id="chart9-block">
           <h3>How Have Leading Production Companies Changed Rank?</h3>
           <p class="chart-description">Explore how rankings of the ten most prolific production companies changed
@@ -426,10 +378,10 @@
             Changes in TMDB coverage may influence the observed rankings.</p>
         </article>
 
-        <!-- Chart 10: Director–Actor Partnerships -->
+        <!-- Chart 10: Director-Actor Partnerships -->
         <article class="chart-card" id="chart10-block">
           <h3>Which Director-Actor Partnerships Recur Most Often?</h3>
-          <p>
+          <p class="chart-description">
             Explore the most frequently recurring director-actor
             partnerships in TMDB-listed movies from 2000 to 2025.
             Each horizontal line represents a partnership, ranked
@@ -464,9 +416,11 @@
         </article>
 
       </div>
+
     </section>
 
-    <section id="section4" class="story-section">
+    <section class="story-section" id="section4">
+
       <div class="section-intro">
         <p class="eyebrow">04 / AUSTRALIA</p>
         <h2>Australia's Screen Production Landscape</h2>
@@ -476,21 +430,18 @@
 
       <!-- Chart 11: Australian Production Expenditure Map -->
       <article class="chart-card chart-full" id="chart11-block">
-        <div class="chart11-content">
+        <div class="chart-content">
           <h3>Where Is Australia's Screen Production Expenditure Concentrated?</h3>
-          <p class="chart11-description">
+          <p class="chart-description">
             Explore how reported screen production expenditure is distributed
             across Australian states. Larger circles represent greater expenditure,
             highlighting differences in production activity between states.
           </p>
-          <!-- Vega-Lite visualisation -->
           <div id="chart11" class="vis"></div>
-          <!-- Interaction instructions -->
-          <p class="chart-interaction">
+          <p class="chart-instruction">
             Hover over a circle to view the state's expenditure,
             financial year and share of the published national total.
           </p>
-          <!-- Analytical insight -->
           <div class="chart-insight">
             <p>
               In 2024/25, Victoria recorded the highest reported screen production
@@ -504,7 +455,6 @@
               New South Wales and Queensland.
             </p>
           </div>
-          <!-- Source and methodology -->
           <p class="chart-note">
             Source: Screen Australia, Spend by Location, 2024/25.
             Expenditure is reported in AUD millions. Only NSW, QLD,
@@ -516,25 +466,21 @@
         </div>
       </article>
 
-
       <!-- Chart 12: Australian vs Global Movie Genres -->
       <article class="chart-card chart-full" id="chart12-block">
-        <div class="chart12-content">
+        <div class="chart-content">
           <h3>Australian vs Global Movie Genres</h3>
-          <p class="chart12-description">
+          <p class="chart-description">
             How does Australia's genre representation compare with
             global filmmaking? Compare the percentage of movies
             associated with each genre, with Australian productions
             on the left and global productions on the right.
           </p>
-          <!-- Vega-Lite visualisation -->
           <div id="chart12" class="vis"></div>
-          <!-- Interaction instructions -->
-          <p class="chart-interaction">
+          <p class="chart-instruction">
             Hover over a bar to view the genre's movie count
             and percentage of eligible productions.
           </p>
-          <!-- Analytical insight -->
           <div class="chart-insight">
             <p>
               Drama is the most represented genre in both Australian
@@ -550,7 +496,6 @@
               emphasis on certain dramatic and suspense-oriented genres.
             </p>
           </div>
-          <!-- Source and methodology -->
           <p class="chart-note">
             Source: TMDB, 1980-2025. Percentages represent the share
             of genre-classified movies associated with each genre.
@@ -565,73 +510,65 @@
       </article>
 
     </section>
-    <footer class="site-footer">FIT3179 · Gina Pov Chy Yem (28780353)</footer>
-  </main>
-  <script>
 
+    <footer class="site-footer">Monash University · FIT3179 · Gina Pov Chy Yem (28780353) · 2026-10-26</footer>
+  </main>
+
+  <script>
     // Chart 1: World Choropleth
     vegaEmbed(
       '#chart1',
       'charts/chart1_choropleth.vg.json',
       {
-        actions: false,
-        renderer: 'svg'
+        actions: false
       }
     ).catch(error => {
       console.error('Chart 1 error:', error);
-      document.querySelector('#chart1').textContent =
-        'Chart 1 failed to load. Check the browser console.';
     });
 
     // Chart 2: Genre Streamgraph
     vegaEmbed(
-      '#vis2',
+      '#chart2',
       'charts/chart2_streamgraph.vg.json',
       {
-        actions: false,
-        renderer: 'svg'
+        actions: false
       }
     ).catch(error => {
       console.error('Chart 2 error:', error);
-      document.querySelector('#vis2').textContent =
-        'Chart 2 failed to load. Check the browser console.';
     });
 
-    // Chart 3 — International Co-production Map
+    // Chart 3: International Co-production Map
     vegaEmbed(
       "#chart3",
       "charts/chart3_flowmap.vg.json",
       {
         actions: false,
-        renderer: "svg",
         bind: "#chart3-controls"
       }
     ).catch(error => {
-      console.error("Chart 3 failed to load:", error);
+      console.error("Chart 3 error:", error);
     });
 
-    // Chart 4: Genre × Decade Heatmap
+    // Chart 4: Genre/Decade Heatmap
     vegaEmbed(
       "#chart4",
       "charts/chart4_heatmap.vg.json",
       {
         actions: false
       }
-    ).catch(console.error);
+    ).catch(error => {
+      console.error('Chart 4 error:', error);
+    });
 
-    // Chart 5: Budget × Revenue Scatterplot
+    // Chart 5: Budget/Revenue Scatterplot
     vegaEmbed(
       '#chart5',
       'charts/chart5_scatterplot.vg.json',
       {
-        actions: false,
-        renderer: 'svg'
+        actions: false
       }
     ).catch(error => {
-      console.error('Chart 5 failed:', error);
-
-      document.querySelector('#chart5').textContent =
-        'Chart 5 failed to load. Check the browser console.';
+      console.error('Chart 5 error:', error);
     });
 
     // Chart 6: ROI by Genre
@@ -640,173 +577,93 @@
       "charts/chart6_financial.vg.json",
       {
         actions: false,
-        renderer: "svg",
         bind: "#chart6-controls"
       }
     ).catch(error => {
-      console.error("Chart 6 failed:", error);
+      console.error("Chart 6 error:", error);
     });
 
-    // Chart 7 — IMDb vs TMDB Audience Ratings
+    // Chart 7: IMDb vs TMDB Audience Ratings
     vegaEmbed(
       "#chart7",
       "charts/chart7_ratings.vg.json",
-      { actions: false }
+      {
+        actions: false
+      }
     ).catch(error => {
-      console.error("Error loading Chart 7:", error);
+      console.error("Chart 7 error:", error);
     });
 
-    /* ==========================================
-       Chart 8 — Director Collaboration Explorer
-       ========================================== */
-
+    // Chart 8: Director–Actor Collaboration Explorer
     async function initialiseChart8() {
-
-      const periodSelect =
-        document.getElementById("chart8-period");
-
-      const directorSelect =
-        document.getElementById("chart8-director");
-
-      const directorDataURL =
-        "data/charts/director_actor_explorer_directors.csv";
-
+      const periodSelect = document.getElementById("chart8-period");
+      const directorSelect = document.getElementById("chart8-director");
       try {
-
-        // Load the available directors for every period.
-        const loader = vega.loader();
-
-        const csvText = await loader.load(
-          directorDataURL
+        // Load directors and render the network.
+        const csv = await vega.loader().load(
+          "data/charts/director_actor_explorer_directors.csv"
         );
-
-        const directors = vega.read(csvText, {
+        const directors = vega.read(csv, {
           type: "csv",
           parse: "auto"
         });
-
-        // Embed the compact Vega specification.
-        const result = await vegaEmbed(
+        const { view } = await vegaEmbed(
           "#chart8",
           "charts/chart8_network.vg.json",
           {
             actions: false,
-            renderer: "svg",
             tooltip: true
           }
         );
-
-        const view = result.view;
-
-        // Populate the director dropdown using
-        // the selected period's ranking.
-        function updateDirectorOptions() {
-
-          const period = periodSelect.value;
-
+        // Populate directors for the selected period.
+        function updateDirectors() {
           const available = directors
-            .filter(row => row.period === period)
+            .filter(d => d.period === periodSelect.value)
             .sort((a, b) => a.rank - b.rank);
-
-          directorSelect.innerHTML = "";
-
-          for (const row of available) {
-
-            const option =
-              document.createElement("option");
-
-            option.value = row.director;
-
-            option.textContent =
-              `${row.rank}. ${row.director}`;
-
-            directorSelect.appendChild(option);
-          }
-
-          // Prefer Hiroyuki Tsuji for the initial
-          // default period, if available.
-          const preferred = available.find(
-            row => row.director === "Hiroyuki Tsuji"
-          );
-
+          directorSelect.replaceChildren();
+          available.forEach(d => {
+            const option = new Option(
+              `${d.rank}. ${d.director}`,
+              d.director
+            );
+            directorSelect.add(option);
+          });
           if (
-            period === "2000–2025" &&
-            preferred
+            periodSelect.value === "2000–2025" &&
+            available.some(d => d.director === "Hiroyuki Tsuji")
           ) {
-            directorSelect.value =
-              preferred.director;
-          } else if (available.length > 0) {
-            directorSelect.value =
-              available[0].director;
+            directorSelect.value = "Hiroyuki Tsuji";
           }
-
-          return directorSelect.value;
         }
-
-        // Update both Vega signals together.
-        async function updateChart() {
-
-          await view
-            .signal(
-              "selectedPeriod",
-              periodSelect.value
-            )
-            .signal(
-              "selectedDirector",
-              directorSelect.value
-            )
+        function updateChart() {
+          return view
+            .signal("selectedPeriod", periodSelect.value)
+            .signal("selectedDirector", directorSelect.value)
             .runAsync();
         }
-
-        // Initial chart.
-        updateDirectorOptions();
+        updateDirectors();
         await updateChart();
-
-        // Period interaction.
-        periodSelect.addEventListener(
-          "change",
-          async () => {
-
-            updateDirectorOptions();
-            await updateChart();
-
-          }
-        );
-
-        // Director interaction.
-        directorSelect.addEventListener(
-          "change",
-          updateChart
-        );
-
+        periodSelect.addEventListener("change", () => {
+          updateDirectors();
+          updateChart();
+        });
+        directorSelect.addEventListener("change", updateChart);
       } catch (error) {
-
-        console.error(
-          "Chart 8 failed to initialise:",
-          error
-        );
-
+        console.error("Chart 8 error:", error);
       }
     }
-
     initialiseChart8();
 
-    // ==========================================
     // Chart 9: Production Company Ranking
-    // ==========================================
     vegaEmbed(
       "#chart9",
       "charts/chart9_bump.vg.json",
       {
         actions: false
       }
-    )
-      .then(function (result) {
-        console.log("Chart 9 loaded successfully.");
-      })
-      .catch(function (error) {
-        console.error("Chart 9 failed to load:", error);
-      });
+    ).catch(error => {
+      console.error("Chart 9 error:", error);
+    });
 
     // Chart 10 — Director–Actor Partnerships
     vegaEmbed(
@@ -815,11 +672,11 @@
       {
         actions: false,
       }
-    ).catch(console.error);
+    ).catch(error => {
+      console.error("Chart 10 error:", error);
+    });
 
-    // ==========================================
     // Chart 11: Australian Expenditure Map
-    // ==========================================
     vegaEmbed(
       "#chart11",
       "charts/chart11_map.vg.json",
@@ -829,17 +686,21 @@
           baseURL: new URL("./", document.baseURI).href
         })
       }
-    ).catch(console.error);
+    ).catch(error => {
+      console.error("Chart 11 error:", error);
+    });
 
     // Chart 12: Australian vs Global Movie Genres
     vegaEmbed(
       '#chart12',
       'charts/chart12_butterfly.vg.json',
-      { actions: false }
-    ).catch(console.error);
-
+      { 
+        actions: false 
+      }
+    ).catch(error => {
+      console.error("Chart 12 error:", error);
+    });
   </script>
-
 </body>
 
 </html>

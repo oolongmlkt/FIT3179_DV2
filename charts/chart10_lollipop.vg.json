@@ -1,162 +1,97 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Top 15 director-actor partnerships by distinct shared movies, 2000-2025.",
-    "width": 450,
-    "height": 500,
-    "background": "transparent",
-    "data": {
-        "url": "data/charts/director_actor_rankings.csv",
-        "format": {
-            "type": "csv",
-            "parse": {
-                "period": "string",
-                "rank": "number",
-                "source": "string",
-                "target": "string",
-                "director": "string",
-                "actor": "string",
-                "pair_label": "string",
-                "collaboration_count": "number",
-                "first_year": "number",
-                "last_year": "number"
-            }
-        }
-    },
-    "transform": [
-        {
-            "filter": "datum.period === '2000–2025'"
-        },
-        {
-            "filter": "datum.rank <= 15"
-        }
-    ],
-    "encoding": {
-        "y": {
-            "field": "pair_label",
-            "type": "nominal",
-            "sort": {
-                "field": "rank",
-                "op": "min",
-                "order": "ascending"
-            },
-            "axis": {
-                "title": null,
-                "labelFontSize": 11,
-                "labelLimit": 260,
-                "labelPadding": 8,
-                "ticks": false,
-                "domain": false
-            }
-        },
-        "tooltip": [
-            {
-                "field": "rank",
-                "type": "quantitative",
-                "title": "Rank",
-                "format": ".0f"
-            },
-            {
-                "field": "director",
-                "type": "nominal",
-                "title": "Director"
-            },
-            {
-                "field": "actor",
-                "type": "nominal",
-                "title": "Actor"
-            },
-            {
-                "field": "collaboration_count",
-                "type": "quantitative",
-                "title": "Shared movies",
-                "format": ",.0f"
-            },
-            {
-                "field": "first_year",
-                "type": "quantitative",
-                "title": "First collaboration",
-                "format": ".0f"
-            },
-            {
-                "field": "last_year",
-                "type": "quantitative",
-                "title": "Last collaboration",
-                "format": ".0f"
-            }
-        ]
-    },
-    "layer": [
-        {
-            "mark": {
-                "type": "rule",
-                "strokeWidth": 2.5,
-                "color": "#A9B8C7"
-            },
-            "encoding": {
-                "x": {
-                    "field": "collaboration_count",
-                    "type": "quantitative",
-                    "scale": {
-                        "domainMin": 0,
-                        "nice": true
-                    },
-                    "axis": {
-                        "title": "Number of shared movies",
-                        "titleFontSize": 12,
-                        "labelFontSize": 11,
-                        "grid": true,
-                        "gridOpacity": 0.15,
-                        "tickMinStep": 1
-                    }
-                },
-                "x2": {
-                    "datum": 0
-                }
-            }
-        },
-        {
-            "mark": {
-                "type": "circle",
-                "size": 115,
-                "color": "#367BA7",
-                "opacity": 0.95
-            },
-            "encoding": {
-                "x": {
-                    "field": "collaboration_count",
-                    "type": "quantitative"
-                }
-            }
-        },
-        {
-            "mark": {
-                "type": "text",
-                "align": "left",
-                "baseline": "middle",
-                "dx": 10,
-                "fontSize": 11,
-                "color": "#475569"
-            },
-            "encoding": {
-                "x": {
-                    "field": "collaboration_count",
-                    "type": "quantitative"
-                },
-                "text": {
-                    "field": "collaboration_count",
-                    "type": "quantitative",
-                    "format": ".0f"
-                }
-            }
-        }
-    ],
-    "config": {
-        "view": {
-            "stroke": null
-        },
-        "axis": {
-            "domainColor": "#CBD5E1",
-            "tickColor": "#CBD5E1"
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 500,
+  "data": {
+    "url": "data/charts/director_actor_rankings.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "rank": "number",
+        "collaboration_count": "number",
+        "first_year": "number",
+        "last_year": "number"
+      }
     }
+  },
+  "transform": [
+    {"filter": "datum.period === '2000–2025' && datum.rank <= 15"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "collaboration_count",
+      "type": "quantitative",
+      "scale": {"domainMin": 0, "nice": true},
+      "axis": {
+        "title": "Number of shared movies",
+        "titleFontSize": 12,
+        "labelFontSize": 11,
+        "grid": true,
+        "gridOpacity": 0.15,
+        "tickMinStep": 1
+      }
+    },
+    "y": {
+      "field": "pair_label",
+      "type": "nominal",
+      "sort": {
+        "field": "rank",
+        "op": "min",
+        "order": "ascending"
+      },
+      "axis": {
+        "title": null,
+        "labelFontSize": 11,
+        "labelLimit": 260,
+        "labelPadding": 8,
+        "ticks": false,
+        "domain": false
+      }
+    },
+    "tooltip": [
+      {"field": "rank", "type": "quantitative", "title": "Rank", "format": ".0f"},
+      {"field": "director", "type": "nominal", "title": "Director"},
+      {"field": "actor", "type": "nominal", "title": "Actor"},
+      {"field": "collaboration_count", "type": "quantitative", "title": "Shared movies", "format": ",.0f"},
+      {"field": "first_year", "type": "quantitative", "title": "First collaboration", "format": ".0f"},
+      {"field": "last_year", "type": "quantitative", "title": "Last collaboration", "format": ".0f"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2.5,
+        "color": "#A9B8C7"
+      },
+      "encoding": {
+        "x2": {"datum": 0}
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 115,
+        "color": "#367BA7",
+        "opacity": 0.95
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 11,
+        "color": "#475569"
+      },
+      "encoding": {
+        "text": {
+          "field": "collaboration_count",
+          "type": "quantitative",
+          "format": ".0f"
+        }
+      }
+    }
+  ]
 }

@@ -1,18 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "International Film Co-production Network",
-    "subtitle": "Shared production-country credits, 1980-2025",
-    "anchor": "start",
-    "fontSize": 20,
-    "subtitleFontSize": 12,
-    "offset": 15,
-    "color": "#17243A",
-    "subtitleColor": "#526176"
-  },
-  "width": 850,
+  "width": "container",
   "height": 500,
-  "background": "#ffffff",
   "projection": {
     "type": "equalEarth"
   },
@@ -89,14 +78,7 @@
       "data": {
         "url": "data/charts/country_coproductions.csv",
         "format": {
-          "type": "csv",
-          "parse": {
-            "movie_count": "number",
-            "source_lat": "number",
-            "source_lon": "number",
-            "target_lat": "number",
-            "target_lon": "number"
-          }
+          "type": "csv"
         }
       },
       "transform": [
@@ -113,8 +95,7 @@
       "mark": {
         "type": "rule",
         "color": "#B28A45",
-        "opacity": 0.5,
-        "strokeCap": "round"
+        "opacity": 0.5
       },
       "encoding": {
         "longitude": {
@@ -141,10 +122,9 @@
               3000
             ],
             "range": [
-              0.8,
-              5
-            ],
-            "clamp": true
+              1,
+              6
+            ]
           },
           "legend": null
         },
@@ -168,10 +148,5 @@
         ]
       }
     }
-  ],
-  "config": {
-    "view": {
-      "stroke": null
-    }
-  }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 480,
+  "width": "container",
   "height": 480,
   "data": {
     "url": "data/charts/genre_by_decade.csv"
@@ -84,13 +84,5 @@
         "format": ".1f"
       }
     ]
-  },
-  "config": {
-    "view": {
-      "stroke": null
-    },
-    "axis": {
-      "grid": false
-    }
   }
 }

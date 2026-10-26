@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 700,
+    "width": "container",
     "height": 500,
     "data": {
         "url": "data/charts/australia_global_genres.csv"
@@ -12,28 +12,87 @@
         {
             "calculate": "datum.region === 'Australia' ? -datum.percentage : datum.percentage",
             "as": "plot_percentage"
-        },
-        {
-            "calculate": "datum.region === 'Australia' ? datum.percentage : 0",
-            "as": "australia_percentage"
-        },
-        {
-            "calculate": "datum.region === 'Global' ? datum.percentage : 0",
-            "as": "global_percentage"
-        },
-        {
-            "joinaggregate": [
-                {
-                    "op": "max",
-                    "field": "australia_percentage",
-                    "as": "australia_sort"
-                }
-            ],
-            "groupby": [
-                "genre"
-            ]
         }
     ],
+    "encoding": {
+        "y": {
+            "field": "genre",
+            "type": "nominal",
+            "sort": {
+                "field": "plot_percentage",
+                "op": "min",
+                "order": "ascending"
+            },
+            "axis": {
+                "title": null,
+                "labelFontSize": 11,
+                "labelLimit": 130,
+                "labelPadding": 8,
+                "ticks": false,
+                "domain": false
+            }
+        },
+        "x": {
+            "field": "plot_percentage",
+            "type": "quantitative",
+            "scale": {
+                "domain": [
+                    -50,
+                    50
+                ]
+            },
+            "axis": {
+                "title": "Percentage of movies (%)",
+                "values": [
+                    -50,
+                    -40,
+                    -30,
+                    -20,
+                    -10,
+                    0,
+                    10,
+                    20,
+                    30,
+                    40,
+                    50
+                ],
+                "labelExpr": "abs(datum.value) + '%'",
+                "gridColor": "#EAEAEA",
+                "labelFontSize": 10,
+                "titlePadding": 12
+            }
+        },
+        "tooltip": [
+            {
+                "field": "genre",
+                "type": "nominal",
+                "title": "Genre"
+            },
+            {
+                "field": "region",
+                "type": "nominal",
+                "title": "Region"
+            },
+            {
+                "field": "movie_count",
+                "type": "quantitative",
+                "title": "Movies",
+                "format": ","
+            },
+            {
+                "field": "total_movies",
+                "type": "quantitative",
+                "title": "Eligible movies",
+                "format": ","
+            },
+            {
+                "field": "percentage",
+                "type": "quantitative",
+                "title": "Genre representation",
+                "format": ".1f"
+            }
+        ]
+    },
     "layer": [
         {
             "mark": {
@@ -41,53 +100,6 @@
                 "size": 16
             },
             "encoding": {
-                "y": {
-                    "field": "genre",
-                    "type": "nominal",
-                    "sort": {
-                        "field": "australia_sort",
-                        "order": "descending"
-                    },
-                    "axis": {
-                        "title": null,
-                        "labelFontSize": 11,
-                        "labelLimit": 130,
-                        "labelPadding": 8,
-                        "ticks": false,
-                        "domain": false
-                    }
-                },
-                "x": {
-                    "field": "plot_percentage",
-                    "type": "quantitative",
-                    "scale": {
-                        "domain": [
-                            -50,
-                            50
-                        ]
-                    },
-                    "axis": {
-                        "title": "Percentage of movies (%)",
-                        "values": [
-                            -50,
-                            -40,
-                            -30,
-                            -20,
-                            -10,
-                            0,
-                            10,
-                            20,
-                            30,
-                            40,
-                            50
-                        ],
-                        "labelExpr": "abs(datum.value) + '%'",
-                        "grid": true,
-                        "gridColor": "#EAEAEA",
-                        "labelFontSize": 10,
-                        "titlePadding": 12
-                    }
-                },
                 "x2": {
                     "datum": 0
                 },
@@ -107,42 +119,9 @@
                     "legend": {
                         "title": null,
                         "orient": "top",
-                        "direction": "horizontal",
-                        "labelFontSize": 11,
-                        "symbolType": "square",
                         "symbolSize": 120
                     }
-                },
-                "tooltip": [
-                    {
-                        "field": "genre",
-                        "type": "nominal",
-                        "title": "Genre"
-                    },
-                    {
-                        "field": "region",
-                        "type": "nominal",
-                        "title": "Region"
-                    },
-                    {
-                        "field": "movie_count",
-                        "type": "quantitative",
-                        "title": "Movies",
-                        "format": ","
-                    },
-                    {
-                        "field": "total_movies",
-                        "type": "quantitative",
-                        "title": "Eligible movies",
-                        "format": ","
-                    },
-                    {
-                        "field": "percentage",
-                        "type": "quantitative",
-                        "title": "Genre representation",
-                        "format": ".1f"
-                    }
-                ]
+                }
             }
         },
         {
@@ -157,16 +136,5 @@
                 }
             }
         }
-    ],
-    "config": {
-        "background": "white",
-        "view": {
-            "stroke": null
-        },
-        "font": "Arial",
-        "axis": {
-            "labelColor": "#444444",
-            "titleColor": "#444444"
-        }
-    }
+    ]
 }

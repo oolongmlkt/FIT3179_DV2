@@ -1,66 +1,50 @@
-/* ==========================================
-   Movie Collections — Global Theme
-   ========================================== */
-
+/* Movie Collections — shared theme and layout */
 :root {
-    --cinema-navy: #17243A;
-    --cinema-gold: #B28A45;
-    --cinema-ivory: #F8F6F1;
-    --cinema-border: #E6E1D8;
+    --navy: #17243a;
+    --gold: #b28a45;
+    --ivory: #f8f6f1;
+    --border: #e6e1d8;
+    --muted: #637185;
+    --body-text: #4a596b;
 }
 
-/* Global reset */
 * {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
-    background: var(--cinema-ivory);
-    color: var(--cinema-navy);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    background: var(--ivory);
+    color: var(--navy);
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
 }
-
-/* ==========================================
-   Page Layout
-   ========================================== */
 
 .page {
     max-width: 1650px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 32px 64px;
 }
 
-/* ==========================================
-   Header and Navigation
-   ========================================== */
-
+/* Page header and section headings */
 .site-header {
     padding: 64px 0 42px;
-    border-bottom: 1px solid #DCE3EB;
     margin-bottom: 54px;
+    border-bottom: 1px solid #dce3eb;
 }
 
 h1 {
+    margin: 0 0 16px;
     font-size: clamp(38px, 5vw, 56px);
     line-height: 1.12;
-    letter-spacing: -0.035em;
-    margin: 0 0 16px;
+    letter-spacing: -.035em;
 }
 
 .site-subtitle {
     max-width: 780px;
+    margin: 0 0 24px;
     font-size: 18px;
     color: #526176;
-    margin: 0 0 24px;
 }
-
-/* Section navigation */
 
 .section-nav {
     display: flex;
@@ -69,25 +53,21 @@ h1 {
 }
 
 .section-nav a {
-    color: #284C75;
-    background: #FFFFFF;
-    border: 1px solid #DCE3EB;
-    border-radius: 20px;
     padding: 7px 14px;
+    border: 1px solid #dce3eb;
+    border-radius: 20px;
+    background: white;
+    color: #284c75;
     font-size: 13px;
     text-decoration: none;
 }
 
 .section-nav a:hover,
 .section-nav a:focus-visible {
-    background: #F4EBD9;
-    border-color: var(--cinema-gold);
-    color: var(--cinema-navy);
+    background: #f4ebd9;
+    border-color: var(--gold);
+    color: var(--navy);
 }
-
-/* ==========================================
-   Story Sections
-   ========================================== */
 
 .story-section {
     margin-bottom: 70px;
@@ -97,50 +77,45 @@ h1 {
 .section-intro {
     margin: 0 0 26px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #D8B66A;
+    border-bottom: 1px solid #d8b66a;
 }
 
 .eyebrow {
+    margin: 0 0 12px;
+    color: #92703a;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.16em;
-    color: #92703A;
+    letter-spacing: .16em;
     text-transform: uppercase;
-    margin: 0 0 12px;
 }
 
 .section-intro h2 {
+    margin: 0 0 10px;
     font-size: clamp(26px, 3vw, 36px);
     line-height: 1.2;
-    color: var(--cinema-navy);
-    margin: 0 0 10px;
 }
 
 .section-intro>p:last-child {
-    color: #526176;
     max-width: 900px;
     margin: 0;
+    color: #526176;
 }
 
-/* ==========================================
-   Chart Cards and Grid Layout
-   ========================================== */
-
+/* Shared chart card structure */
 .chart-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
     margin-bottom: 24px;
-    align-items: stretch;
 }
 
 .chart-card {
     min-width: 0;
     padding: 24px;
-    background: #FFFFFF;
-    border: 1px solid var(--cinema-border);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(23, 36, 58, 0.045);
+    background: white;
+    box-shadow: 0 4px 16px rgb(23 36 58 / 4.5%);
 }
 
 .chart-full {
@@ -148,166 +123,103 @@ h1 {
 }
 
 .chart-card h3 {
+    margin: 0 0 12px;
     font-size: 19px;
     line-height: 1.35;
-    color: var(--cinema-navy);
-    margin: 0 0 12px;
 }
 
-.chart-card>p:not(.chart-note) {
+.chart-description {
     margin: 0 0 16px;
-    color: #4A596B;
-    font-size: 14px;
+    color: var(--body-text);
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-/* General notes outside chart cards */
-.note {
-    color: #637185;
+.chart-instruction {
+    margin: 8px 0 14px;
+    color: var(--muted);
     font-size: 12px;
     line-height: 1.6;
-    margin: 16px 0 0;
-}
-
-/* ==========================================
-   Vega Visualisation Containers
-   ========================================== */
-
-.vis {
-    width: 100%;
-    min-width: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 6px 0;
-}
-
-.vis .vega-embed {
-    max-width: none;
-}
-
-/* ==========================================
-   Chart 1 — World Choropleth
-   ========================================== */
-
-/* Centre all Chart 1 content within its card */
-
-#chart1-block .chart1-content {
-    width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-/* Centre the Vega-Lite map */
-
-#chart1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 12px 0 18px;
-}
-
-#chart1 .vega-embed {
-    flex: 0 0 auto;
-}
-
-/* ==========================================
-   Chart 2 — Genre Streamgraph
-   ========================================== */
-
-/* Centre all Chart 2 content within its card */
-
-#chart2-block .chart2-content {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-}
-
-/* Centre the streamgraph and its genre legend */
-
-#vis2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 12px 0 18px;
-}
-
-#vis2 .vega-embed {
-    flex: 0 0 auto;
-}
-
-/* Interaction instructions */
-
-#chart2-block .chart2-instruction {
-    margin: 8px 0 18px;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
     text-align: center;
 }
 
-/* ==========================================
-   Chart 3 — International Co-production Map
-   ========================================== */
-
-/* Overall content alignment */
-
-#chart3-block .chart3-content {
-    width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
+.chart-insight {
+    margin: 18px 0 14px;
+    padding: 14px 16px;
+    border-left: 3px solid #365d86;
+    border-radius: 0 4px 4px 0;
+    background: #f3f7fb;
 }
 
-/* Description */
-
-#chart3-block .chart3-description {
-    margin: 0 0 16px;
-    font-size: 14px;
+.chart-insight p {
+    margin: 0;
+    color: var(--navy);
+    font-size: 12px;
     line-height: 1.6;
-    color: #4A596B;
-    text-align: left;
 }
 
-/* Centre the Vega-Lite map */
+.chart-card .chart-note {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid #e0e6ed;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
 
-#chart3 {
+.site-footer {
+    padding-top: 24px;
+    border-top: 1px solid #dce3eb;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.vis {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-width: 0;
+    padding: 12px 0 18px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 12px 0 8px;
 }
 
-#chart3 .vega-embed {
-    flex: 0 0 auto;
+/* Full-width chart content */
+.chart-content {
+    max-width: 950px;
+    margin: auto;
 }
 
+/* Charts displayed in two-column grids */
+.chart-grid .vis {
+    overflow-x: hidden;
+    align-items: flex-start;
+}
 
-/* ==========================================
-   Chart 3 — Custom Legend
-   ========================================== */
+.chart-grid .vega-embed {
+    flex: 0 1 auto;
+    max-width: 100%;
+}
 
-#chart3-block .chart3-legend {
-    width: 100%;
+.vis canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Chart 3: co-production legend and controls */
+.chart3-legend {
     margin: 4px auto 18px;
     text-align: center;
 }
 
-#chart3-block .chart3-legend h4 {
+.chart3-legend h4 {
     margin: 0 0 12px;
     font-size: 12px;
-    font-weight: 700;
-    color: var(--cinema-navy);
 }
 
-#chart3-block .chart3-legend-items {
+.chart3-legend-items {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,279 +227,87 @@ h1 {
     gap: 32px;
 }
 
-#chart3-block .chart3-legend-item {
+.chart3-legend-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-
-    font-size: 11px;
     color: #526176;
+    font-size: 11px;
 }
 
-#chart3-block .chart3-legend-line {
+.chart3-legend-line {
     display: block;
     width: 70px;
-    background: #B28A45;
     border-radius: 2px;
+    background: var(--gold);
 }
 
-/* Match the Vega-Lite sqrt size scale */
-
-#chart3-block .line-100 {
-    height: 1.57px;
+.line-100 {
+    height: 1.91px;
 }
 
-#chart3-block .line-1000 {
-    height: 3.22px;
+.line-1000 {
+    height: 3.89px;
 }
 
-#chart3-block .line-3000 {
-    height: 5px;
+.line-3000 {
+    height: 6px;
 }
-
-
-/* ==========================================
-   Chart 3 — Interactive Controls
-   ========================================== */
-
-#chart3-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
-
-    width: 100%;
-    margin: 12px auto 20px;
-    padding: 14px 20px;
-
-    background: #F8F6F1;
-    border: 1px solid #E6E1D8;
-    border-radius: 6px;
-}
-
-/* Individual controls */
-
-#chart3-controls .vega-bind {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-
-    font-size: 13px;
-    color: #17243A;
-}
-
-/* Slider */
 
 #chart3-controls input[type="range"] {
     width: 160px;
-    accent-color: #B28A45;
+    accent-color: var(--gold);
     cursor: pointer;
 }
 
-/* Country dropdown */
-
-#chart3-controls select {
-    padding: 6px 9px;
-    border: 1px solid #CCCCCC;
-    border-radius: 4px;
-    background: #FFFFFF;
-    color: #17243A;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-/* Chart 3 interaction instructions */
-
-#chart3-block .chart3-instruction {
-    margin: 8px 0 18px;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
-    text-align: center;
-}
-
-/* Responsive controls */
-
-@media (max-width: 700px) {
-    #chart3-controls {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-}
-
-/* ==========================================
-   Chart 4 — Genre × Decade Heatmap
-   ========================================== */
-
-#chart4 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    width: 100%;
-    min-width: 0;
-
-    padding: 12px 0 18px;
-}
-
-#chart4 .vega-embed {
-    flex: 0 0 auto;
-    max-width: 100%;
-}
-
-#chart4 svg {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* ==========================================
-   Chart 5 — Budget vs Revenue Scatterplot
-   ========================================== */
-
-#chart5 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    min-width: 0;
-    padding: 12px 0 18px;
-}
-
-/* Keep Vega's rendered chart within its card */
-#chart5 .vega-embed {
-    flex: 0 0 auto;
-    max-width: 100%;
-}
-
-/* Scale the SVG down if it exceeds the card width */
-#chart5 svg {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Centre Chart 6 without unnecessary scrolling */
-
-#chart6 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    width: 100%;
-    min-width: 0;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    padding: 12px 0 18px;
-}
-
-#chart6 .vega-embed {
-    flex: 0 1 auto;
-    max-width: 100%;
-}
-
-#chart6 svg {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Chart 6 — Interactive Controls */
-
+/* Shared Charts 3 and 6 */
+#chart3-controls,
 #chart6-controls {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 12px;
     width: 100%;
-
     margin: 12px auto 18px;
     padding: 12px 16px;
-
-    background: #F8F6F1;
-    border: 1px solid #E6E1D8;
+    border: 1px solid var(--border);
     border-radius: 6px;
+    background: var(--ivory);
 }
 
+#chart3-controls .vega-bind,
 #chart6-controls .vega-bind {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
-
+    color: var(--navy);
     font-size: 13px;
-    font-weight: 600;
-    color: #17243A;
 }
 
-#chart6-controls select {
-    padding: 6px 10px;
-
-    border: 1px solid #CCCCCC;
+.chart-card select {
+    max-width: 100%;
+    padding: 6px 9px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-
-    background: #FFFFFF;
-    color: #17243A;
-
+    background: white;
+    color: var(--navy);
     font-size: 13px;
     cursor: pointer;
 }
 
-#chart6-controls select:focus-visible {
-    outline: 2px solid #B28A45;
+.chart-card select:focus-visible {
+    outline: 2px solid var(--gold);
     outline-offset: 2px;
 }
 
-/* ==========================================
-   Chart 7 — IMDb vs TMDB Ratings
-   ========================================== */
-
-#chart7 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    width: 100%;
-    min-width: 0;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    padding: 12px 0 18px;
-}
-
-#chart7 .vega-embed {
-    flex: 0 1 auto;
-    max-width: 100%;
-}
-
-#chart7 canvas {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* ==========================================
-   Chart 8 — Director-Actor Collaboration Explorer
-   ========================================== */
-
-/* Shared content width */
-#chart8-block .chart8-content {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-/* Controls and network */
+/* Chart 8: custom director/period controls and network legend */
 .chart8-wrapper {
     width: 100%;
-    margin: 20px auto 0;
+    max-width: 760px;
+    margin: 20px auto;
 }
 
 .chart8-controls {
@@ -604,40 +324,6 @@ h1 {
     font-weight: 600;
 }
 
-.chart8-controls select {
-    padding: 6px 9px;
-    border: 1px solid #CCC;
-    border-radius: 4px;
-    background: #FFF;
-    font-size: 13px;
-    max-width: 100%;
-}
-
-/* Interaction instructions */
-.chart8-instruction {
-    margin: 8px 0 12px;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
-    text-align: center;
-}
-
-/* Network */
-#chart8 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    min-width: 0;
-    margin: 0 auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-#chart8 .vega-embed {
-    flex: 0 0 auto;
-}
-
-/* Legend */
 .chart8-legend {
     display: flex;
     justify-content: center;
@@ -645,11 +331,11 @@ h1 {
     flex-wrap: wrap;
     gap: 18px;
     margin-top: 8px;
-    font-size: 12px;
     color: #555;
+    font-size: 12px;
 }
 
-.chart8-legend > span {
+.chart8-legend>span {
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -663,250 +349,9 @@ h1 {
 }
 
 .director-dot {
-    background: #377EB8;
+    background: #377eb8;
 }
 
 .actor-dot {
-    background: #F28E2B;
-}
-
-/* ==========================================
-   Chart 9 — Production Company Rankings
-   ========================================== */
-
-#chart9-block .chart-description {
-    max-width: 850px;
-    line-height: 1.6;
-    margin-bottom: 1.25rem;
-}
-
-#chart9 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    min-width: 0;
-    overflow-x: hidden;
-    padding: 12px 0 18px;
-}
-
-#chart9 .vega-embed {
-    max-width: 100%;
-    min-width: 0;
-}
-
-#chart9 canvas {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* ==========================================
-   Chart 10 — Director–Actor Partnerships
-   ========================================== */
-
-#chart10 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    width: 100%;
-    min-width: 0;
-
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    padding: 12px 0 18px;
-}
-
-#chart10 .vega-embed {
-    flex: 0 1 auto;
-    max-width: 100%;
-}
-
-/* ==========================================
-   Chart 11 — Australian Production Expenditure
-   ========================================== */
-
-#chart11-block .chart11-content {
-    width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-#chart11-block h3 {
-    text-align: left;
-    margin-bottom: 12px;
-}
-
-#chart11-block .chart11-description {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #4A596B;
-    text-align: left;
-    margin: 0 0 16px;
-}
-
-#chart11 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 12px 0 18px;
-}
-
-#chart11 .vega-embed {
-    flex: 0 0 auto;
-}
-
-#chart11-block .chart-interaction,
-#chart11-block .chart-insight,
-#chart11-block .chart-note {
-    text-align: left;
-}
-
-#chart11 canvas {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-/* ==========================================
-   Chart 12 — Australian vs Global Genres
-   ========================================== */
-
-#chart12-block .chart12-content {
-    width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-#chart12-block h3 {
-    text-align: left;
-    margin-bottom: 12px;
-}
-
-#chart12-block .chart12-description {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #4A596B;
-    text-align: left;
-    margin: 0 0 16px;
-}
-
-#chart12 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-width: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 12px 0 18px;
-}
-
-#chart12 .vega-embed {
-    flex: 0 0 auto;
-}
-
-#chart12 canvas {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-#chart12-block .chart-interaction,
-#chart12-block .chart-insight,
-#chart12-block .chart-note {
-    text-align: left;
-}
-
-/* ==========================================
-   Footer
-   ========================================== */
-
-.site-footer {
-    padding-top: 24px;
-    border-top: 1px solid #DCE3EB;
-    color: #637185;
-    font-size: 12px;
-}
-
-/* ==========================================
-   Responsive Layout
-   ========================================== */
-
-/* Stack paired charts on narrower screens */
-
-@media (max-width: 1450px) {
-    .chart-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Mobile layout */
-
-@media (max-width: 700px) {
-    .page {
-        padding: 0 14px 36px;
-    }
-
-    .site-header {
-        padding-top: 38px;
-        margin-bottom: 34px;
-    }
-
-    .chart-card {
-        padding: 16px;
-    }
-
-    .story-section {
-        margin-bottom: 46px;
-    }
-}
-
-/* ==========================================
-   Shared Chart Insights
-   ========================================== */
-
-.chart-insight {
-    width: 100%;
-    background: #F3F7FB;
-    border-left: 3px solid #365D86;
-    padding: 14px 16px;
-    margin: 18px 0 14px;
-    border-radius: 0 4px 4px 0;
-    text-align: left;
-}
-
-.chart-insight p {
-    margin: 0;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #17243A;
-}
-
-/* ==========================================
-   Shared Source Notes — All Charts
-   ========================================== */
-
-.chart-card .chart-note {
-    margin: 18px 0 0;
-    padding-top: 14px;
-    border-top: 1px solid #E0E6ED;
-
-    font-size: 12px;
-    line-height: 1.6;
-    color: #637185;
-}
-
-/* Shared chart interaction instructions */
-.chart-interaction {
-    font-size: 12px;
-    color: #637185;
-    line-height: 1.5;
-    margin: 8px 0 12px;
+    background: #f28e2b;
 }

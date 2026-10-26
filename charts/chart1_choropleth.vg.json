@@ -1,18 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Where Is Film Production Most Concentrated?",
-    "subtitle": [
-      "Average annual TMDB-listed movie productions per million residents, 1980-2025"
-    ],
-    "anchor": "start",
-    "fontSize": 20,
-    "subtitleFontSize": 12,
-    "offset": 16
-  },
-  "width": 900,
+  "width": "container",
   "height": 460,
-  "background": "white",
   "projection": {
     "type": "equalEarth"
   },
@@ -50,10 +39,6 @@
           "movies_in_valid_years"
         ]
       }
-    },
-    {
-      "calculate": "isValid(datum.average_annual_movies_per_million) ? datum.average_annual_movies_per_million : null",
-      "as": "production_rate"
     }
   ],
   "layer": [
@@ -61,24 +46,24 @@
       "mark": {
         "type": "geoshape",
         "fill": "#e6e8eb",
-        "stroke": "#ffffff",
+        "stroke": "white",
         "strokeWidth": 0.45
       }
     },
     {
       "transform": [
         {
-          "filter": "isValid(datum.production_rate)"
+          "filter": "isValid(datum.average_annual_movies_per_million)"
         }
       ],
       "mark": {
         "type": "geoshape",
-        "stroke": "#ffffff",
+        "stroke": "white",
         "strokeWidth": 0.45
       },
       "encoding": {
         "color": {
-          "field": "production_rate",
+          "field": "average_annual_movies_per_million",
           "type": "quantitative",
           "title": "Movies per million / year",
           "scale": {
@@ -112,7 +97,7 @@
             "title": "Country"
           },
           {
-            "field": "production_rate",
+            "field": "average_annual_movies_per_million",
             "type": "quantitative",
             "title": "Movies per million / year",
             "format": ".2f"
@@ -126,17 +111,10 @@
           {
             "field": "valid_population_years",
             "type": "quantitative",
-            "title": "Years with population data",
-            "format": "d"
+            "title": "Years with population data"
           }
         ]
       }
     }
-  ],
-  "config": {
-    "view": {
-      "stroke": null
-    },
-    "font": "Arial"
-  }
+  ]
 }
